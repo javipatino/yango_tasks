@@ -26,7 +26,7 @@
               "type": "main",
               "cat": "CI driver",
               "desc": "Driver earnings CI — weekday vs weekend, peak hours",
-              "priority": null,
+              "priority": "Alta",
               "eta": "2026-06-15",
               "status": "pending",
               "link": ""
