@@ -15,7 +15,7 @@
               "id": "t1",
               "type": "main",
               "cat": "CI automation",
-              "desc": "Iterar agente de CI earnings para tener resumen semanal los lunes de incentivos de la competencia",
+              "desc": "Ajustar CI earnings para tener resumen semanal los lunes de incentivos de la competencia",
               "priority": "Media",
               "eta": "2026-05-30",
               "status": "progress",
