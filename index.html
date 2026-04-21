@@ -70,8 +70,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .gantt-bar { position: absolute; height: 100%; border-radius: 3px; display: flex; align-items: center; padding: 0 5px; font-size: 9px; font-weight: 600; white-space: nowrap; overflow: hidden; color: #fff; }
 .empty { text-align: center; color: #aaa; font-size: 13px; padding: 3rem; }
 .loading { text-align: center; color: #aaa; font-size: 13px; padding: 3rem; }
-.save-bar { position: fixed; bottom: 1rem; right: 1rem; background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 16px; font-size: 12px; font-weight: 500; cursor: pointer; display: none; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 100; }
-.save-bar:hover { background: #0C447C; }
+
+.sync-bar { position: fixed; bottom: 1rem; right: 1rem; display: flex; align-items: center; gap: 8px; background: #1a1a1a; color: #fff; border-radius: 8px; padding: 8px 14px; font-size: 12px; font-weight: 500; z-index: 100; transition: all 0.3s; opacity: 0; pointer-events: none; }
+.sync-bar.visible { opacity: 1; pointer-events: auto; }
+.sync-bar.saving { background: #185FA5; }
+.sync-bar.saved { background: #3B6D11; }
+.sync-bar.error { background: #A32D2D; }
 </style>
 </head>
 <body>
@@ -97,17 +101,22 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
   <div id="view-today" class="view"></div>
   <div id="view-gantt" class="view"></div>
 </div>
-<button class="save-bar" id="save-btn" onclick="saveChanges()">Guardando...</button>
+
+<div class="sync-bar" id="sync-bar">
+  <span id="sync-msg">Guardando...</span>
+</div>
 
 <script>
 const JSON_URL = 'https://raw.githubusercontent.com/javipatino/yango_tasks/main/tasks.json';
+const WEBHOOK_URL = 'https://javipati.app.n8n.cloud/webhook/yango-web-update';
+
 let data = null;
 let currentArea = 'ops';
 let currentPerson = 'all';
 let taskStatus = {};
 let taskPriority = {};
 let taskEta = {};
-let dirty = false;
+let saveTimer = null;
 
 async function loadData() {
   try {
@@ -118,7 +127,7 @@ async function loadData() {
     renderPersonFilters();
     renderAll();
   } catch(e) {
-    document.getElementById('view-board').innerHTML = '<div class="empty">Error cargando datos. Verifica la URL del repositorio.</div>';
+    document.getElementById('view-board').innerHTML = '<div class="empty">Error cargando datos.</div>';
   }
 }
 
@@ -219,21 +228,25 @@ function etaCell(id) {
   </div>`;
 }
 
-function markDirty() {
-  dirty = true;
-  const btn = document.getElementById('save-btn');
-  btn.style.display = 'block';
-  btn.textContent = 'Los cambios son locales — exporta el JSON para guardar';
+function showSync(state, msg) {
+  const bar = document.getElementById('sync-bar');
+  const msgEl = document.getElementById('sync-msg');
+  bar.className = 'sync-bar visible ' + state;
+  msgEl.textContent = msg;
+  if (state === 'saved' || state === 'error') {
+    setTimeout(() => { bar.className = 'sync-bar'; }, 3000);
+  }
 }
 
-function updatePriority(id, val) { taskPriority[id] = val || null; markDirty(); renderAll(); }
-function updateStatus(id, val) { taskStatus[id] = val; markDirty(); renderAll(); }
-function updateEta(id, val) { taskEta[id] = val || null; markDirty(); renderAll(); }
+function scheduleSync() {
+  if (saveTimer) clearTimeout(saveTimer);
+  showSync('saving', 'Guardando...');
+  saveTimer = setTimeout(syncToGitHub, 1500);
+}
 
-function saveChanges() {
+async function syncToGitHub() {
   // Rebuild data with current state
   const updated = JSON.parse(JSON.stringify(data));
-  updated.last_updated = new Date().toISOString().split('T')[0];
   Object.values(updated.areas).forEach(area => {
     [...(area.people||[]), ...(area.kams||[])].forEach(p => {
       p.tasks.forEach(t => {
@@ -243,14 +256,28 @@ function saveChanges() {
       });
     });
   });
-  const blob = new Blob([JSON.stringify(updated, null, 2)], {type: 'application/json'});
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'tasks.json';
-  a.click();
-  dirty = false;
-  document.getElementById('save-btn').style.display = 'none';
+
+  try {
+    const res = await fetch(WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(updated)
+    });
+    if (res.ok) {
+      data = updated;
+      document.getElementById('last-updated').textContent = 'Actualizado: ' + new Date().toISOString().split('T')[0];
+      showSync('saved', '✓ Guardado en GitHub');
+    } else {
+      showSync('error', 'Error al guardar');
+    }
+  } catch(e) {
+    showSync('error', 'Error de conexión');
+  }
 }
+
+function updatePriority(id, val) { taskPriority[id] = val || null; scheduleSync(); renderAll(); }
+function updateStatus(id, val) { taskStatus[id] = val; scheduleSync(); renderAll(); }
+function updateEta(id, val) { taskEta[id] = val || null; scheduleSync(); renderAll(); }
 
 function renderTaskBlock(p) {
   const mainTasks = p.tasks.filter(t => t.type==='main');
@@ -307,9 +334,7 @@ function renderBoard() {
   const container = document.getElementById('view-board');
   const people = filteredPeople();
   const kams = filteredKams();
-  if (!people.length && !kams.length) {
-    container.innerHTML = '<div class="empty">Sin datos para esta área aún</div>'; return;
-  }
+  if (!people.length && !kams.length) { container.innerHTML = '<div class="empty">Sin datos para esta área aún</div>'; return; }
   let html = people.map(p => renderTaskBlock(p)).join('');
   if (kams.length) {
     html += `<div class="kam-label">KAMs — Partner Ops</div>`;
@@ -358,7 +383,7 @@ function renderToday() {
 
 function toggleDone(id) {
   taskStatus[id] = taskStatus[id]==='done' ? 'pending' : 'done';
-  markDirty(); renderAll();
+  scheduleSync(); renderAll();
 }
 
 function renderGantt() {
@@ -401,7 +426,6 @@ function renderGantt() {
 }
 
 function renderAll() { renderBoard(); renderToday(); renderGantt(); }
-
 loadData();
 </script>
 </body>
