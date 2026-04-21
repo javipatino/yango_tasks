@@ -1,0 +1,221 @@
+{
+  "last_updated": "2026-04-21",
+  "areas": {
+    "ops": {
+      "people": [
+        {
+          "id": "javi",
+          "name": "Javier",
+          "initials": "JP",
+          "bg": "#E6F1FB",
+          "tc": "#0C447C",
+          "krs": [],
+          "tasks": [
+            { "id": "t1", "type": "main", "cat": "CI automation", "desc": "Competitors CI automation summary & agent", "priority": "Media", "eta": "2026-05-30", "status": "progress", "link": "" },
+            { "id": "t2", "type": "main", "cat": "CI driver", "desc": "Driver earnings CI — weekday vs weekend, peak hours", "priority": null, "eta": "2026-06-15", "status": "pending", "link": "" },
+            { "id": "t3", "type": "little", "cat": "Call taxi", "desc": "Validar si Alejo MS&E puede aumentar TR de start call taxi a 13%", "priority": null, "eta": null, "status": "pending", "link": "" },
+            { "id": "t4", "type": "little", "cat": "Facturas PRO", "desc": "Revisar proceso facturas Pro Soledad y Redi Soledad", "priority": null, "eta": null, "status": "pending", "link": "" },
+            { "id": "t5", "type": "little", "cat": "CI driver", "desc": "Ajustar CI driver TPH&MPH para que tome todo diario", "priority": null, "eta": null, "status": "pending", "link": "https://st.yandex-team.ru/COMPINTELL-15" }
+          ]
+        },
+        {
+          "id": "nico",
+          "name": "Nicolás",
+          "initials": "NV",
+          "bg": "#E1F5EE",
+          "tc": "#085041",
+          "krs": [
+            { "cat": "Moto", "desc": "Bogota 70k→100k daily · Cali +200k · Baq +90k weekly", "eta": "Q2" },
+            { "cat": "UFC", "desc": "Bogota 60k→80k · Cali 20k→30k weekly", "eta": "Q2" },
+            { "cat": "TukTuk", "desc": "13k→30k weekly trips", "eta": "Q2" }
+          ],
+          "tasks": [
+            { "id": "t6", "type": "main", "cat": "Bogota south", "desc": "Propuesta geobonos Alejo · Descuentos sur MS&E", "priority": null, "eta": null, "status": "pending", "link": "" },
+            { "id": "t7", "type": "main", "cat": "IA project", "desc": "Comportamiento conductores horas pico (API fleetroom)", "priority": null, "eta": null, "status": "progress", "link": "" },
+            { "id": "t8", "type": "main", "cat": "Viaje Soledad", "desc": "Cuadrar ida a Soledad con Sarmiento", "priority": null, "eta": "2026-04-20", "status": "done", "link": "" },
+            { "id": "t9", "type": "little", "cat": "Facturas", "desc": "PRO: factura GR 2k USD — lista para pago", "priority": null, "eta": "2026-04-16", "status": "pending", "link": "https://st.yandex-team.ru/TAXIASSIST-598054" },
+            { "id": "t10", "type": "little", "cat": "Facturas", "desc": "PRO: factura supply 3k USD marzo — pasar a billing", "priority": null, "eta": "2026-04-16", "status": "pending", "link": "https://st.yandex-team.ru/TAXIASSIST-608433" },
+            { "id": "t11", "type": "little", "cat": "Facturas", "desc": "REDI: factura adquisición base de datos (marketing)", "priority": "Alta", "eta": "2026-04-20", "status": "pending", "link": "" },
+            { "id": "t12", "type": "little", "cat": "Facturas", "desc": "REDI: factura pago incentivos (supply)", "priority": "Alta", "eta": "2026-04-20", "status": "pending", "link": "" }
+          ]
+        },
+        {
+          "id": "sarmi",
+          "name": "Sarmiento",
+          "initials": "SS",
+          "bg": "#FAECE7",
+          "tc": "#712B13",
+          "krs": [
+            { "cat": "Driver acq.", "desc": "5.700 N+R weekly · Referral 20% · Scouts 400/sem 30% conv.", "eta": "Q2" }
+          ],
+          "tasks": [
+            { "id": "t13", "type": "main", "cat": "Lead Gen", "desc": "Proyecto scraper con TL + 2 parques + moto fleet", "priority": null, "eta": "2026-04-21", "status": "progress", "link": "" },
+            { "id": "t14", "type": "main", "cat": "Own scouts", "desc": "LTV vs DAC — finales de abril", "priority": null, "eta": "2026-04-30", "status": "pending", "link": "" },
+            { "id": "t15", "type": "little", "cat": "Referral", "desc": "Sacar nuevas campañas de Referral", "priority": null, "eta": "2026-04-21", "status": "pending", "link": "" },
+            { "id": "t16", "type": "little", "cat": "Gen dash latam", "desc": "Mantener actualizado con registros y conversión a 5to viaje", "priority": null, "eta": null, "status": "pending", "link": "" }
+          ]
+        },
+        {
+          "id": "juanjo",
+          "name": "Juanjo",
+          "initials": "JJ",
+          "bg": "#EEEDFE",
+          "tc": "#3C3489",
+          "krs": [
+            { "cat": "Moto Fleet", "desc": "1.000 bikes, 500 active weekly", "eta": "Q2" }
+          ],
+          "tasks": [
+            { "id": "t17", "type": "main", "cat": "Lead Gen", "desc": "Seguimiento leads por canal", "priority": null, "eta": null, "status": "pending", "link": "" },
+            { "id": "t18", "type": "main", "cat": "Performance", "desc": "Lanzar performance moto fleet", "priority": null, "eta": null, "status": "pending", "link": "" },
+            { "id": "t19", "type": "main", "cat": "Motai acq", "desc": "Motai acquisition — leads del cabinet ¿a cuál fleetroom?", "priority": "Alta", "eta": null, "status": "pending", "link": "" },
+            { "id": "t20", "type": "little", "cat": "UMA", "desc": "Small form — Richard ni nadie contesta", "priority": null, "eta": null, "status": "pending", "link": "" },
+            { "id": "t21", "type": "little", "cat": "Motopack", "desc": "¿Listos?", "priority": null, "eta": null, "status": "pending", "link": "" }
+          ]
+        },
+        {
+          "id": "alejo",
+          "name": "Alejo",
+          "initials": "AR",
+          "bg": "#EAF3DE",
+          "tc": "#27500A",
+          "krs": [
+            { "cat": "Nequi", "desc": "GMV share Nequi al 15%", "eta": "Q2" }
+          ],
+          "tasks": [
+            { "id": "t26", "type": "main", "cat": "Nequi", "desc": "Que se vea más claro el descuento en app", "priority": null, "eta": null, "status": "pending", "link": "" },
+            { "id": "t27", "type": "main", "cat": "Nequi mkt", "desc": "Salida de campaña de marketing Nequi", "priority": null, "eta": null, "status": "pending", "link": "" },
+            { "id": "t28", "type": "main", "cat": "API Cobre", "desc": "API para que conductores recarguen via Cobre", "priority": null, "eta": null, "status": "pending", "link": "" },
+            { "id": "t29", "type": "little", "cat": "Cobre", "desc": "Follow-up a Ivan para top-ups por Cobre", "priority": null, "eta": null, "status": "pending", "link": "" },
+            { "id": "t30", "type": "little", "cat": "Loyalty", "desc": "¿Rewards conductores en máximo nivel de loyalty?", "priority": null, "eta": null, "status": "pending", "link": "" }
+          ]
+        },
+        {
+          "id": "lucho",
+          "name": "Lucho",
+          "initials": "LC",
+          "bg": "#FAEEDA",
+          "tc": "#633806",
+          "krs": [
+            { "cat": "Economy Cali", "desc": "Bogota 900k weekly · Cali 210k→240k weekly trips", "eta": "Q2" }
+          ],
+          "tasks": [
+            { "id": "t22", "type": "main", "cat": "Pricing CI 2.0", "desc": "DiDi precios con descuento · Añadir puntos metro-area", "priority": "Alta", "eta": null, "status": "progress", "link": "" },
+            { "id": "t23", "type": "main", "cat": "Peajes", "desc": "Revisar peajes faltantes en Yango Maps · WoW de peajes", "priority": null, "eta": null, "status": "pending", "link": "" },
+            { "id": "t24", "type": "little", "cat": "Adq. Suro", "desc": "5 scouts en calle always on — ¿activos?", "priority": null, "eta": null, "status": "pending", "link": "" },
+            { "id": "t25", "type": "little", "cat": "Pricing CI", "desc": "Corregir el weighted de pricing analysis", "priority": null, "eta": null, "status": "pending", "link": "" }
+          ]
+        }
+      ],
+      "kams": [
+        {
+          "id": "jimmy",
+          "name": "Jimmy",
+          "initials": "JM",
+          "bg": "#E6F1FB",
+          "tc": "#0C447C",
+          "krs": [],
+          "tasks": [
+            { "id": "k1", "type": "main", "cat": "Order pool", "desc": "Llamada a conductores en test — precio con bono en order pool", "priority": "Alta", "eta": null, "status": "pending", "link": "" },
+            { "id": "k2", "type": "main", "cat": "Metro BOG", "desc": "Plan de acción Soacha, Mosquera, Funza", "priority": null, "eta": null, "status": "pending", "link": "" },
+            { "id": "k3", "type": "main", "cat": "Call taxi", "desc": "P&L mensual y nueva cotización contrato Cesar", "priority": null, "eta": null, "status": "pending", "link": "" }
+          ]
+        },
+        {
+          "id": "danih",
+          "name": "Dani H",
+          "initials": "DH",
+          "bg": "#E1F5EE",
+          "tc": "#085041",
+          "krs": [],
+          "tasks": [
+            { "id": "k4", "type": "main", "cat": "Oro-Plata-Bronce", "desc": "Oro-Plata-Bronce 2.0 (con Jaco)", "priority": null, "eta": null, "status": "pending", "link": "" },
+            { "id": "k5", "type": "main", "cat": "Partner comms", "desc": "Partner comms Suro — traerla a Bogotá", "priority": null, "eta": null, "status": "pending", "link": "" }
+          ]
+        },
+        {
+          "id": "jaco",
+          "name": "Jaco",
+          "initials": "JC",
+          "bg": "#FAECE7",
+          "tc": "#712B13",
+          "krs": [],
+          "tasks": [
+            { "id": "k6", "type": "main", "cat": "Oro-Plata-Bronce", "desc": "Oro-Plata-Bronce 2.0 (con Dani H)", "priority": null, "eta": null, "status": "pending", "link": "" },
+            { "id": "k7", "type": "main", "cat": "Cali oeste", "desc": "Plan de acción oeste de Cali", "priority": null, "eta": null, "status": "pending", "link": "" }
+          ]
+        },
+        {
+          "id": "juli",
+          "name": "Juli",
+          "initials": "JL",
+          "bg": "#EEEDFE",
+          "tc": "#3C3489",
+          "krs": [],
+          "tasks": [
+            { "id": "k8", "type": "main", "cat": "Aeropuertos", "desc": "Creación de Airport checklist y monitoring", "priority": null, "eta": null, "status": "pending", "link": "" }
+          ]
+        }
+      ]
+    },
+    "mkt": {
+      "people": [
+        {
+          "id": "simon",
+          "name": "Simon",
+          "initials": "SM",
+          "bg": "#E6F1FB",
+          "tc": "#0C447C",
+          "krs": [],
+          "tasks": [
+            { "id": "m1", "type": "main", "cat": "Moto Campaign", "desc": "100% equipo enfocado, producción con SM el 11, creative WIP", "priority": "Alta", "eta": null, "status": "progress", "link": "" },
+            { "id": "m2", "type": "main", "cat": "Safety Campaign", "desc": "Deprioritized por ahora", "priority": "Baja", "eta": null, "status": "pending", "link": "" },
+            { "id": "m3", "type": "main", "cat": "World Cup", "desc": "Big worry — no green light de HQ aún", "priority": "Alta", "eta": null, "status": "pending", "link": "" }
+          ]
+        },
+        {
+          "id": "alberto",
+          "name": "Alberto",
+          "initials": "AB",
+          "bg": "#E1F5EE",
+          "tc": "#085041",
+          "krs": [],
+          "tasks": [
+            { "id": "m4", "type": "main", "cat": "Virgin Partnership", "desc": "Primera parte lanzada, pending PR", "priority": null, "eta": null, "status": "progress", "link": "" },
+            { "id": "m5", "type": "main", "cat": "WC Fan Zones", "desc": "Costo 300M — detalles por discutir", "priority": null, "eta": null, "status": "pending", "link": "" },
+            { "id": "m6", "type": "little", "cat": "TukTuk Branding", "desc": "Nuevo evento la próxima semana", "priority": null, "eta": null, "status": "pending", "link": "" },
+            { "id": "m7", "type": "little", "cat": "Moto Branding", "desc": "Confirmación de producción", "priority": null, "eta": null, "status": "pending", "link": "" },
+            { "id": "m8", "type": "little", "cat": "Coca Cola", "desc": "Offline promoter con promocode en FEP", "priority": null, "eta": null, "status": "pending", "link": "" },
+            { "id": "m9", "type": "little", "cat": "Puntos Colombia", "desc": "Legal OK, pending signature para ejecutar", "priority": null, "eta": null, "status": "pending", "link": "" }
+          ]
+        },
+        {
+          "id": "andres",
+          "name": "Andrés",
+          "initials": "AG",
+          "bg": "#FAECE7",
+          "tc": "#712B13",
+          "krs": [],
+          "tasks": [
+            { "id": "m10", "type": "main", "cat": "Influencer", "desc": "Redefiniendo nueva campaña always on", "priority": null, "eta": null, "status": "progress", "link": "" }
+          ]
+        },
+        {
+          "id": "mateo",
+          "name": "Mateo",
+          "initials": "MT",
+          "bg": "#EEEDFE",
+          "tc": "#3C3489",
+          "krs": [],
+          "tasks": [
+            { "id": "m11", "type": "main", "cat": "Moto Research", "desc": "Benchmark done, survey WIP", "priority": null, "eta": null, "status": "progress", "link": "" },
+            { "id": "m12", "type": "little", "cat": "WhatsApp Channel", "desc": "Implementado como AO, meta 10k followers EOM", "priority": null, "eta": null, "status": "progress", "link": "" },
+            { "id": "m13", "type": "little", "cat": "Performance", "desc": "WIP new creatives", "priority": null, "eta": null, "status": "progress", "link": "" }
+          ]
+        }
+      ]
+    },
+    "pr": { "people": [] },
+    "gr": { "people": [] },
+    "otros": { "people": [] }
+  }
+}
