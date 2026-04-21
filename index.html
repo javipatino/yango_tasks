@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yango — Task Board</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f3; color: #1a1a1a; font-size: 13px; }
+.wrapper { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem; }
+.top-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 10px; }
+.top-bar h1 { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #1a1a1a; }
+.last-updated { font-size: 11px; color: #888; }
+.area-filters { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem; }
+.person-filters { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 1.25rem; min-height: 28px; }
+.filter-btn { font-size: 11px; padding: 3px 11px; border-radius: 20px; border: 1px solid #d0d0d0; background: #fff; color: #666; cursor: pointer; transition: all 0.15s; }
+.filter-btn:hover { background: #f0f0f0; }
+.filter-btn.active { background: #185FA5; color: #fff; border-color: #185FA5; }
+.area-btn.active-mkt { background: #0F6E56; border-color: #0F6E56; }
+.area-btn.active-pr  { background: #993C1D; border-color: #993C1D; }
+.area-btn.active-gr  { background: #533AB7; border-color: #533AB7; }
+.area-btn.active-otros { background: #5F5E5A; border-color: #5F5E5A; }
+.tabs { display: flex; border-bottom: 1px solid #e0e0e0; margin-bottom: 1.5rem; }
+.tab { font-size: 13px; padding: 7px 16px; color: #888; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all 0.15s; }
+.tab:hover { color: #333; }
+.tab.active { color: #185FA5; border-bottom-color: #185FA5; font-weight: 500; }
+.view { display: none; }
+.view.active { display: block; }
+.person-block { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1rem; }
+.person-header { display: flex; align-items: center; gap: 10px; margin-bottom: 0.75rem; }
+.avatar { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; flex-shrink: 0; }
+.person-name { font-size: 13px; font-weight: 600; color: #1a1a1a; }
+.task-count { font-size: 11px; color: #999; }
+.kr-strip { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 0.75rem; }
+.kr-pill { display: inline-flex; align-items: center; gap: 5px; background: #f5f5f3; border-radius: 20px; padding: 3px 10px; font-size: 11px; color: #666; border: 1px solid #e8e8e8; }
+.kr-pill strong { font-size: 11px; font-weight: 600; color: #333; }
+.section { margin-bottom: 1rem; }
+.section-title { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #aaa; margin-bottom: 0.4rem; padding-bottom: 4px; border-bottom: 1px solid #f0f0f0; }
+.task-table { width: 100%; border-collapse: collapse; }
+.task-table th { font-size: 10px; color: #aaa; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; padding: 4px 6px; text-align: left; }
+.task-table td { padding: 4px 6px; border-bottom: 1px solid #f5f5f3; vertical-align: middle; }
+.task-table tr:last-child td { border-bottom: none; }
+.task-table tr.high-prio td { background: #fff5f5; }
+.task-cat { font-size: 11px; color: #999; white-space: nowrap; }
+.task-desc { font-size: 11px; color: #1a1a1a; line-height: 1.4; }
+.task-link { font-size: 10px; color: #185FA5; text-decoration: none; display: inline-block; margin-top: 1px; }
+.task-link:hover { text-decoration: underline; }
+.mini-select { font-size: 11px; border: 1px solid #d8d8d8; border-radius: 4px; padding: 1px 3px; height: 22px; background: #fff; color: #333; cursor: pointer; width: 100%; }
+.task-table tr.high-prio .mini-select { background: #fff5f5; }
+.mini-date { font-size: 11px; border: 1px solid #d8d8d8; border-radius: 4px; padding: 1px 3px; height: 22px; background: #fff; color: #333; cursor: pointer; width: 100%; }
+.task-table tr.high-prio .mini-date { background: #fff5f5; }
+.eta-wrap { display: flex; align-items: center; gap: 4px; }
+.eta-label { font-size: 11px; color: #999; min-width: 55px; }
+.kam-label { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #aaa; margin: 1.25rem 0 0.5rem; padding-bottom: 4px; border-bottom: 1px solid #e0e0e0; }
+.today-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.today-card { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 12px 14px; }
+.today-card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.today-task { display: flex; align-items: flex-start; gap: 8px; padding: 5px 0; border-bottom: 1px solid #f5f5f3; }
+.today-task:last-child { border-bottom: none; padding-bottom: 0; }
+.check-box { width: 15px; height: 15px; border-radius: 3px; border: 1px solid #ccc; flex-shrink: 0; margin-top: 1px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 9px; background: #fff; }
+.check-box.checked { background: #639922; border-color: #639922; color: #fff; }
+.gantt-wrap { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 1rem 1.25rem; overflow-x: auto; }
+.gantt-months { display: flex; margin-bottom: 6px; padding-left: 192px; }
+.gantt-month { flex: 1; font-size: 10px; color: #aaa; text-align: center; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+.gantt-row { display: flex; align-items: center; gap: 10px; padding: 4px 0; border-bottom: 1px solid #f5f5f3; }
+.gantt-row:last-child { border-bottom: none; }
+.gantt-label { width: 120px; flex-shrink: 0; font-size: 11px; color: #333; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gantt-av { width: 26px; flex-shrink: 0; }
+.gantt-track { flex: 1; height: 18px; background: #f5f5f3; border-radius: 3px; position: relative; min-width: 200px; }
+.gantt-bar { position: absolute; height: 100%; border-radius: 3px; display: flex; align-items: center; padding: 0 5px; font-size: 9px; font-weight: 600; white-space: nowrap; overflow: hidden; color: #fff; }
+.empty { text-align: center; color: #aaa; font-size: 13px; padding: 3rem; }
+.loading { text-align: center; color: #aaa; font-size: 13px; padding: 3rem; }
+.save-bar { position: fixed; bottom: 1rem; right: 1rem; background: #185FA5; color: #fff; border: none; border-radius: 8px; padding: 8px 16px; font-size: 12px; font-weight: 500; cursor: pointer; display: none; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 100; }
+.save-bar:hover { background: #0C447C; }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="top-bar">
+    <h1>Yango — Task Board</h1>
+    <span class="last-updated" id="last-updated"></span>
+  </div>
+  <div class="area-filters" id="area-filters">
+    <button class="filter-btn area-btn active" onclick="filterArea('ops',this)">Ops</button>
+    <button class="filter-btn area-btn" onclick="filterArea('mkt',this)">Mkt</button>
+    <button class="filter-btn area-btn" onclick="filterArea('pr',this)">PR</button>
+    <button class="filter-btn area-btn" onclick="filterArea('gr',this)">GR</button>
+    <button class="filter-btn area-btn" onclick="filterArea('otros',this)">Otros</button>
+  </div>
+  <div class="person-filters" id="person-filters"></div>
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab('board',this)">Tablero</div>
+    <div class="tab" onclick="switchTab('today',this)">Hoy</div>
+    <div class="tab" onclick="switchTab('gantt',this)">Gantt</div>
+  </div>
+  <div id="view-board" class="view active"><div class="loading">Cargando...</div></div>
+  <div id="view-today" class="view"></div>
+  <div id="view-gantt" class="view"></div>
+</div>
+<button class="save-bar" id="save-btn" onclick="saveChanges()">Guardando...</button>
+
+<script>
+const JSON_URL = 'https://raw.githubusercontent.com/javipatino/yango_tasks/main/tasks.json';
+let data = null;
+let currentArea = 'ops';
+let currentPerson = 'all';
+let taskStatus = {};
+let taskPriority = {};
+let taskEta = {};
+let dirty = false;
+
+async function loadData() {
+  try {
+    const r = await fetch(JSON_URL + '?t=' + Date.now());
+    data = await r.json();
+    document.getElementById('last-updated').textContent = 'Actualizado: ' + data.last_updated;
+    initState();
+    renderPersonFilters();
+    renderAll();
+  } catch(e) {
+    document.getElementById('view-board').innerHTML = '<div class="empty">Error cargando datos. Verifica la URL del repositorio.</div>';
+  }
+}
+
+function initState() {
+  Object.values(data.areas).forEach(area => {
+    const all = [...(area.people||[]), ...(area.kams||[])];
+    all.forEach(p => p.tasks.forEach(t => {
+      taskStatus[t.id] = t.status;
+      taskPriority[t.id] = t.priority;
+      taskEta[t.id] = t.eta;
+    }));
+  });
+}
+
+function allPeopleInArea(area) {
+  const a = data.areas[area];
+  if (!a) return [];
+  return [...(a.people||[]), ...(a.kams||[])];
+}
+
+function isoToDisplay(iso) {
+  if (!iso) return '—';
+  if (iso.startsWith('Q')) return iso;
+  const [y,m,d] = iso.split('-');
+  return `${d}/${m}/${y}`;
+}
+
+function filterArea(area, btn) {
+  currentArea = area; currentPerson = 'all';
+  document.querySelectorAll('.area-btn').forEach(b => {
+    b.classList.remove('active','active-mkt','active-pr','active-gr','active-otros');
+  });
+  btn.classList.add('active');
+  if (area !== 'ops') btn.classList.add('active-' + area);
+  renderPersonFilters(); renderAll();
+}
+
+function filterPerson(id, btn) {
+  currentPerson = id;
+  document.querySelectorAll('.person-filters .filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderAll();
+}
+
+function renderPersonFilters() {
+  const c = document.getElementById('person-filters');
+  const people = allPeopleInArea(currentArea);
+  if (!people.length) { c.innerHTML = ''; return; }
+  let html = `<button class="filter-btn active" onclick="filterPerson('all',this)">Todos</button>`;
+  people.forEach(p => { html += `<button class="filter-btn" onclick="filterPerson('${p.id}',this)">${p.name}</button>`; });
+  c.innerHTML = html;
+}
+
+function switchTab(tab, btn) {
+  document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('view-' + tab).classList.add('active');
+}
+
+function filteredPeople() {
+  const a = data.areas[currentArea];
+  const p = a ? (a.people||[]) : [];
+  return currentPerson === 'all' ? p : p.filter(x => x.id === currentPerson);
+}
+function filteredKams() {
+  const a = data.areas[currentArea];
+  const k = a ? (a.kams||[]) : [];
+  return currentPerson === 'all' ? k : k.filter(x => x.id === currentPerson);
+}
+
+function prioSelect(id) {
+  const v = taskPriority[id] || '';
+  return `<select class="mini-select" onchange="updatePriority('${id}',this.value)">
+    <option value="" ${!v?'selected':''}>—</option>
+    <option value="Alta" ${v==='Alta'?'selected':''}>Alta</option>
+    <option value="Media" ${v==='Media'?'selected':''}>Media</option>
+    <option value="Baja" ${v==='Baja'?'selected':''}>Baja</option>
+  </select>`;
+}
+
+function statusSelect(id) {
+  const s = taskStatus[id] || 'pending';
+  return `<select class="mini-select" onchange="updateStatus('${id}',this.value)">
+    <option value="pending" ${s==='pending'?'selected':''}>Pendiente</option>
+    <option value="progress" ${s==='progress'?'selected':''}>En curso</option>
+    <option value="done" ${s==='done'?'selected':''}>Listo</option>
+  </select>`;
+}
+
+function etaCell(id) {
+  const v = taskEta[id] || '';
+  const isQ = v && v.startsWith('Q');
+  const dateVal = isQ ? '' : (v || '');
+  return `<div class="eta-wrap">
+    <span class="eta-label">${isoToDisplay(v)}</span>
+    <input type="date" class="mini-date" value="${dateVal}" onchange="updateEta('${id}',this.value)" style="width:22px;border:none;padding:0;opacity:0.35;cursor:pointer;background:transparent;" title="Cambiar fecha">
+  </div>`;
+}
+
+function markDirty() {
+  dirty = true;
+  const btn = document.getElementById('save-btn');
+  btn.style.display = 'block';
+  btn.textContent = 'Los cambios son locales — exporta el JSON para guardar';
+}
+
+function updatePriority(id, val) { taskPriority[id] = val || null; markDirty(); renderAll(); }
+function updateStatus(id, val) { taskStatus[id] = val; markDirty(); renderAll(); }
+function updateEta(id, val) { taskEta[id] = val || null; markDirty(); renderAll(); }
+
+function saveChanges() {
+  // Rebuild data with current state
+  const updated = JSON.parse(JSON.stringify(data));
+  updated.last_updated = new Date().toISOString().split('T')[0];
+  Object.values(updated.areas).forEach(area => {
+    [...(area.people||[]), ...(area.kams||[])].forEach(p => {
+      p.tasks.forEach(t => {
+        t.status = taskStatus[t.id] ?? t.status;
+        t.priority = taskPriority[t.id] ?? t.priority;
+        t.eta = taskEta[t.id] ?? t.eta;
+      });
+    });
+  });
+  const blob = new Blob([JSON.stringify(updated, null, 2)], {type: 'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'tasks.json';
+  a.click();
+  dirty = false;
+  document.getElementById('save-btn').style.display = 'none';
+}
+
+function renderTaskBlock(p) {
+  const mainTasks = p.tasks.filter(t => t.type==='main');
+  const littleTasks = p.tasks.filter(t => t.type==='little');
+  const total = p.tasks.filter(t => taskStatus[t.id]!=='done').length;
+
+  let html = `<div class="person-block">
+    <div class="person-header">
+      <div class="avatar" style="background:${p.bg};color:${p.tc}">${p.initials}</div>
+      <div><div class="person-name">${p.name}</div><div class="task-count">${total} pendiente${total!==1?'s':''}</div></div>
+    </div>`;
+
+  if (p.krs && p.krs.length) {
+    html += `<div class="kr-strip">`;
+    p.krs.forEach(kr => {
+      html += `<div class="kr-pill"><strong>${kr.cat}</strong>&nbsp;${kr.desc}&nbsp;<span style="color:#bbb">${kr.eta}</span></div>`;
+    });
+    html += `</div>`;
+  }
+
+  const renderSection = (tasks, label) => {
+    if (!tasks.length) return '';
+    let s = `<div class="section"><div class="section-title">${label}</div>
+      <table class="task-table">
+        <thead><tr>
+          <th style="width:105px">Categoría</th>
+          <th>Descripción</th>
+          <th style="width:80px">Prioridad</th>
+          <th style="width:88px">Estado</th>
+          <th style="width:115px">ETA</th>
+        </tr></thead><tbody>`;
+    tasks.forEach(t => {
+      const hi = taskPriority[t.id] === 'Alta';
+      s += `<tr class="${hi?'high-prio':''}">
+        <td><span class="task-cat">${t.cat}</span></td>
+        <td><div class="task-desc">${t.desc}</div>${t.link?`<a class="task-link" href="${t.link}" target="_blank">↗ StarTrek</a>`:''}</td>
+        <td>${prioSelect(t.id)}</td>
+        <td>${statusSelect(t.id)}</td>
+        <td>${etaCell(t.id)}</td>
+      </tr>`;
+    });
+    s += `</tbody></table></div>`;
+    return s;
+  };
+
+  html += renderSection(mainTasks, 'Main tasks');
+  html += renderSection(littleTasks, 'Little tasks');
+  html += `</div>`;
+  return html;
+}
+
+function renderBoard() {
+  if (!data) return;
+  const container = document.getElementById('view-board');
+  const people = filteredPeople();
+  const kams = filteredKams();
+  if (!people.length && !kams.length) {
+    container.innerHTML = '<div class="empty">Sin datos para esta área aún</div>'; return;
+  }
+  let html = people.map(p => renderTaskBlock(p)).join('');
+  if (kams.length) {
+    html += `<div class="kam-label">KAMs — Partner Ops</div>`;
+    html += kams.map(p => renderTaskBlock(p)).join('');
+  }
+  container.innerHTML = html;
+}
+
+function renderToday() {
+  if (!data) return;
+  const container = document.getElementById('view-today');
+  const today = new Date().toISOString().split('T')[0];
+  const people = [...filteredPeople(), ...filteredKams()];
+  let html = '<div class="today-grid">';
+  let any = false;
+
+  people.forEach(p => {
+    const due = p.tasks.filter(t => taskStatus[t.id]!=='done' && taskEta[t.id] && !String(taskEta[t.id]).startsWith('Q') && taskEta[t.id] <= today);
+    const hi = p.tasks.filter(t => taskStatus[t.id]!=='done' && taskPriority[t.id]==='Alta' && !due.find(d=>d.id===t.id));
+    const all = [...due, ...hi];
+    if (!all.length) return;
+    any = true;
+    html += `<div class="today-card">
+      <div class="today-card-header">
+        <div class="avatar" style="background:${p.bg};color:${p.tc};width:26px;height:26px;font-size:10px">${p.initials}</div>
+        <span style="font-size:12px;font-weight:600;color:#1a1a1a">${p.name}</span>
+        <span style="font-size:10px;color:#aaa;margin-left:auto">${all.length} tarea${all.length!==1?'s':''}</span>
+      </div>`;
+    all.forEach(t => {
+      const checked = taskStatus[t.id]==='done';
+      html += `<div class="today-task">
+        <div class="check-box ${checked?'checked':''}" onclick="toggleDone('${t.id}')">${checked?'✓':''}</div>
+        <div style="flex:1">
+          <div style="font-size:11px;color:#1a1a1a;${checked?'text-decoration:line-through;color:#aaa':''}">${t.desc}</div>
+          <div style="font-size:10px;color:#aaa;margin-top:1px">${t.cat}${taskEta[t.id]&&!String(taskEta[t.id]).startsWith('Q')?' · '+isoToDisplay(taskEta[t.id]):''}${taskPriority[t.id]==='Alta'?' · <span style="color:#c0392b">Alta</span>':''}</div>
+        </div>
+      </div>`;
+    });
+    html += `</div>`;
+  });
+
+  html += '</div>';
+  if (!any) html = '<div class="empty">No hay tareas urgentes para hoy</div>';
+  container.innerHTML = html;
+}
+
+function toggleDone(id) {
+  taskStatus[id] = taskStatus[id]==='done' ? 'pending' : 'done';
+  markDirty(); renderAll();
+}
+
+function renderGantt() {
+  if (!data) return;
+  const container = document.getElementById('view-gantt');
+  const people = [...filteredPeople(), ...filteredKams()];
+  const START = new Date('2026-04-01');
+  const END = new Date('2026-06-30');
+  const TOTAL = (END - START) / 86400000;
+  const months = ['Abr','May','Jun'];
+  const startDates = { t1:'2026-04-10', t2:'2026-04-15', t13:'2026-04-14' };
+
+  let rows = '';
+  let any = false;
+
+  people.forEach(p => {
+    const tasks = p.tasks.filter(t => t.type==='main' && taskEta[t.id] && !String(taskEta[t.id]).startsWith('Q'));
+    if (!tasks.length) return;
+    any = true;
+    tasks.forEach(t => {
+      const eta = new Date(taskEta[t.id]+'T12:00:00');
+      const sd = new Date((startDates[t.id]||'2026-04-21')+'T12:00:00');
+      const sp = Math.max(0,(sd-START)/86400000/TOTAL*100);
+      const ep = Math.min(100,(eta-START)/86400000/TOTAL*100);
+      const w = Math.max(2,ep-sp);
+      const col = taskStatus[t.id]==='done'?'#639922':taskStatus[t.id]==='progress'?'#185FA5':'#aaa';
+      rows += `<div class="gantt-row">
+        <div class="gantt-label" title="${t.desc}">${t.cat}</div>
+        <div class="gantt-av"><div class="avatar" style="background:${p.bg};color:${p.tc};width:22px;height:22px;font-size:9px;display:inline-flex">${p.initials}</div></div>
+        <div class="gantt-track"><div class="gantt-bar" style="left:${sp}%;width:${w}%;background:${col}">${w>8?isoToDisplay(taskEta[t.id]):''}</div></div>
+      </div>`;
+    });
+  });
+
+  if (!any) { container.innerHTML = '<div class="empty">No hay main tasks con fecha para mostrar en Gantt</div>'; return; }
+  container.innerHTML = `<div class="gantt-wrap">
+    <div class="gantt-months">${months.map(m=>`<div class="gantt-month">${m}</div>`).join('')}</div>
+    ${rows}
+  </div>`;
+}
+
+function renderAll() { renderBoard(); renderToday(); renderGantt(); }
+
+loadData();
+</script>
+</body>
+</html>
