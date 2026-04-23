@@ -60,6 +60,16 @@
               "eta": null,
               "status": "pending",
               "link": "https://st.yandex-team.ru/COMPINTELL-15"
+            },
+            {
+              "id": "t1745411400",
+              "type": "little",
+              "cat": "Cashless",
+              "desc": "Pendiente de que Floober se agregue como habilitado para recibir pagos cashless",
+              "priority": "Media",
+              "eta": "2026-04-28",
+              "status": "pending",
+              "link": ""
             }
           ]
         },
