@@ -38,7 +38,7 @@
               "desc": "Validar si Alejo MS&E puede aumentar TR de start call taxi a 13%",
               "priority": "Alta",
               "eta": null,
-              "status": "done",
+              "status": "pending",
               "link": ""
             },
             {
@@ -46,7 +46,7 @@
               "type": "little",
               "cat": "Facturas PRO",
               "desc": "Revisar proceso facturas Pro Soledad y Redi Soledad",
-              "priority": "Alta",
+              "priority": null,
               "eta": null,
               "status": "pending",
               "link": ""
@@ -124,7 +124,7 @@
               "desc": "PRO: factura GR 2k USD — lista para pago",
               "priority": null,
               "eta": "2026-04-16",
-              "status": "done",
+              "status": "pending",
               "link": "https://st.yandex-team.ru/TAXIASSIST-598054"
             },
             {
