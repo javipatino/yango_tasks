@@ -46,7 +46,7 @@
               "type": "little",
               "cat": "Facturas PRO",
               "desc": "Revisar proceso facturas Pro Soledad y Redi Soledad",
-              "priority": null,
+              "priority": "Alta",
               "eta": null,
               "status": "pending",
               "link": ""
