@@ -12,10 +12,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .top-bar h1 { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #1a1a1a; }
 .last-updated { font-size: 11px; color: #888; }
 .area-filters { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem; }
-.person-filters { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 1.25rem; min-height: 28px; }
+.person-filters { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 0.6rem; min-height: 28px; }
+.tab-filters { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 1.25rem; }
 .filter-btn { font-size: 11px; padding: 3px 11px; border-radius: 20px; border: 1px solid #d0d0d0; background: #fff; color: #666; cursor: pointer; transition: all 0.15s; }
 .filter-btn:hover { background: #f0f0f0; }
 .filter-btn.active { background: #185FA5; color: #fff; border-color: #185FA5; }
+.filter-btn.prio-btn.active { background: #c0392b; border-color: #c0392b; }
 .area-btn.active-mkt { background: #0F6E56; border-color: #0F6E56; }
 .area-btn.active-pr  { background: #993C1D; border-color: #993C1D; }
 .area-btn.active-gr  { background: #533AB7; border-color: #533AB7; }
@@ -31,11 +33,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .avatar { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; flex-shrink: 0; }
 .person-name { font-size: 13px; font-weight: 600; color: #1a1a1a; }
 .task-count { font-size: 11px; color: #999; }
-.kr-strip { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 0.75rem; }
+.kr-section { margin-bottom: 0.85rem; }
+.kr-section-title { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #aaa; margin-bottom: 0.4rem; padding-bottom: 3px; border-bottom: 1px solid #f0f0f0; }
+.kr-strip { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 4px; }
 .kr-pill { display: inline-flex; align-items: center; gap: 5px; background: #f5f5f3; border-radius: 20px; padding: 3px 10px; font-size: 11px; color: #666; border: 1px solid #e8e8e8; }
 .kr-pill strong { font-size: 11px; font-weight: 600; color: #333; }
-.section { margin-bottom: 1rem; }
-.section-title { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #aaa; margin-bottom: 0.4rem; padding-bottom: 4px; border-bottom: 1px solid #f0f0f0; }
 .task-table { width: 100%; border-collapse: collapse; }
 .task-table th { font-size: 10px; color: #aaa; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; padding: 4px 6px; text-align: left; }
 .task-table td { padding: 4px 6px; border-bottom: 1px solid #f5f5f3; vertical-align: middle; }
@@ -52,6 +54,24 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .eta-wrap { display: flex; align-items: center; gap: 4px; }
 .eta-label { font-size: 11px; color: #999; min-width: 55px; }
 .kam-label { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #aaa; margin: 1.25rem 0 0.5rem; padding-bottom: 4px; border-bottom: 1px solid #e0e0e0; }
+.add-task-row td { background: #f9f9f7 !important; border-bottom: none !important; }
+.add-task-row input[type=text], .add-task-row input:not([type=date]) { font-size: 11px; border: 1px solid #d8d8d8; border-radius: 4px; padding: 1px 4px; height: 22px; background: #fff; color: #333; width: 100%; }
+.add-task-btn { font-size: 10px; padding: 2px 8px; border-radius: 4px; border: 1px solid #185FA5; background: #185FA5; color: #fff; cursor: pointer; white-space: nowrap; }
+.add-task-btn:hover { background: #1450a0; }
+.add-row-trigger { font-size: 11px; color: #185FA5; cursor: pointer; padding: 5px 6px; display: inline-flex; align-items: center; gap: 4px; border-radius: 4px; margin-top: 4px; }
+.add-row-trigger:hover { background: #f0f5ff; }
+.update-toggle { background: none; border: none; color: #bbb; cursor: pointer; font-size: 11px; padding: 2px 5px; border-radius: 3px; line-height: 1; white-space: nowrap; }
+.update-toggle:hover { color: #185FA5; background: #f0f5ff; }
+.update-panel-row { display: none; }
+.update-panel-row.open { display: table-row; }
+.update-panel { background: #f9f9f7; }
+.update-panel-inner { padding: 8px 12px; }
+.update-entry { font-size: 11px; color: #555; padding: 4px 0; border-bottom: 1px solid #efefed; line-height: 1.4; }
+.update-entry:last-child { border-bottom: none; }
+.update-date { font-weight: 600; color: #999; margin-right: 6px; }
+.update-add { display: flex; gap: 6px; margin-top: 8px; }
+.update-add input { flex: 1; font-size: 11px; border: 1px solid #d8d8d8; border-radius: 4px; padding: 3px 6px; height: 24px; }
+.update-add button { font-size: 10px; padding: 2px 10px; border-radius: 4px; border: 1px solid #185FA5; background: #185FA5; color: #fff; cursor: pointer; white-space: nowrap; }
 .today-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
 .today-card { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 12px 14px; }
 .today-card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
@@ -70,7 +90,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .gantt-bar { position: absolute; height: 100%; border-radius: 3px; display: flex; align-items: center; padding: 0 5px; font-size: 9px; font-weight: 600; white-space: nowrap; overflow: hidden; color: #fff; }
 .empty { text-align: center; color: #aaa; font-size: 13px; padding: 3rem; }
 .loading { text-align: center; color: #aaa; font-size: 13px; padding: 3rem; }
-
 .sync-bar { position: fixed; bottom: 1rem; right: 1rem; display: flex; align-items: center; gap: 8px; background: #1a1a1a; color: #fff; border-radius: 8px; padding: 8px 14px; font-size: 12px; font-weight: 500; z-index: 100; transition: all 0.3s; opacity: 0; pointer-events: none; }
 .sync-bar.visible { opacity: 1; pointer-events: auto; }
 .sync-bar.saving { background: #185FA5; }
@@ -85,6 +104,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <span class="last-updated" id="last-updated"></span>
   </div>
   <div class="area-filters" id="area-filters">
+    <button class="filter-btn area-btn" onclick="filterArea('all',this)">Todos</button>
     <button class="filter-btn area-btn active" onclick="filterArea('ops',this)">Ops</button>
     <button class="filter-btn area-btn" onclick="filterArea('mkt',this)">Mkt</button>
     <button class="filter-btn area-btn" onclick="filterArea('pr',this)">PR</button>
@@ -92,6 +112,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <button class="filter-btn area-btn" onclick="filterArea('otros',this)">Otros</button>
   </div>
   <div class="person-filters" id="person-filters"></div>
+  <div class="tab-filters">
+    <button class="filter-btn prio-btn" id="prio-filter-btn" onclick="togglePrioFilter(this)">⚡ Prioritarios</button>
+  </div>
   <div class="tabs">
     <div class="tab active" onclick="switchTab('board',this)">Tablero</div>
     <div class="tab" onclick="switchTab('today',this)">Hoy</div>
@@ -113,9 +136,11 @@ const WEBHOOK_URL = 'https://javipati.app.n8n.cloud/webhook/yango-web-update';
 let data = null;
 let currentArea = 'ops';
 let currentPerson = 'all';
+let onlyPrio = false;
 let taskStatus = {};
 let taskPriority = {};
 let taskEta = {};
+let taskUpdates = {};
 let saveTimer = null;
 
 async function loadData() {
@@ -138,11 +163,17 @@ function initState() {
       taskStatus[t.id] = t.status;
       taskPriority[t.id] = t.priority;
       taskEta[t.id] = t.eta;
+      taskUpdates[t.id] = t.updates || [];
     }));
   });
 }
 
 function allPeopleInArea(area) {
+  if (area === 'all') {
+    let result = [];
+    Object.values(data.areas).forEach(a => result = result.concat(a.people||[], a.kams||[]));
+    return result;
+  }
   const a = data.areas[area];
   if (!a) return [];
   return [...(a.people||[]), ...(a.kams||[])];
@@ -161,8 +192,17 @@ function filterArea(area, btn) {
     b.classList.remove('active','active-mkt','active-pr','active-gr','active-otros');
   });
   btn.classList.add('active');
-  if (area !== 'ops') btn.classList.add('active-' + area);
+  if (area === 'mkt') btn.classList.add('active-mkt');
+  else if (area === 'pr') btn.classList.add('active-pr');
+  else if (area === 'gr') btn.classList.add('active-gr');
+  else if (area === 'otros') btn.classList.add('active-otros');
   renderPersonFilters(); renderAll();
+}
+
+function togglePrioFilter(btn) {
+  onlyPrio = !onlyPrio;
+  btn.classList.toggle('active', onlyPrio);
+  renderAll();
 }
 
 function filterPerson(id, btn) {
@@ -189,11 +229,22 @@ function switchTab(tab, btn) {
 }
 
 function filteredPeople() {
+  if (currentArea === 'all') {
+    let result = [];
+    Object.values(data.areas).forEach(a => result = result.concat(a.people||[]));
+    return currentPerson === 'all' ? result : result.filter(x => x.id === currentPerson);
+  }
   const a = data.areas[currentArea];
   const p = a ? (a.people||[]) : [];
   return currentPerson === 'all' ? p : p.filter(x => x.id === currentPerson);
 }
+
 function filteredKams() {
+  if (currentArea === 'all') {
+    let result = [];
+    Object.values(data.areas).forEach(a => result = result.concat(a.kams||[]));
+    return currentPerson === 'all' ? result : result.filter(x => x.id === currentPerson);
+  }
   const a = data.areas[currentArea];
   const k = a ? (a.kams||[]) : [];
   return currentPerson === 'all' ? k : k.filter(x => x.id === currentPerson);
@@ -245,7 +296,6 @@ function scheduleSync() {
 }
 
 async function syncToGitHub() {
-  // Rebuild data with current state
   const updated = JSON.parse(JSON.stringify(data));
   Object.values(updated.areas).forEach(area => {
     [...(area.people||[]), ...(area.kams||[])].forEach(p => {
@@ -253,10 +303,10 @@ async function syncToGitHub() {
         t.status = taskStatus[t.id] ?? t.status;
         t.priority = taskPriority[t.id] ?? t.priority;
         t.eta = taskEta[t.id] ?? t.eta;
+        t.updates = taskUpdates[t.id] ?? t.updates ?? [];
       });
     });
   });
-
   try {
     const res = await fetch(WEBHOOK_URL, {
       method: 'POST',
@@ -279,10 +329,91 @@ function updatePriority(id, val) { taskPriority[id] = val || null; scheduleSync(
 function updateStatus(id, val) { taskStatus[id] = val; scheduleSync(); renderAll(); }
 function updateEta(id, val) { taskEta[id] = val || null; scheduleSync(); renderAll(); }
 
+function toggleUpdates(id, btn) {
+  const row = document.getElementById('upanel-row-' + id);
+  if (!row) return;
+  const isOpen = row.classList.contains('open');
+  row.classList.toggle('open', !isOpen);
+  const count = (taskUpdates[id]||[]).length;
+  btn.textContent = !isOpen ? ('▲' + (count?' '+count:'')) : ('▼' + (count?' '+count:''));
+}
+
+function addUpdate(id) {
+  const input = document.getElementById('uinput-' + id);
+  const text = input ? input.value.trim() : '';
+  if (!text) return;
+  const today = new Date();
+  const label = String(today.getDate()).padStart(2,'0') + '.' + String(today.getMonth()+1).padStart(2,'0');
+  if (!taskUpdates[id]) taskUpdates[id] = [];
+  taskUpdates[id].unshift({ date: label, text });
+  input.value = '';
+  scheduleSync();
+  renderAll();
+}
+
+function showAddRow(personId, tableId) {
+  const existing = document.getElementById('add-row-' + tableId);
+  if (existing) { existing.remove(); return; }
+  const tbody = document.getElementById('tbody-' + tableId);
+  if (!tbody) return;
+  const tr = document.createElement('tr');
+  tr.id = 'add-row-' + tableId;
+  tr.className = 'add-task-row';
+  tr.innerHTML = `
+    <td><input id="new-cat-${tableId}" placeholder="Categoría" /></td>
+    <td><input id="new-desc-${tableId}" placeholder="Descripción..." /></td>
+    <td><select class="mini-select" id="new-prio-${tableId}">
+      <option value="">—</option>
+      <option value="Alta">Alta</option>
+      <option value="Media">Media</option>
+      <option value="Baja">Baja</option>
+    </select></td>
+    <td><select class="mini-select" id="new-status-${tableId}">
+      <option value="pending">Pendiente</option>
+      <option value="progress">En curso</option>
+      <option value="done">Listo</option>
+    </select></td>
+    <td><input type="date" class="mini-date" id="new-eta-${tableId}" style="width:100%" /></td>
+    <td><button class="add-task-btn" onclick="saveNewTask('${personId}','${tableId}')">✓</button></td>
+  `;
+  tbody.appendChild(tr);
+  document.getElementById('new-desc-' + tableId).focus();
+}
+
+function saveNewTask(personId, tableId) {
+  const cat = (document.getElementById('new-cat-' + tableId)?.value || '').trim();
+  const desc = (document.getElementById('new-desc-' + tableId)?.value || '').trim();
+  const prio = document.getElementById('new-prio-' + tableId)?.value || null;
+  const status = document.getElementById('new-status-' + tableId)?.value || 'pending';
+  const eta = document.getElementById('new-eta-' + tableId)?.value || null;
+  if (!desc) { alert('Ingresa una descripción'); return; }
+
+  const id = 't' + Date.now();
+  const newTask = { id, type: 'little', cat: cat || 'General', desc, priority: prio || null, eta: eta || null, status, link: '', updates: [] };
+
+  let found = false;
+  Object.values(data.areas).forEach(a => {
+    [...(a.people||[]), ...(a.kams||[])].forEach(p => {
+      if (p.id === personId) { p.tasks.push(newTask); found = true; }
+    });
+  });
+
+  if (found) {
+    taskStatus[id] = status;
+    taskPriority[id] = prio;
+    taskEta[id] = eta;
+    taskUpdates[id] = [];
+    scheduleSync();
+    renderAll();
+  }
+}
+
 function renderTaskBlock(p) {
-  const mainTasks = p.tasks.filter(t => t.type==='main');
-  const littleTasks = p.tasks.filter(t => t.type==='little');
-  const total = p.tasks.filter(t => taskStatus[t.id]!=='done').length;
+  const allTasks = onlyPrio
+    ? p.tasks.filter(t => taskPriority[t.id] === 'Alta')
+    : p.tasks;
+  const total = p.tasks.filter(t => taskStatus[t.id] !== 'done').length;
+  const tableId = p.id;
 
   let html = `<div class="person-block">
     <div class="person-header">
@@ -290,6 +421,8 @@ function renderTaskBlock(p) {
       <div><div class="person-name">${p.name}</div><div class="task-count">${total} pendiente${total!==1?'s':''}</div></div>
     </div>`;
 
+  html += `<div class="kr-section">
+    <div class="kr-section-title">${(p.krs && p.krs.length) ? 'Key Results' : 'KR Pendiente'}</div>`;
   if (p.krs && p.krs.length) {
     html += `<div class="kr-strip">`;
     p.krs.forEach(kr => {
@@ -297,34 +430,46 @@ function renderTaskBlock(p) {
     });
     html += `</div>`;
   }
+  html += `</div>`;
 
-  const renderSection = (tasks, label) => {
-    if (!tasks.length) return '';
-    let s = `<div class="section"><div class="section-title">${label}</div>
-      <table class="task-table">
-        <thead><tr>
-          <th style="width:105px">Categoría</th>
-          <th>Descripción</th>
-          <th style="width:80px">Prioridad</th>
-          <th style="width:88px">Estado</th>
-          <th style="width:115px">ETA</th>
-        </tr></thead><tbody>`;
-    tasks.forEach(t => {
-      const hi = taskPriority[t.id] === 'Alta';
-      s += `<tr class="${hi?'high-prio':''}">
-        <td><span class="task-cat">${t.cat}</span></td>
-        <td><div class="task-desc">${t.desc}</div>${t.link?`<a class="task-link" href="${t.link}" target="_blank">↗ StarTrek</a>`:''}</td>
-        <td>${prioSelect(t.id)}</td>
-        <td>${statusSelect(t.id)}</td>
-        <td>${etaCell(t.id)}</td>
-      </tr>`;
-    });
-    s += `</tbody></table></div>`;
-    return s;
-  };
+  html += `<table class="task-table">
+    <thead><tr>
+      <th style="width:100px">Categoría</th>
+      <th>Descripción</th>
+      <th style="width:80px">Prioridad</th>
+      <th style="width:88px">Estado</th>
+      <th style="width:110px">ETA</th>
+      <th style="width:36px"></th>
+    </tr></thead>
+    <tbody id="tbody-${tableId}">`;
 
-  html += renderSection(mainTasks, 'Main tasks');
-  html += renderSection(littleTasks, 'Little tasks');
+  allTasks.forEach(t => {
+    const hi = taskPriority[t.id] === 'Alta';
+    const updates = taskUpdates[t.id] || [];
+    const uCount = updates.length;
+    html += `<tr class="${hi?'high-prio':''}">
+      <td><span class="task-cat">${t.cat}</span></td>
+      <td><div class="task-desc">${t.desc}</div>${t.link?`<a class="task-link" href="${t.link}" target="_blank">↗ StarTrek</a>`:''}</td>
+      <td>${prioSelect(t.id)}</td>
+      <td>${statusSelect(t.id)}</td>
+      <td>${etaCell(t.id)}</td>
+      <td><button class="update-toggle" onclick="toggleUpdates('${t.id}',this)">▼${uCount?' '+uCount:''}</button></td>
+    </tr>
+    <tr class="update-panel-row" id="upanel-row-${t.id}">
+      <td colspan="6" style="padding:0;border-bottom:1px solid #f0f0f0;">
+        <div class="update-panel-inner" style="background:#f9f9f7;padding:8px 12px;">
+          ${uCount ? updates.map(u => `<div class="update-entry"><span class="update-date">${u.date}:</span>${u.text}</div>`).join('') : '<div class="update-entry" style="color:#bbb;font-style:italic">Sin actualizaciones aún</div>'}
+          <div class="update-add">
+            <input id="uinput-${t.id}" placeholder="Agregar update..." onkeydown="if(event.key==='Enter')addUpdate('${t.id}')" />
+            <button onclick="addUpdate('${t.id}')">+ Agregar</button>
+          </div>
+        </div>
+      </td>
+    </tr>`;
+  });
+
+  html += `</tbody></table>`;
+  html += `<span class="add-row-trigger" onclick="showAddRow('${p.id}','${tableId}')">＋ Agregar tarea</span>`;
   html += `</div>`;
   return html;
 }
@@ -332,8 +477,21 @@ function renderTaskBlock(p) {
 function renderBoard() {
   if (!data) return;
   const container = document.getElementById('view-board');
-  const people = filteredPeople();
-  const kams = filteredKams();
+
+  let people, kams;
+  if (currentArea === 'all') {
+    people = []; kams = [];
+    Object.values(data.areas).forEach(a => {
+      const fp = currentPerson === 'all' ? (a.people||[]) : (a.people||[]).filter(x => x.id === currentPerson);
+      const fk = currentPerson === 'all' ? (a.kams||[]) : (a.kams||[]).filter(x => x.id === currentPerson);
+      people = people.concat(fp);
+      kams = kams.concat(fk);
+    });
+  } else {
+    people = filteredPeople();
+    kams = filteredKams();
+  }
+
   if (!people.length && !kams.length) { container.innerHTML = '<div class="empty">Sin datos para esta área aún</div>'; return; }
   let html = people.map(p => renderTaskBlock(p)).join('');
   if (kams.length) {
@@ -352,9 +510,11 @@ function renderToday() {
   let any = false;
 
   people.forEach(p => {
-    const due = p.tasks.filter(t => taskStatus[t.id]!=='done' && taskEta[t.id] && !String(taskEta[t.id]).startsWith('Q') && taskEta[t.id] <= today);
-    const hi = p.tasks.filter(t => taskStatus[t.id]!=='done' && taskPriority[t.id]==='Alta' && !due.find(d=>d.id===t.id));
-    const all = [...due, ...hi];
+    let tasks = p.tasks.filter(t => taskStatus[t.id] !== 'done');
+    const due = tasks.filter(t => taskEta[t.id] && !String(taskEta[t.id]).startsWith('Q') && taskEta[t.id] <= today);
+    const hi = tasks.filter(t => taskPriority[t.id]==='Alta' && !due.find(d=>d.id===t.id));
+    let all = [...due, ...hi];
+    if (onlyPrio) all = all.filter(t => taskPriority[t.id] === 'Alta');
     if (!all.length) return;
     any = true;
     html += `<div class="today-card">
@@ -396,11 +556,11 @@ function renderGantt() {
   const months = ['Abr','May','Jun'];
   const startDates = { t1:'2026-04-10', t2:'2026-04-15', t13:'2026-04-14' };
 
-  let rows = '';
-  let any = false;
+  let rows = ''; let any = false;
 
   people.forEach(p => {
-    const tasks = p.tasks.filter(t => t.type==='main' && taskEta[t.id] && !String(taskEta[t.id]).startsWith('Q'));
+    let tasks = p.tasks.filter(t => taskEta[t.id] && !String(taskEta[t.id]).startsWith('Q'));
+    if (onlyPrio) tasks = tasks.filter(t => taskPriority[t.id] === 'Alta');
     if (!tasks.length) return;
     any = true;
     tasks.forEach(t => {
@@ -418,7 +578,7 @@ function renderGantt() {
     });
   });
 
-  if (!any) { container.innerHTML = '<div class="empty">No hay main tasks con fecha para mostrar en Gantt</div>'; return; }
+  if (!any) { container.innerHTML = '<div class="empty">No hay tareas con fecha para mostrar en Gantt</div>'; return; }
   container.innerHTML = `<div class="gantt-wrap">
     <div class="gantt-months">${months.map(m=>`<div class="gantt-month">${m}</div>`).join('')}</div>
     ${rows}
