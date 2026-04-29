@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-23",
+  "last_updated": "2026-04-29",
   "areas": {
     "ops": {
       "people": [
@@ -19,7 +19,8 @@
               "priority": "Media",
               "eta": "2026-05-27",
               "status": "progress",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t2",
@@ -29,7 +30,8 @@
               "priority": "Alta",
               "eta": "2026-06-15",
               "status": "done",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t3",
@@ -39,7 +41,8 @@
               "priority": "Alta",
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t4",
@@ -49,7 +52,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t5",
@@ -59,7 +63,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": "https://st.yandex-team.ru/COMPINTELL-15"
+              "link": "https://st.yandex-team.ru/COMPINTELL-15",
+              "updates": []
             },
             {
               "id": "t1745411400",
@@ -69,7 +74,19 @@
               "priority": "Media",
               "eta": "2026-04-28",
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
+            },
+            {
+              "id": "t1777473375705",
+              "type": "little",
+              "cat": "MS&E",
+              "desc": "Análisis de MS&E de impacto cuando hay lluvias",
+              "priority": null,
+              "eta": "2026-04-30",
+              "status": "pending",
+              "link": "",
+              "updates": []
             }
           ]
         },
@@ -105,7 +122,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t7",
@@ -115,7 +133,8 @@
               "priority": null,
               "eta": null,
               "status": "progress",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t8",
@@ -125,7 +144,8 @@
               "priority": null,
               "eta": "2026-04-20",
               "status": "done",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t9",
@@ -135,7 +155,8 @@
               "priority": null,
               "eta": "2026-04-16",
               "status": "pending",
-              "link": "https://st.yandex-team.ru/TAXIASSIST-598054"
+              "link": "https://st.yandex-team.ru/TAXIASSIST-598054",
+              "updates": []
             },
             {
               "id": "t10",
@@ -145,7 +166,8 @@
               "priority": null,
               "eta": "2026-04-16",
               "status": "pending",
-              "link": "https://st.yandex-team.ru/TAXIASSIST-608433"
+              "link": "https://st.yandex-team.ru/TAXIASSIST-608433",
+              "updates": []
             },
             {
               "id": "t11",
@@ -155,7 +177,8 @@
               "priority": "Alta",
               "eta": "2026-04-20",
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t12",
@@ -165,7 +188,8 @@
               "priority": "Alta",
               "eta": "2026-04-20",
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             }
           ]
         },
@@ -191,7 +215,8 @@
               "priority": null,
               "eta": "2026-04-21",
               "status": "progress",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t14",
@@ -201,7 +226,8 @@
               "priority": null,
               "eta": "2026-04-30",
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t15",
@@ -211,7 +237,8 @@
               "priority": null,
               "eta": "2026-04-21",
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t16",
@@ -221,7 +248,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             }
           ]
         },
@@ -247,7 +275,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t18",
@@ -257,7 +286,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t19",
@@ -267,7 +297,8 @@
               "priority": "Alta",
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t20",
@@ -277,7 +308,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t21",
@@ -287,7 +319,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             }
           ]
         },
@@ -313,7 +346,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t27",
@@ -323,7 +357,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t28",
@@ -333,7 +368,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t29",
@@ -343,7 +379,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t30",
@@ -353,7 +390,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             }
           ]
         },
@@ -379,7 +417,8 @@
               "priority": "Alta",
               "eta": null,
               "status": "progress",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t23",
@@ -389,7 +428,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t24",
@@ -399,7 +439,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "t25",
@@ -409,7 +450,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             }
           ]
         }
@@ -431,7 +473,8 @@
               "priority": "Alta",
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "k2",
@@ -441,7 +484,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "k3",
@@ -451,7 +495,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             }
           ]
         },
@@ -471,7 +516,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "k5",
@@ -481,7 +527,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             }
           ]
         },
@@ -501,7 +548,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "k7",
@@ -511,7 +559,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             }
           ]
         },
@@ -531,7 +580,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             }
           ]
         }
@@ -555,7 +605,8 @@
               "priority": "Media",
               "eta": null,
               "status": "progress",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "m2",
@@ -565,7 +616,8 @@
               "priority": "Baja",
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "m3",
@@ -575,7 +627,8 @@
               "priority": "Alta",
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             }
           ]
         },
@@ -595,7 +648,8 @@
               "priority": null,
               "eta": null,
               "status": "progress",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "m5",
@@ -605,7 +659,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "m6",
@@ -615,7 +670,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "m7",
@@ -625,7 +681,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "m8",
@@ -635,7 +692,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "m9",
@@ -645,7 +703,8 @@
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": ""
+              "link": "",
+              "updates": []
             }
           ]
         },
@@ -665,7 +724,8 @@
               "priority": null,
               "eta": null,
               "status": "progress",
-              "link": ""
+              "link": "",
+              "updates": []
             }
           ]
         },
@@ -685,7 +745,8 @@
               "priority": null,
               "eta": null,
               "status": "progress",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "m12",
@@ -695,7 +756,8 @@
               "priority": null,
               "eta": null,
               "status": "progress",
-              "link": ""
+              "link": "",
+              "updates": []
             },
             {
               "id": "m13",
@@ -705,7 +767,8 @@
               "priority": null,
               "eta": null,
               "status": "progress",
-              "link": ""
+              "link": "",
+              "updates": []
             }
           ]
         }
