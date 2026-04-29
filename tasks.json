@@ -20,7 +20,8 @@
               "eta": "2026-05-27",
               "status": "progress",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             },
             {
               "id": "t2",
@@ -31,7 +32,8 @@
               "eta": "2026-06-15",
               "status": "done",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             },
             {
               "id": "t3",
@@ -42,7 +44,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             },
             {
               "id": "t4",
@@ -53,7 +56,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             },
             {
               "id": "t5",
@@ -64,7 +68,8 @@
               "eta": null,
               "status": "pending",
               "link": "https://st.yandex-team.ru/COMPINTELL-15",
-              "updates": []
+              "updates": [],
+              "kr": null
             },
             {
               "id": "t1745411400",
@@ -75,7 +80,8 @@
               "eta": "2026-04-28",
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             },
             {
               "id": "t1777473375705",
@@ -86,7 +92,20 @@
               "eta": "2026-04-30",
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
+            },
+            {
+              "id": "t1777500113645",
+              "type": "little",
+              "cat": "Indrive MS",
+              "desc": "Agregar data de indrive en el sheets de market share",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": null
             }
           ]
         },
@@ -123,7 +142,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Moto"
             },
             {
               "id": "t7",
@@ -134,7 +154,8 @@
               "eta": null,
               "status": "progress",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Moto"
             },
             {
               "id": "t8",
@@ -145,7 +166,8 @@
               "eta": "2026-04-20",
               "status": "done",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Moto"
             },
             {
               "id": "t9",
@@ -156,7 +178,8 @@
               "eta": "2026-04-16",
               "status": "pending",
               "link": "https://st.yandex-team.ru/TAXIASSIST-598054",
-              "updates": []
+              "updates": [],
+              "kr": "Moto"
             },
             {
               "id": "t10",
@@ -167,7 +190,8 @@
               "eta": "2026-04-16",
               "status": "pending",
               "link": "https://st.yandex-team.ru/TAXIASSIST-608433",
-              "updates": []
+              "updates": [],
+              "kr": "Moto"
             },
             {
               "id": "t11",
@@ -178,7 +202,8 @@
               "eta": "2026-04-20",
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Moto"
             },
             {
               "id": "t12",
@@ -189,7 +214,8 @@
               "eta": "2026-04-20",
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Moto"
             }
           ]
         },
@@ -216,7 +242,8 @@
               "eta": "2026-04-21",
               "status": "progress",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Driver acq."
             },
             {
               "id": "t14",
@@ -227,7 +254,8 @@
               "eta": "2026-04-30",
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Driver acq."
             },
             {
               "id": "t15",
@@ -238,7 +266,8 @@
               "eta": "2026-04-21",
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Driver acq."
             },
             {
               "id": "t16",
@@ -249,7 +278,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Driver acq."
             }
           ]
         },
@@ -276,7 +306,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Moto Fleet"
             },
             {
               "id": "t18",
@@ -287,7 +318,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Moto Fleet"
             },
             {
               "id": "t19",
@@ -298,7 +330,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Moto Fleet"
             },
             {
               "id": "t20",
@@ -309,7 +342,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Moto Fleet"
             },
             {
               "id": "t21",
@@ -320,7 +354,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Moto Fleet"
             }
           ]
         },
@@ -347,7 +382,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Nequi"
             },
             {
               "id": "t27",
@@ -358,7 +394,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Nequi"
             },
             {
               "id": "t28",
@@ -369,7 +406,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Nequi"
             },
             {
               "id": "t29",
@@ -380,7 +418,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Nequi"
             },
             {
               "id": "t30",
@@ -391,7 +430,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Nequi"
             }
           ]
         },
@@ -418,7 +458,8 @@
               "eta": null,
               "status": "progress",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Economy Cali"
             },
             {
               "id": "t23",
@@ -429,7 +470,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Economy Cali"
             },
             {
               "id": "t24",
@@ -440,7 +482,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Economy Cali"
             },
             {
               "id": "t25",
@@ -451,7 +494,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": "Economy Cali"
             }
           ]
         }
@@ -474,7 +518,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             },
             {
               "id": "k2",
@@ -485,7 +530,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             },
             {
               "id": "k3",
@@ -496,7 +542,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             }
           ]
         },
@@ -517,7 +564,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             },
             {
               "id": "k5",
@@ -528,7 +576,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             }
           ]
         },
@@ -549,7 +598,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             },
             {
               "id": "k7",
@@ -560,7 +610,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             }
           ]
         },
@@ -581,7 +632,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             }
           ]
         }
@@ -606,7 +658,8 @@
               "eta": null,
               "status": "progress",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             },
             {
               "id": "m2",
@@ -617,7 +670,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             },
             {
               "id": "m3",
@@ -628,7 +682,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             }
           ]
         },
@@ -649,7 +704,8 @@
               "eta": null,
               "status": "progress",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             },
             {
               "id": "m5",
@@ -660,7 +716,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             },
             {
               "id": "m6",
@@ -671,7 +728,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             },
             {
               "id": "m7",
@@ -682,7 +740,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             },
             {
               "id": "m8",
@@ -693,7 +752,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             },
             {
               "id": "m9",
@@ -704,7 +764,8 @@
               "eta": null,
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             }
           ]
         },
@@ -725,7 +786,8 @@
               "eta": null,
               "status": "progress",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             }
           ]
         },
@@ -746,7 +808,8 @@
               "eta": null,
               "status": "progress",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             },
             {
               "id": "m12",
@@ -757,7 +820,8 @@
               "eta": null,
               "status": "progress",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             },
             {
               "id": "m13",
@@ -768,7 +832,8 @@
               "eta": null,
               "status": "progress",
               "link": "",
-              "updates": []
+              "updates": [],
+              "kr": null
             }
           ]
         }
