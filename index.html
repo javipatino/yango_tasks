@@ -7,9 +7,9 @@
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f3; color: #1a1a1a; font-size: 13px; }
-.wrapper { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem; }
+.wrapper { max-width: 1150px; margin: 0 auto; padding: 1.5rem 1rem; }
 .top-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 10px; }
-.top-bar h1 { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #1a1a1a; }
+.top-bar h1 { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
 .last-updated { font-size: 11px; color: #888; }
 .area-filters { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem; }
 .person-filters { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 0.6rem; min-height: 28px; }
@@ -31,18 +31,23 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .person-block { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1rem; }
 .person-header { display: flex; align-items: center; gap: 10px; margin-bottom: 0.9rem; }
 .avatar { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; flex-shrink: 0; }
-.person-name { font-size: 13px; font-weight: 600; color: #1a1a1a; }
+.person-name { font-size: 13px; font-weight: 600; }
 .task-count { font-size: 11px; color: #999; }
-
-/* KR subsection */
 .kr-subsection { margin-bottom: 1rem; }
 .kr-subsection-header { display: flex; align-items: center; gap: 8px; padding: 5px 8px; background: #f0f0ee; border-radius: 6px; margin-bottom: 4px; }
-.kr-subsection-title { font-size: 11px; font-weight: 700; color: #444; letter-spacing: 0.03em; }
-.kr-subsection-desc { font-size: 11px; color: #777; }
-.kr-subsection-eta { font-size: 10px; color: #bbb; margin-left: auto; }
-.kr-subsection-pending { font-size: 10px; font-style: italic; color: #aaa; padding: 4px 8px; margin-bottom: 4px; }
-
-/* Task table */
+.kr-subsection-title { font-size: 11px; font-weight: 700; color: #444; }
+.kr-subsection-desc { font-size: 11px; color: #777; flex: 1; }
+.kr-subsection-eta { font-size: 10px; color: #bbb; }
+.kr-edit-btn { background: none; border: none; color: #ccc; cursor: pointer; font-size: 12px; padding: 1px 4px; border-radius: 3px; }
+.kr-edit-btn:hover { color: #185FA5; background: #e8f0fb; }
+.kr-edit-form { display: none; background: #f5f5f3; border-radius: 6px; padding: 8px 10px; margin-bottom: 6px; gap: 6px; flex-wrap: wrap; align-items: center; }
+.kr-edit-form.open { display: flex; }
+.kr-edit-form input { font-size: 11px; border: 1px solid #d8d8d8; border-radius: 4px; padding: 2px 6px; height: 24px; background: #fff; }
+.kr-edit-form input.desc-input { flex: 1; min-width: 160px; }
+.kr-edit-form input.eta-input { width: 70px; }
+.kr-edit-form button { font-size: 10px; padding: 2px 8px; border-radius: 4px; cursor: pointer; height: 24px; }
+.kr-save-btn { background: #185FA5; color: #fff; border: 1px solid #185FA5; }
+.kr-cancel-btn { background: #fff; color: #888; border: 1px solid #d8d8d8; }
 .task-table { width: 100%; border-collapse: collapse; }
 .task-table th { font-size: 10px; color: #aaa; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; padding: 4px 6px; text-align: left; }
 .task-table td { padding: 4px 6px; border-bottom: 1px solid #f5f5f3; vertical-align: middle; }
@@ -57,45 +62,50 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .eta-wrap { display: flex; align-items: center; gap: 4px; }
 .eta-label { font-size: 11px; color: #999; min-width: 55px; }
 .mini-date { font-size: 11px; border: 1px solid #d8d8d8; border-radius: 4px; padding: 1px 3px; height: 22px; background: #fff; color: #333; cursor: pointer; }
-.task-table tr.high-prio .mini-date { background: #fff5f5; }
-.kam-label { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #aaa; margin: 1.25rem 0 0.5rem; padding-bottom: 4px; border-bottom: 1px solid #e0e0e0; }
-
-/* Action buttons column */
-.action-btns { display: flex; align-items: center; gap: 3px; }
-.update-toggle { background: none; border: none; color: #ccc; cursor: pointer; font-size: 11px; padding: 2px 4px; border-radius: 3px; line-height: 1; white-space: nowrap; }
-.update-toggle:hover { color: #185FA5; background: #f0f5ff; }
-.move-btn { background: none; border: none; color: #ccc; cursor: pointer; font-size: 13px; padding: 2px 4px; border-radius: 3px; line-height: 1; }
-.move-btn:hover { color: #888; background: #f0f0ee; }
-.delete-btn { background: none; border: none; color: #ddd; cursor: pointer; font-size: 13px; padding: 2px 4px; border-radius: 3px; line-height: 1; }
-.delete-btn:hover { color: #c0392b; background: #fff0f0; }
-
-/* Move modal */
-.move-modal-row { display: none; }
-.move-modal-row.open { display: table-row; }
-.move-modal-inner { display: flex; align-items: center; gap: 8px; padding: 6px 10px; background: #f5f5f3; border-bottom: 1px solid #e8e8e8; }
-.move-modal-inner label { font-size: 11px; color: #666; }
-.move-modal-inner select { font-size: 11px; border: 1px solid #d8d8d8; border-radius: 4px; padding: 2px 5px; height: 24px; background: #fff; cursor: pointer; }
-.move-modal-inner button { font-size: 10px; padding: 2px 8px; border-radius: 4px; border: 1px solid #185FA5; background: #185FA5; color: #fff; cursor: pointer; }
-.move-modal-inner .cancel-btn { background: #fff; color: #888; border-color: #d8d8d8; }
-
+/* Edit row */
+.edit-row { display: none; }
+.edit-row.open { display: table-row; }
+.edit-row td { background: #f0f5ff !important; padding: 8px 6px; border-bottom: 2px solid #185FA5 !important; }
+.edit-form { display: flex; flex-wrap: wrap; gap: 6px; align-items: flex-end; }
+.edit-field { display: flex; flex-direction: column; gap: 2px; }
+.edit-field label { font-size: 9px; color: #999; text-transform: uppercase; letter-spacing: 0.05em; }
+.edit-field input, .edit-field select { font-size: 11px; border: 1px solid #c0d0e8; border-radius: 4px; padding: 2px 6px; height: 24px; background: #fff; min-width: 80px; }
+.edit-field input.wide { min-width: 220px; }
+.edit-field input.med { min-width: 110px; }
+.edit-save-btn { font-size: 10px; padding: 2px 10px; border-radius: 4px; background: #185FA5; color: #fff; border: 1px solid #185FA5; cursor: pointer; height: 24px; }
+.edit-cancel-btn { font-size: 10px; padding: 2px 8px; border-radius: 4px; background: #fff; color: #888; border: 1px solid #d8d8d8; cursor: pointer; height: 24px; }
+/* Action buttons */
+.action-btns { display: flex; align-items: center; gap: 2px; white-space: nowrap; }
+.act-btn { background: none; border: none; cursor: pointer; font-size: 12px; padding: 2px 4px; border-radius: 3px; color: #ccc; line-height: 1; }
+.act-btn:hover { background: #f0f0ee; color: #555; }
+.act-btn.edit:hover { color: #185FA5; background: #e8f0fb; }
+.act-btn.move:hover { color: #888; }
+.act-btn.del:hover { color: #c0392b; background: #fff0f0; }
+.act-btn.hist:hover { color: #185FA5; background: #f0f5ff; }
+/* Move panel */
+.move-row { display: none; }
+.move-row.open { display: table-row; }
+.move-inner { display: flex; align-items: center; gap: 8px; padding: 6px 10px; background: #f5f5f3; border-bottom: 1px solid #e8e8e8; }
+.move-inner label { font-size: 11px; color: #666; }
+.move-inner select { font-size: 11px; border: 1px solid #d8d8d8; border-radius: 4px; padding: 2px 5px; height: 24px; background: #fff; cursor: pointer; }
+.move-inner button { font-size: 10px; padding: 2px 8px; border-radius: 4px; cursor: pointer; height: 24px; }
 /* Update panel */
-.update-panel-row { display: none; }
-.update-panel-row.open { display: table-row; }
-.update-panel-inner { background: #f9f9f7; padding: 8px 12px; border-bottom: 1px solid #f0f0f0; }
+.upanel-row { display: none; }
+.upanel-row.open { display: table-row; }
+.upanel-inner { background: #f9f9f7; padding: 8px 12px; border-bottom: 1px solid #f0f0f0; }
 .update-entry { font-size: 11px; color: #555; padding: 4px 0; border-bottom: 1px solid #efefed; line-height: 1.4; }
 .update-entry:last-child { border-bottom: none; }
 .update-date { font-weight: 600; color: #999; margin-right: 6px; }
 .update-add { display: flex; gap: 6px; margin-top: 8px; }
 .update-add input { flex: 1; font-size: 11px; border: 1px solid #d8d8d8; border-radius: 4px; padding: 3px 6px; height: 24px; }
 .update-add button { font-size: 10px; padding: 2px 10px; border-radius: 4px; border: 1px solid #185FA5; background: #185FA5; color: #fff; cursor: pointer; white-space: nowrap; }
-
 /* Add task */
 .add-task-row td { background: #f9f9f7 !important; border-bottom: none !important; }
 .add-task-row input:not([type=date]) { font-size: 11px; border: 1px solid #d8d8d8; border-radius: 4px; padding: 1px 4px; height: 22px; background: #fff; color: #333; width: 100%; }
 .add-task-btn { font-size: 10px; padding: 2px 8px; border-radius: 4px; border: 1px solid #185FA5; background: #185FA5; color: #fff; cursor: pointer; }
 .add-row-trigger { font-size: 11px; color: #185FA5; cursor: pointer; padding: 5px 6px; display: inline-flex; align-items: center; gap: 4px; border-radius: 4px; margin-top: 4px; }
 .add-row-trigger:hover { background: #f0f5ff; }
-
+.kam-label { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #aaa; margin: 1.25rem 0 0.5rem; padding-bottom: 4px; border-bottom: 1px solid #e0e0e0; }
 /* Today */
 .today-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
 .today-card { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 12px 14px; }
@@ -104,7 +114,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .today-task:last-child { border-bottom: none; padding-bottom: 0; }
 .check-box { width: 15px; height: 15px; border-radius: 3px; border: 1px solid #ccc; flex-shrink: 0; margin-top: 1px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 9px; background: #fff; }
 .check-box.checked { background: #639922; border-color: #639922; color: #fff; }
-
 /* Gantt */
 .gantt-wrap { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 1rem 1.25rem; overflow-x: auto; }
 .gantt-months { display: flex; margin-bottom: 6px; padding-left: 192px; }
@@ -165,7 +174,10 @@ let taskStatus = {};
 let taskPriority = {};
 let taskEta = {};
 let taskUpdates = {};
-let taskKr = {};       // task id → kr cat (string)
+let taskKr = {};
+let taskCat = {};
+let taskDesc = {};
+let taskLink = {};
 let saveTimer = null;
 
 async function loadData() {
@@ -190,20 +202,13 @@ function initState() {
         taskPriority[t.id] = t.priority;
         taskEta[t.id] = t.eta;
         taskUpdates[t.id] = t.updates || [];
-        // If task has no kr field, assign to first KR
         taskKr[t.id] = t.kr || firstKr || null;
+        taskCat[t.id] = t.cat;
+        taskDesc[t.id] = t.desc;
+        taskLink[t.id] = t.link || '';
       });
     });
   });
-}
-
-function getPerson(personId) {
-  for (const area of Object.values(data.areas)) {
-    for (const p of [...(area.people||[]), ...(area.kams||[])]) {
-      if (p.id === personId) return p;
-    }
-  }
-  return null;
 }
 
 function allPeopleInArea(area) {
@@ -337,6 +342,9 @@ async function syncToGitHub() {
         t.eta = taskEta[t.id] ?? t.eta;
         t.updates = taskUpdates[t.id] ?? t.updates ?? [];
         t.kr = taskKr[t.id] ?? t.kr ?? null;
+        t.cat = taskCat[t.id] ?? t.cat;
+        t.desc = taskDesc[t.id] ?? t.desc;
+        t.link = taskLink[t.id] ?? t.link ?? '';
       });
     });
   });
@@ -351,13 +359,105 @@ function updatePriority(id, val) { taskPriority[id] = val || null; scheduleSync(
 function updateStatus(id, val) { taskStatus[id] = val; scheduleSync(); renderAll(); }
 function updateEta(id, val) { taskEta[id] = val || null; scheduleSync(); renderAll(); }
 
+// ── Inline edit ──────────────────────────────────────────────
+function toggleEdit(id) {
+  const row = document.getElementById('edit-row-' + id);
+  if (!row) return;
+  const isOpen = row.classList.contains('open');
+  // close all others first
+  document.querySelectorAll('.edit-row.open').forEach(r => r.classList.remove('open'));
+  if (!isOpen) row.classList.add('open');
+}
+
+function saveEdit(taskId, personId) {
+  const desc = document.getElementById('edit-desc-' + taskId)?.value.trim();
+  const cat  = document.getElementById('edit-cat-' + taskId)?.value.trim();
+  const link = document.getElementById('edit-link-' + taskId)?.value.trim();
+  const kr   = document.getElementById('edit-kr-' + taskId)?.value || null;
+  const prio = document.getElementById('edit-prio-' + taskId)?.value || null;
+  const status = document.getElementById('edit-status-' + taskId)?.value || 'pending';
+  const eta  = document.getElementById('edit-eta-' + taskId)?.value || null;
+
+  if (desc) taskDesc[taskId] = desc;
+  if (cat) taskCat[taskId] = cat;
+  taskLink[taskId] = link || '';
+  taskKr[taskId] = kr || null;
+  taskPriority[taskId] = prio || null;
+  taskStatus[taskId] = status;
+  taskEta[taskId] = eta || null;
+
+  // Also update the data object directly so re-render is correct
+  Object.values(data.areas).forEach(area => {
+    [...(area.people||[]), ...(area.kams||[])].forEach(p => {
+      const t = p.tasks.find(t => t.id === taskId);
+      if (t) {
+        if (desc) t.desc = desc;
+        if (cat) t.cat = cat;
+        t.link = link || '';
+      }
+    });
+  });
+
+  document.getElementById('edit-row-' + taskId)?.classList.remove('open');
+  scheduleSync();
+  renderAll();
+}
+
+// ── KR edit ──────────────────────────────────────────────────
+function toggleKrEdit(personId, krIdx) {
+  const form = document.getElementById('kr-edit-' + personId + '-' + krIdx);
+  if (!form) return;
+  form.classList.toggle('open');
+}
+
+function saveKrEdit(personId, krIdx) {
+  const cat  = document.getElementById('kre-cat-' + personId + '-' + krIdx)?.value.trim();
+  const desc = document.getElementById('kre-desc-' + personId + '-' + krIdx)?.value.trim();
+  const eta  = document.getElementById('kre-eta-' + personId + '-' + krIdx)?.value.trim();
+
+  Object.values(data.areas).forEach(area => {
+    [...(area.people||[]), ...(area.kams||[])].forEach(p => {
+      if (p.id === personId && p.krs && p.krs[krIdx]) {
+        const oldCat = p.krs[krIdx].cat;
+        if (cat) p.krs[krIdx].cat = cat;
+        if (desc) p.krs[krIdx].desc = desc;
+        if (eta) p.krs[krIdx].eta = eta;
+        // update taskKr references if cat changed
+        if (cat && cat !== oldCat) {
+          p.tasks.forEach(t => { if (taskKr[t.id] === oldCat) taskKr[t.id] = cat; });
+        }
+      }
+    });
+  });
+
+  scheduleSync();
+  renderAll();
+}
+
+// ── Move ────────────────────────────────────────────────────
+function toggleMove(id) {
+  const row = document.getElementById('move-row-' + id);
+  if (!row) return;
+  document.querySelectorAll('.move-row.open').forEach(r => r.classList.remove('open'));
+  row.classList.toggle('open');
+}
+
+function applyMove(taskId) {
+  const sel = document.getElementById('move-kr-' + taskId);
+  if (!sel) return;
+  taskKr[taskId] = sel.value || null;
+  document.getElementById('move-row-' + taskId)?.classList.remove('open');
+  scheduleSync(); renderAll();
+}
+
+// ── Updates ─────────────────────────────────────────────────
 function toggleUpdates(id, btn) {
   const row = document.getElementById('upanel-row-' + id);
   if (!row) return;
   const isOpen = row.classList.contains('open');
   row.classList.toggle('open', !isOpen);
   const count = (taskUpdates[id]||[]).length;
-  btn.textContent = !isOpen ? ('▲' + (count?' '+count:'')) : ('▼' + (count?' '+count:''));
+  btn.textContent = !isOpen ? ('▲'+(count?' '+count:'')) : ('▼'+(count?' '+count:''));
 }
 
 function addUpdate(id) {
@@ -372,34 +472,24 @@ function addUpdate(id) {
   scheduleSync(); renderAll();
 }
 
+// ── Delete ───────────────────────────────────────────────────
 function deleteTask(personId, taskId) {
   if (!confirm('¿Eliminar esta tarea?')) return;
-  let found = false;
   Object.values(data.areas).forEach(a => {
     [...(a.people||[]), ...(a.kams||[])].forEach(p => {
       if (p.id === personId) {
         const idx = p.tasks.findIndex(t => t.id === taskId);
-        if (idx !== -1) { p.tasks.splice(idx, 1); found = true; }
+        if (idx !== -1) p.tasks.splice(idx, 1);
       }
     });
   });
-  if (found) { delete taskStatus[taskId]; delete taskPriority[taskId]; delete taskEta[taskId]; delete taskUpdates[taskId]; delete taskKr[taskId]; scheduleSync(); renderAll(); }
-}
-
-function toggleMovePanel(id) {
-  const row = document.getElementById('move-row-' + id);
-  if (!row) return;
-  row.classList.toggle('open');
-}
-
-function applyMove(taskId, personId) {
-  const sel = document.getElementById('move-kr-' + taskId);
-  if (!sel) return;
-  taskKr[taskId] = sel.value;
-  toggleMovePanel(taskId);
+  delete taskStatus[taskId]; delete taskPriority[taskId]; delete taskEta[taskId];
+  delete taskUpdates[taskId]; delete taskKr[taskId]; delete taskCat[taskId];
+  delete taskDesc[taskId]; delete taskLink[taskId];
   scheduleSync(); renderAll();
 }
 
+// ── Add task ─────────────────────────────────────────────────
 function showAddRow(personId, krCat, tableId) {
   const existing = document.getElementById('add-row-' + tableId);
   if (existing) { existing.remove(); return; }
@@ -409,74 +499,100 @@ function showAddRow(personId, krCat, tableId) {
   tr.id = 'add-row-' + tableId;
   tr.className = 'add-task-row';
   tr.innerHTML = `
-    <td><input id="new-cat-${tableId}" placeholder="Categoría" /></td>
-    <td><input id="new-desc-${tableId}" placeholder="Descripción..." /></td>
-    <td><select class="mini-select" id="new-prio-${tableId}">
+    <td><input id="nc-${tableId}" placeholder="Categoría" /></td>
+    <td><input id="nd-${tableId}" placeholder="Descripción..." /></td>
+    <td><select class="mini-select" id="np-${tableId}">
       <option value="">—</option><option value="Alta">Alta</option><option value="Media">Media</option><option value="Baja">Baja</option>
     </select></td>
-    <td><select class="mini-select" id="new-status-${tableId}">
+    <td><select class="mini-select" id="ns-${tableId}">
       <option value="pending">Pendiente</option><option value="progress">En curso</option><option value="done">Listo</option>
     </select></td>
-    <td><input type="date" class="mini-date" id="new-eta-${tableId}" style="width:100%" /></td>
-    <td><button class="add-task-btn" onclick="saveNewTask('${personId}','${krCat}','${tableId}')">✓</button></td>
+    <td><input type="date" class="mini-date" id="ne-${tableId}" style="width:100%" /></td>
+    <td><button class="add-task-btn" onclick="saveNewTask('${personId}','${krCat || ''}','${tableId}')">✓</button></td>
   `;
   tbody.appendChild(tr);
-  document.getElementById('new-desc-' + tableId).focus();
+  document.getElementById('nd-' + tableId).focus();
 }
 
 function saveNewTask(personId, krCat, tableId) {
-  const cat = (document.getElementById('new-cat-' + tableId)?.value || '').trim();
-  const desc = (document.getElementById('new-desc-' + tableId)?.value || '').trim();
-  const prio = document.getElementById('new-prio-' + tableId)?.value || null;
-  const status = document.getElementById('new-status-' + tableId)?.value || 'pending';
-  const eta = document.getElementById('new-eta-' + tableId)?.value || null;
+  const cat    = (document.getElementById('nc-' + tableId)?.value || '').trim();
+  const desc   = (document.getElementById('nd-' + tableId)?.value || '').trim();
+  const prio   = document.getElementById('np-' + tableId)?.value || null;
+  const status = document.getElementById('ns-' + tableId)?.value || 'pending';
+  const eta    = document.getElementById('ne-' + tableId)?.value || null;
   if (!desc) { alert('Ingresa una descripción'); return; }
 
   const id = 't' + Date.now();
-  const newTask = { id, type: 'little', cat: cat || 'General', desc, priority: prio||null, eta: eta||null, status, link: '', updates: [], kr: krCat||null };
+  const newTask = { id, type: 'little', cat: cat || 'General', desc, priority: prio||null, eta: eta||null, status, link: '', updates: [], kr: krCat || null };
 
-  let found = false;
   Object.values(data.areas).forEach(a => {
     [...(a.people||[]), ...(a.kams||[])].forEach(p => {
-      if (p.id === personId) { p.tasks.push(newTask); found = true; }
+      if (p.id === personId) p.tasks.push(newTask);
     });
   });
-  if (found) { taskStatus[id]=status; taskPriority[id]=prio; taskEta[id]=eta; taskUpdates[id]=[]; taskKr[id]=krCat||null; scheduleSync(); renderAll(); }
+  taskStatus[id]=status; taskPriority[id]=prio; taskEta[id]=eta;
+  taskUpdates[id]=[]; taskKr[id]=krCat||null; taskCat[id]=cat||'General';
+  taskDesc[id]=desc; taskLink[id]='';
+  scheduleSync(); renderAll();
 }
 
+// ── Render task rows ─────────────────────────────────────────
 function renderTaskRow(t, personId, krs) {
   const hi = taskPriority[t.id] === 'Alta';
   const updates = taskUpdates[t.id] || [];
   const uCount = updates.length;
   const krOptions = krs.map(kr => `<option value="${kr.cat}" ${taskKr[t.id]===kr.cat?'selected':''}>${kr.cat}</option>`).join('');
+  const krEditOptions = krs.map(kr => `<option value="${kr.cat}" ${taskKr[t.id]===kr.cat?'selected':''}>${kr.cat}</option>`).join('');
+  const prioOpts = ['','Alta','Media','Baja'].map(v => `<option value="${v}" ${(taskPriority[t.id]||'')=== v?'selected':''}>${v||'—'}</option>`).join('');
+  const statOpts = ['pending','progress','done'].map(v => `<option value="${v}" ${(taskStatus[t.id]||'pending')===v?'selected':''}>${v==='pending'?'Pendiente':v==='progress'?'En curso':'Listo'}</option>`).join('');
+  const etaVal = taskEta[t.id] && !taskEta[t.id].startsWith('Q') ? taskEta[t.id] : '';
+
   return `
     <tr class="${hi?'high-prio':''}">
-      <td><span class="task-cat">${t.cat}</span></td>
-      <td><div class="task-desc">${t.desc}</div>${t.link?`<a class="task-link" href="${t.link}" target="_blank">↗ StarTrek</a>`:''}</td>
+      <td><span class="task-cat">${taskCat[t.id]||t.cat}</span></td>
+      <td><div class="task-desc">${taskDesc[t.id]||t.desc}</div>${(taskLink[t.id]||t.link)?`<a class="task-link" href="${taskLink[t.id]||t.link}" target="_blank">↗ StarTrek</a>`:''}</td>
       <td>${prioSelect(t.id)}</td>
       <td>${statusSelect(t.id)}</td>
       <td>${etaCell(t.id)}</td>
       <td>
         <div class="action-btns">
-          <button class="update-toggle" onclick="toggleUpdates('${t.id}',this)" title="Historial">▼${uCount?' '+uCount:''}</button>
-          ${krs.length>1?`<button class="move-btn" onclick="toggleMovePanel('${t.id}')" title="Mover a otro KR">⇄</button>`:''}
-          <button class="delete-btn" onclick="deleteTask('${personId}','${t.id}')" title="Eliminar">✕</button>
+          <button class="act-btn hist" onclick="toggleUpdates('${t.id}',this)" title="Historial">▼${uCount?' '+uCount:''}</button>
+          <button class="act-btn edit" onclick="toggleEdit('${t.id}')" title="Editar">✏️</button>
+          ${krs.length>1?`<button class="act-btn move" onclick="toggleMove('${t.id}')" title="Mover KR">⇄</button>`:''}
+          <button class="act-btn del" onclick="deleteTask('${personId}','${t.id}')" title="Eliminar">✕</button>
         </div>
       </td>
     </tr>
-    <tr class="move-modal-row" id="move-row-${t.id}">
+    <tr class="edit-row" id="edit-row-${t.id}">
+      <td colspan="6">
+        <div class="edit-form">
+          <div class="edit-field"><label>Descripción</label><input id="edit-desc-${t.id}" class="wide" value="${(taskDesc[t.id]||t.desc).replace(/"/g,'&quot;')}" /></div>
+          <div class="edit-field"><label>Categoría</label><input id="edit-cat-${t.id}" class="med" value="${(taskCat[t.id]||t.cat).replace(/"/g,'&quot;')}" /></div>
+          ${krs.length?`<div class="edit-field"><label>KR</label><select id="edit-kr-${t.id}"><option value="">Sin KR</option>${krEditOptions}</select></div>`:''}
+          <div class="edit-field"><label>Prioridad</label><select id="edit-prio-${t.id}">${prioOpts}</select></div>
+          <div class="edit-field"><label>Estado</label><select id="edit-status-${t.id}">${statOpts}</select></div>
+          <div class="edit-field"><label>ETA</label><input type="date" id="edit-eta-${t.id}" value="${etaVal}" style="min-width:120px" /></div>
+          <div class="edit-field"><label>Link</label><input id="edit-link-${t.id}" class="med" value="${(taskLink[t.id]||t.link||'').replace(/"/g,'&quot;')}" placeholder="https://..." /></div>
+          <div class="edit-field" style="justify-content:flex-end;flex-direction:row;gap:5px;align-self:flex-end">
+            <button class="edit-save-btn" onclick="saveEdit('${t.id}','${personId}')">✓ Guardar</button>
+            <button class="edit-cancel-btn" onclick="toggleEdit('${t.id}')">Cancelar</button>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr class="move-row" id="move-row-${t.id}">
       <td colspan="6" style="padding:0">
-        <div class="move-modal-inner">
+        <div class="move-inner">
           <label>Mover a KR:</label>
           <select id="move-kr-${t.id}">${krOptions}</select>
-          <button onclick="applyMove('${t.id}','${personId}')">Mover</button>
-          <button class="cancel-btn" onclick="toggleMovePanel('${t.id}')">Cancelar</button>
+          <button style="background:#185FA5;color:#fff;border:1px solid #185FA5;border-radius:4px" onclick="applyMove('${t.id}')">Mover</button>
+          <button style="background:#fff;color:#888;border:1px solid #d8d8d8;border-radius:4px" onclick="toggleMove('${t.id}')">Cancelar</button>
         </div>
       </td>
     </tr>
-    <tr class="update-panel-row" id="upanel-row-${t.id}">
+    <tr class="upanel-row" id="upanel-row-${t.id}">
       <td colspan="6" style="padding:0;border-bottom:1px solid #f0f0f0;">
-        <div class="update-panel-inner">
+        <div class="upanel-inner">
           ${uCount ? updates.map(u=>`<div class="update-entry"><span class="update-date">${u.date}:</span>${u.text}</div>`).join('') : '<div class="update-entry" style="color:#bbb;font-style:italic">Sin actualizaciones aún</div>'}
           <div class="update-add">
             <input id="uinput-${t.id}" placeholder="Agregar update..." onkeydown="if(event.key==='Enter')addUpdate('${t.id}')" />
@@ -490,8 +606,13 @@ function renderTaskRow(t, personId, krs) {
 function renderTaskBlock(p) {
   const krs = p.krs || [];
   const total = p.tasks.filter(t => taskStatus[t.id] !== 'done').length;
+  const allTasks = onlyPrio ? p.tasks.filter(t => taskPriority[t.id]==='Alta') : p.tasks;
 
-  let allTasks = onlyPrio ? p.tasks.filter(t => taskPriority[t.id]==='Alta') : p.tasks;
+  const tableHeader = `<thead><tr>
+    <th style="width:100px">Categoría</th><th>Descripción</th>
+    <th style="width:80px">Prioridad</th><th style="width:88px">Estado</th>
+    <th style="width:110px">ETA</th><th style="width:80px"></th>
+  </tr></thead>`;
 
   let html = `<div class="person-block">
     <div class="person-header">
@@ -499,53 +620,50 @@ function renderTaskBlock(p) {
       <div><div class="person-name">${p.name}</div><div class="task-count">${total} pendiente${total!==1?'s':''}</div></div>
     </div>`;
 
-  const tableHeader = `<thead><tr>
-    <th style="width:100px">Categoría</th>
-    <th>Descripción</th>
-    <th style="width:80px">Prioridad</th>
-    <th style="width:88px">Estado</th>
-    <th style="width:110px">ETA</th>
-    <th style="width:70px"></th>
-  </tr></thead>`;
-
   if (!krs.length) {
-    // No KRs: show as "KR Pendiente" section
-    const tableId = p.id + '-nokr';
+    const tid = p.id + '-nokr';
     html += `<div class="kr-subsection">
       <div class="kr-subsection-header"><span class="kr-subsection-title">KR Pendiente</span></div>
-      <table class="task-table">${tableHeader}<tbody id="tbody-${tableId}">`;
+      <table class="task-table">${tableHeader}<tbody id="tbody-${tid}">`;
     allTasks.forEach(t => { html += renderTaskRow(t, p.id, krs); });
     html += `</tbody></table>
-      <span class="add-row-trigger" onclick="showAddRow('${p.id}',null,'${tableId}')">＋ Agregar tarea</span>
+      <span class="add-row-trigger" onclick="showAddRow('${p.id}','','${tid}')">＋ Agregar tarea</span>
     </div>`;
   } else {
     krs.forEach((kr, i) => {
-      const tableId = p.id + '-kr' + i;
+      const tid = p.id + '-kr' + i;
       const krTasks = allTasks.filter(t => taskKr[t.id] === kr.cat);
       html += `<div class="kr-subsection">
         <div class="kr-subsection-header">
           <span class="kr-subsection-title">${kr.cat}</span>
           <span class="kr-subsection-desc">${kr.desc}</span>
           <span class="kr-subsection-eta">${kr.eta}</span>
+          <button class="kr-edit-btn" onclick="toggleKrEdit('${p.id}',${i})" title="Editar KR">✏️</button>
         </div>
-        <table class="task-table">${tableHeader}<tbody id="tbody-${tableId}">`;
+        <div class="kr-edit-form" id="kr-edit-${p.id}-${i}">
+          <div class="edit-field"><label>Nombre</label><input id="kre-cat-${p.id}-${i}" value="${kr.cat.replace(/"/g,'&quot;')}" style="min-width:80px" /></div>
+          <div class="edit-field"><label>Descripción</label><input id="kre-desc-${p.id}-${i}" class="desc-input" value="${kr.desc.replace(/"/g,'&quot;')}" /></div>
+          <div class="edit-field"><label>ETA</label><input id="kre-eta-${p.id}-${i}" class="eta-input" value="${kr.eta.replace(/"/g,'&quot;')}" placeholder="Q2" /></div>
+          <button class="kr-save-btn" onclick="saveKrEdit('${p.id}',${i})">✓ Guardar</button>
+          <button class="kr-cancel-btn" onclick="toggleKrEdit('${p.id}',${i})">Cancelar</button>
+        </div>
+        <table class="task-table">${tableHeader}<tbody id="tbody-${tid}">`;
       if (krTasks.length) {
         krTasks.forEach(t => { html += renderTaskRow(t, p.id, krs); });
       } else {
         html += `<tr><td colspan="6" style="padding:6px 8px;font-size:11px;color:#ccc;font-style:italic">Sin tareas en este KR</td></tr>`;
       }
       html += `</tbody></table>
-        <span class="add-row-trigger" onclick="showAddRow('${p.id}','${kr.cat}','${tableId}')">＋ Agregar tarea</span>
+        <span class="add-row-trigger" onclick="showAddRow('${p.id}','${kr.cat}','${tid}')">＋ Agregar tarea</span>
       </div>`;
     });
 
-    // Tasks not assigned to any KR
     const unassigned = allTasks.filter(t => !taskKr[t.id] || !krs.find(kr => kr.cat === taskKr[t.id]));
     if (unassigned.length) {
-      const tableId = p.id + '-unassigned';
+      const tid = p.id + '-unassigned';
       html += `<div class="kr-subsection">
         <div class="kr-subsection-header"><span class="kr-subsection-title" style="color:#aaa">Sin KR</span></div>
-        <table class="task-table">${tableHeader}<tbody id="tbody-${tableId}">`;
+        <table class="task-table">${tableHeader}<tbody id="tbody-${tid}">`;
       unassigned.forEach(t => { html += renderTaskRow(t, p.id, krs); });
       html += `</tbody></table></div>`;
     }
@@ -562,12 +680,11 @@ function renderBoard() {
   if (currentArea === 'all') {
     people = []; kams = [];
     Object.values(data.areas).forEach(a => {
-      people = people.concat(currentPerson==='all' ? (a.people||[]) : (a.people||[]).filter(x=>x.id===currentPerson));
-      kams = kams.concat(currentPerson==='all' ? (a.kams||[]) : (a.kams||[]).filter(x=>x.id===currentPerson));
+      people = people.concat(currentPerson==='all'?(a.people||[]):(a.people||[]).filter(x=>x.id===currentPerson));
+      kams = kams.concat(currentPerson==='all'?(a.kams||[]):(a.kams||[]).filter(x=>x.id===currentPerson));
     });
-  } else {
-    people = filteredPeople(); kams = filteredKams();
-  }
+  } else { people = filteredPeople(); kams = filteredKams(); }
+
   if (!people.length && !kams.length) { container.innerHTML = '<div class="empty">Sin datos para esta área aún</div>'; return; }
   let html = people.map(p => renderTaskBlock(p)).join('');
   if (kams.length) { html += `<div class="kam-label">KAMs — Partner Ops</div>`; html += kams.map(p => renderTaskBlock(p)).join(''); }
@@ -590,7 +707,7 @@ function renderToday() {
     any = true;
     html += `<div class="today-card"><div class="today-card-header">
       <div class="avatar" style="background:${p.bg};color:${p.tc};width:26px;height:26px;font-size:10px">${p.initials}</div>
-      <span style="font-size:12px;font-weight:600;color:#1a1a1a">${p.name}</span>
+      <span style="font-size:12px;font-weight:600">${p.name}</span>
       <span style="font-size:10px;color:#aaa;margin-left:auto">${all.length} tarea${all.length!==1?'s':''}</span>
     </div>`;
     all.forEach(t => {
@@ -598,8 +715,8 @@ function renderToday() {
       html += `<div class="today-task">
         <div class="check-box ${checked?'checked':''}" onclick="toggleDone('${t.id}')">${checked?'✓':''}</div>
         <div style="flex:1">
-          <div style="font-size:11px;color:#1a1a1a;${checked?'text-decoration:line-through;color:#aaa':''}">${t.desc}</div>
-          <div style="font-size:10px;color:#aaa;margin-top:1px">${t.cat}${taskEta[t.id]&&!String(taskEta[t.id]).startsWith('Q')?' · '+isoToDisplay(taskEta[t.id]):''}${taskPriority[t.id]==='Alta'?' · <span style="color:#c0392b">Alta</span>':''}</div>
+          <div style="font-size:11px;${checked?'text-decoration:line-through;color:#aaa':''}">${taskDesc[t.id]||t.desc}</div>
+          <div style="font-size:10px;color:#aaa;margin-top:1px">${taskCat[t.id]||t.cat}${taskEta[t.id]&&!String(taskEta[t.id]).startsWith('Q')?' · '+isoToDisplay(taskEta[t.id]):''}${taskPriority[t.id]==='Alta'?' · <span style="color:#c0392b">Alta</span>':''}</div>
         </div>
       </div>`;
     });
@@ -619,7 +736,6 @@ function renderGantt() {
   const START = new Date('2026-04-01'), END = new Date('2026-06-30');
   const TOTAL = (END - START) / 86400000;
   const months = ['Abr','May','Jun'];
-  const startDates = { t1:'2026-04-10', t2:'2026-04-15', t13:'2026-04-14' };
   let rows = ''; let any = false;
   people.forEach(p => {
     let tasks = p.tasks.filter(t => taskEta[t.id] && !String(taskEta[t.id]).startsWith('Q'));
@@ -628,13 +744,13 @@ function renderGantt() {
     any = true;
     tasks.forEach(t => {
       const eta = new Date(taskEta[t.id]+'T12:00:00');
-      const sd = new Date((startDates[t.id]||'2026-04-21')+'T12:00:00');
+      const sd = new Date('2026-04-21T12:00:00');
       const sp = Math.max(0,(sd-START)/86400000/TOTAL*100);
       const ep = Math.min(100,(eta-START)/86400000/TOTAL*100);
       const w = Math.max(2,ep-sp);
       const col = taskStatus[t.id]==='done'?'#639922':taskStatus[t.id]==='progress'?'#185FA5':'#aaa';
       rows += `<div class="gantt-row">
-        <div class="gantt-label" title="${t.desc}">${t.cat}</div>
+        <div class="gantt-label" title="${taskDesc[t.id]||t.desc}">${taskCat[t.id]||t.cat}</div>
         <div class="gantt-av"><div class="avatar" style="background:${p.bg};color:${p.tc};width:22px;height:22px;font-size:9px;display:inline-flex">${p.initials}</div></div>
         <div class="gantt-track"><div class="gantt-bar" style="left:${sp}%;width:${w}%;background:${col}">${w>8?isoToDisplay(taskEta[t.id]):''}</div></div>
       </div>`;
