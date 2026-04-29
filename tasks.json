@@ -92,9 +92,21 @@
           "bg": "#E6F5EF",
           "tc": "#0A5C36",
           "krs": [
-            { "cat": "Moto", "desc": "Bogota 70k→100k daily · Cali +200k · Baq +90k weekly", "eta": "Q2" },
-            { "cat": "UFC", "desc": "Bogota 60k→80k · Cali 20k→30k weekly", "eta": "Q2" },
-            { "cat": "TukTuk", "desc": "13k→30k weekly trips", "eta": "Q2" }
+            {
+              "cat": "Moto",
+              "desc": "Bogota 70k→100k daily · Cali +200k · Baq +90k weekly",
+              "eta": "Q2"
+            },
+            {
+              "cat": "UFC",
+              "desc": "Bogota 60k→80k · Cali 20k→30k weekly",
+              "eta": "Q2"
+            },
+            {
+              "cat": "TukTuk",
+              "desc": "13k→30k weekly trips",
+              "eta": "Q2"
+            }
           ],
           "tasks": [
             {
@@ -179,7 +191,7 @@
               "status": "pending",
               "link": "",
               "updates": [],
-              "kr": "Moto"
+              "kr": "TukTuk"
             }
           ]
         },
