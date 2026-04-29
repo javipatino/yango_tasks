@@ -29,15 +29,20 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .view { display: none; }
 .view.active { display: block; }
 .person-block { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1rem; }
-.person-header { display: flex; align-items: center; gap: 10px; margin-bottom: 0.75rem; }
+.person-header { display: flex; align-items: center; gap: 10px; margin-bottom: 0.9rem; }
 .avatar { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; flex-shrink: 0; }
 .person-name { font-size: 13px; font-weight: 600; color: #1a1a1a; }
 .task-count { font-size: 11px; color: #999; }
-.kr-section { margin-bottom: 0.85rem; }
-.kr-section-title { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #aaa; margin-bottom: 0.4rem; padding-bottom: 3px; border-bottom: 1px solid #f0f0f0; }
-.kr-strip { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 4px; }
-.kr-pill { display: inline-flex; align-items: center; gap: 5px; background: #f5f5f3; border-radius: 20px; padding: 3px 10px; font-size: 11px; color: #666; border: 1px solid #e8e8e8; }
-.kr-pill strong { font-size: 11px; font-weight: 600; color: #333; }
+
+/* KR subsection */
+.kr-subsection { margin-bottom: 1rem; }
+.kr-subsection-header { display: flex; align-items: center; gap: 8px; padding: 5px 8px; background: #f0f0ee; border-radius: 6px; margin-bottom: 4px; }
+.kr-subsection-title { font-size: 11px; font-weight: 700; color: #444; letter-spacing: 0.03em; }
+.kr-subsection-desc { font-size: 11px; color: #777; }
+.kr-subsection-eta { font-size: 10px; color: #bbb; margin-left: auto; }
+.kr-subsection-pending { font-size: 10px; font-style: italic; color: #aaa; padding: 4px 8px; margin-bottom: 4px; }
+
+/* Task table */
 .task-table { width: 100%; border-collapse: collapse; }
 .task-table th { font-size: 10px; color: #aaa; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; padding: 4px 6px; text-align: left; }
 .task-table td { padding: 4px 6px; border-bottom: 1px solid #f5f5f3; vertical-align: middle; }
@@ -49,29 +54,49 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .task-link:hover { text-decoration: underline; }
 .mini-select { font-size: 11px; border: 1px solid #d8d8d8; border-radius: 4px; padding: 1px 3px; height: 22px; background: #fff; color: #333; cursor: pointer; width: 100%; }
 .task-table tr.high-prio .mini-select { background: #fff5f5; }
-.mini-date { font-size: 11px; border: 1px solid #d8d8d8; border-radius: 4px; padding: 1px 3px; height: 22px; background: #fff; color: #333; cursor: pointer; width: 100%; }
-.task-table tr.high-prio .mini-date { background: #fff5f5; }
 .eta-wrap { display: flex; align-items: center; gap: 4px; }
 .eta-label { font-size: 11px; color: #999; min-width: 55px; }
+.mini-date { font-size: 11px; border: 1px solid #d8d8d8; border-radius: 4px; padding: 1px 3px; height: 22px; background: #fff; color: #333; cursor: pointer; }
+.task-table tr.high-prio .mini-date { background: #fff5f5; }
 .kam-label { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #aaa; margin: 1.25rem 0 0.5rem; padding-bottom: 4px; border-bottom: 1px solid #e0e0e0; }
-.add-task-row td { background: #f9f9f7 !important; border-bottom: none !important; }
-.add-task-row input[type=text], .add-task-row input:not([type=date]) { font-size: 11px; border: 1px solid #d8d8d8; border-radius: 4px; padding: 1px 4px; height: 22px; background: #fff; color: #333; width: 100%; }
-.add-task-btn { font-size: 10px; padding: 2px 8px; border-radius: 4px; border: 1px solid #185FA5; background: #185FA5; color: #fff; cursor: pointer; white-space: nowrap; }
-.add-task-btn:hover { background: #1450a0; }
-.add-row-trigger { font-size: 11px; color: #185FA5; cursor: pointer; padding: 5px 6px; display: inline-flex; align-items: center; gap: 4px; border-radius: 4px; margin-top: 4px; }
-.add-row-trigger:hover { background: #f0f5ff; }
-.update-toggle { background: none; border: none; color: #bbb; cursor: pointer; font-size: 11px; padding: 2px 5px; border-radius: 3px; line-height: 1; white-space: nowrap; }
+
+/* Action buttons column */
+.action-btns { display: flex; align-items: center; gap: 3px; }
+.update-toggle { background: none; border: none; color: #ccc; cursor: pointer; font-size: 11px; padding: 2px 4px; border-radius: 3px; line-height: 1; white-space: nowrap; }
 .update-toggle:hover { color: #185FA5; background: #f0f5ff; }
+.move-btn { background: none; border: none; color: #ccc; cursor: pointer; font-size: 13px; padding: 2px 4px; border-radius: 3px; line-height: 1; }
+.move-btn:hover { color: #888; background: #f0f0ee; }
+.delete-btn { background: none; border: none; color: #ddd; cursor: pointer; font-size: 13px; padding: 2px 4px; border-radius: 3px; line-height: 1; }
+.delete-btn:hover { color: #c0392b; background: #fff0f0; }
+
+/* Move modal */
+.move-modal-row { display: none; }
+.move-modal-row.open { display: table-row; }
+.move-modal-inner { display: flex; align-items: center; gap: 8px; padding: 6px 10px; background: #f5f5f3; border-bottom: 1px solid #e8e8e8; }
+.move-modal-inner label { font-size: 11px; color: #666; }
+.move-modal-inner select { font-size: 11px; border: 1px solid #d8d8d8; border-radius: 4px; padding: 2px 5px; height: 24px; background: #fff; cursor: pointer; }
+.move-modal-inner button { font-size: 10px; padding: 2px 8px; border-radius: 4px; border: 1px solid #185FA5; background: #185FA5; color: #fff; cursor: pointer; }
+.move-modal-inner .cancel-btn { background: #fff; color: #888; border-color: #d8d8d8; }
+
+/* Update panel */
 .update-panel-row { display: none; }
 .update-panel-row.open { display: table-row; }
-.update-panel { background: #f9f9f7; }
-.update-panel-inner { padding: 8px 12px; }
+.update-panel-inner { background: #f9f9f7; padding: 8px 12px; border-bottom: 1px solid #f0f0f0; }
 .update-entry { font-size: 11px; color: #555; padding: 4px 0; border-bottom: 1px solid #efefed; line-height: 1.4; }
 .update-entry:last-child { border-bottom: none; }
 .update-date { font-weight: 600; color: #999; margin-right: 6px; }
 .update-add { display: flex; gap: 6px; margin-top: 8px; }
 .update-add input { flex: 1; font-size: 11px; border: 1px solid #d8d8d8; border-radius: 4px; padding: 3px 6px; height: 24px; }
 .update-add button { font-size: 10px; padding: 2px 10px; border-radius: 4px; border: 1px solid #185FA5; background: #185FA5; color: #fff; cursor: pointer; white-space: nowrap; }
+
+/* Add task */
+.add-task-row td { background: #f9f9f7 !important; border-bottom: none !important; }
+.add-task-row input:not([type=date]) { font-size: 11px; border: 1px solid #d8d8d8; border-radius: 4px; padding: 1px 4px; height: 22px; background: #fff; color: #333; width: 100%; }
+.add-task-btn { font-size: 10px; padding: 2px 8px; border-radius: 4px; border: 1px solid #185FA5; background: #185FA5; color: #fff; cursor: pointer; }
+.add-row-trigger { font-size: 11px; color: #185FA5; cursor: pointer; padding: 5px 6px; display: inline-flex; align-items: center; gap: 4px; border-radius: 4px; margin-top: 4px; }
+.add-row-trigger:hover { background: #f0f5ff; }
+
+/* Today */
 .today-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
 .today-card { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 12px 14px; }
 .today-card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
@@ -79,6 +104,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .today-task:last-child { border-bottom: none; padding-bottom: 0; }
 .check-box { width: 15px; height: 15px; border-radius: 3px; border: 1px solid #ccc; flex-shrink: 0; margin-top: 1px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 9px; background: #fff; }
 .check-box.checked { background: #639922; border-color: #639922; color: #fff; }
+
+/* Gantt */
 .gantt-wrap { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 1rem 1.25rem; overflow-x: auto; }
 .gantt-months { display: flex; margin-bottom: 6px; padding-left: 192px; }
 .gantt-month { flex: 1; font-size: 10px; color: #aaa; text-align: center; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
@@ -113,7 +140,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
   </div>
   <div class="person-filters" id="person-filters"></div>
   <div class="tab-filters">
-    <button class="filter-btn prio-btn" id="prio-filter-btn" onclick="togglePrioFilter(this)">⚡ Prioritarios</button>
+    <button class="filter-btn prio-btn" onclick="togglePrioFilter(this)">⚡ Prioritarios</button>
   </div>
   <div class="tabs">
     <div class="tab active" onclick="switchTab('board',this)">Tablero</div>
@@ -124,10 +151,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
   <div id="view-today" class="view"></div>
   <div id="view-gantt" class="view"></div>
 </div>
-
-<div class="sync-bar" id="sync-bar">
-  <span id="sync-msg">Guardando...</span>
-</div>
+<div class="sync-bar" id="sync-bar"><span id="sync-msg">Guardando...</span></div>
 
 <script>
 const JSON_URL = 'https://javipati.app.n8n.cloud/webhook/yango-get-tasks';
@@ -141,6 +165,7 @@ let taskStatus = {};
 let taskPriority = {};
 let taskEta = {};
 let taskUpdates = {};
+let taskKr = {};       // task id → kr cat (string)
 let saveTimer = null;
 
 async function loadData() {
@@ -158,25 +183,37 @@ async function loadData() {
 
 function initState() {
   Object.values(data.areas).forEach(area => {
-    const all = [...(area.people||[]), ...(area.kams||[])];
-    all.forEach(p => p.tasks.forEach(t => {
-      taskStatus[t.id] = t.status;
-      taskPriority[t.id] = t.priority;
-      taskEta[t.id] = t.eta;
-      taskUpdates[t.id] = t.updates || [];
-    }));
+    [...(area.people||[]), ...(area.kams||[])].forEach(p => {
+      const firstKr = p.krs && p.krs.length ? p.krs[0].cat : null;
+      p.tasks.forEach(t => {
+        taskStatus[t.id] = t.status;
+        taskPriority[t.id] = t.priority;
+        taskEta[t.id] = t.eta;
+        taskUpdates[t.id] = t.updates || [];
+        // If task has no kr field, assign to first KR
+        taskKr[t.id] = t.kr || firstKr || null;
+      });
+    });
   });
+}
+
+function getPerson(personId) {
+  for (const area of Object.values(data.areas)) {
+    for (const p of [...(area.people||[]), ...(area.kams||[])]) {
+      if (p.id === personId) return p;
+    }
+  }
+  return null;
 }
 
 function allPeopleInArea(area) {
   if (area === 'all') {
-    let result = [];
-    Object.values(data.areas).forEach(a => result = result.concat(a.people||[], a.kams||[]));
-    return result;
+    let r = [];
+    Object.values(data.areas).forEach(a => r = r.concat(a.people||[], a.kams||[]));
+    return r;
   }
   const a = data.areas[area];
-  if (!a) return [];
-  return [...(a.people||[]), ...(a.kams||[])];
+  return a ? [...(a.people||[]), ...(a.kams||[])] : [];
 }
 
 function isoToDisplay(iso) {
@@ -188,9 +225,7 @@ function isoToDisplay(iso) {
 
 function filterArea(area, btn) {
   currentArea = area; currentPerson = 'all';
-  document.querySelectorAll('.area-btn').forEach(b => {
-    b.classList.remove('active','active-mkt','active-pr','active-gr','active-otros');
-  });
+  document.querySelectorAll('.area-btn').forEach(b => b.classList.remove('active','active-mkt','active-pr','active-gr','active-otros'));
   btn.classList.add('active');
   if (area === 'mkt') btn.classList.add('active-mkt');
   else if (area === 'pr') btn.classList.add('active-pr');
@@ -230,9 +265,9 @@ function switchTab(tab, btn) {
 
 function filteredPeople() {
   if (currentArea === 'all') {
-    let result = [];
-    Object.values(data.areas).forEach(a => result = result.concat(a.people||[]));
-    return currentPerson === 'all' ? result : result.filter(x => x.id === currentPerson);
+    let r = [];
+    Object.values(data.areas).forEach(a => r = r.concat(a.people||[]));
+    return currentPerson === 'all' ? r : r.filter(x => x.id === currentPerson);
   }
   const a = data.areas[currentArea];
   const p = a ? (a.people||[]) : [];
@@ -241,9 +276,9 @@ function filteredPeople() {
 
 function filteredKams() {
   if (currentArea === 'all') {
-    let result = [];
-    Object.values(data.areas).forEach(a => result = result.concat(a.kams||[]));
-    return currentPerson === 'all' ? result : result.filter(x => x.id === currentPerson);
+    let r = [];
+    Object.values(data.areas).forEach(a => r = r.concat(a.kams||[]));
+    return currentPerson === 'all' ? r : r.filter(x => x.id === currentPerson);
   }
   const a = data.areas[currentArea];
   const k = a ? (a.kams||[]) : [];
@@ -281,12 +316,9 @@ function etaCell(id) {
 
 function showSync(state, msg) {
   const bar = document.getElementById('sync-bar');
-  const msgEl = document.getElementById('sync-msg');
   bar.className = 'sync-bar visible ' + state;
-  msgEl.textContent = msg;
-  if (state === 'saved' || state === 'error') {
-    setTimeout(() => { bar.className = 'sync-bar'; }, 3000);
-  }
+  document.getElementById('sync-msg').textContent = msg;
+  if (state === 'saved' || state === 'error') setTimeout(() => { bar.className = 'sync-bar'; }, 3000);
 }
 
 function scheduleSync() {
@@ -304,25 +336,15 @@ async function syncToGitHub() {
         t.priority = taskPriority[t.id] ?? t.priority;
         t.eta = taskEta[t.id] ?? t.eta;
         t.updates = taskUpdates[t.id] ?? t.updates ?? [];
+        t.kr = taskKr[t.id] ?? t.kr ?? null;
       });
     });
   });
   try {
-    const res = await fetch(WEBHOOK_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(updated)
-    });
-    if (res.ok) {
-      data = updated;
-      document.getElementById('last-updated').textContent = 'Actualizado: ' + new Date().toISOString().split('T')[0];
-      showSync('saved', '✓ Guardado en GitHub');
-    } else {
-      showSync('error', 'Error al guardar');
-    }
-  } catch(e) {
-    showSync('error', 'Error de conexión');
-  }
+    const res = await fetch(WEBHOOK_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(updated) });
+    if (res.ok) { data = updated; document.getElementById('last-updated').textContent = 'Actualizado: ' + new Date().toISOString().split('T')[0]; showSync('saved', '✓ Guardado en GitHub'); }
+    else showSync('error', 'Error al guardar');
+  } catch(e) { showSync('error', 'Error de conexión'); }
 }
 
 function updatePriority(id, val) { taskPriority[id] = val || null; scheduleSync(); renderAll(); }
@@ -340,18 +362,45 @@ function toggleUpdates(id, btn) {
 
 function addUpdate(id) {
   const input = document.getElementById('uinput-' + id);
-  const text = input ? input.value.trim() : '';
+  const text = input?.value.trim();
   if (!text) return;
   const today = new Date();
   const label = String(today.getDate()).padStart(2,'0') + '.' + String(today.getMonth()+1).padStart(2,'0');
   if (!taskUpdates[id]) taskUpdates[id] = [];
   taskUpdates[id].unshift({ date: label, text });
   input.value = '';
-  scheduleSync();
-  renderAll();
+  scheduleSync(); renderAll();
 }
 
-function showAddRow(personId, tableId) {
+function deleteTask(personId, taskId) {
+  if (!confirm('¿Eliminar esta tarea?')) return;
+  let found = false;
+  Object.values(data.areas).forEach(a => {
+    [...(a.people||[]), ...(a.kams||[])].forEach(p => {
+      if (p.id === personId) {
+        const idx = p.tasks.findIndex(t => t.id === taskId);
+        if (idx !== -1) { p.tasks.splice(idx, 1); found = true; }
+      }
+    });
+  });
+  if (found) { delete taskStatus[taskId]; delete taskPriority[taskId]; delete taskEta[taskId]; delete taskUpdates[taskId]; delete taskKr[taskId]; scheduleSync(); renderAll(); }
+}
+
+function toggleMovePanel(id) {
+  const row = document.getElementById('move-row-' + id);
+  if (!row) return;
+  row.classList.toggle('open');
+}
+
+function applyMove(taskId, personId) {
+  const sel = document.getElementById('move-kr-' + taskId);
+  if (!sel) return;
+  taskKr[taskId] = sel.value;
+  toggleMovePanel(taskId);
+  scheduleSync(); renderAll();
+}
+
+function showAddRow(personId, krCat, tableId) {
   const existing = document.getElementById('add-row-' + tableId);
   if (existing) { existing.remove(); return; }
   const tbody = document.getElementById('tbody-' + tableId);
@@ -363,24 +412,19 @@ function showAddRow(personId, tableId) {
     <td><input id="new-cat-${tableId}" placeholder="Categoría" /></td>
     <td><input id="new-desc-${tableId}" placeholder="Descripción..." /></td>
     <td><select class="mini-select" id="new-prio-${tableId}">
-      <option value="">—</option>
-      <option value="Alta">Alta</option>
-      <option value="Media">Media</option>
-      <option value="Baja">Baja</option>
+      <option value="">—</option><option value="Alta">Alta</option><option value="Media">Media</option><option value="Baja">Baja</option>
     </select></td>
     <td><select class="mini-select" id="new-status-${tableId}">
-      <option value="pending">Pendiente</option>
-      <option value="progress">En curso</option>
-      <option value="done">Listo</option>
+      <option value="pending">Pendiente</option><option value="progress">En curso</option><option value="done">Listo</option>
     </select></td>
     <td><input type="date" class="mini-date" id="new-eta-${tableId}" style="width:100%" /></td>
-    <td><button class="add-task-btn" onclick="saveNewTask('${personId}','${tableId}')">✓</button></td>
+    <td><button class="add-task-btn" onclick="saveNewTask('${personId}','${krCat}','${tableId}')">✓</button></td>
   `;
   tbody.appendChild(tr);
   document.getElementById('new-desc-' + tableId).focus();
 }
 
-function saveNewTask(personId, tableId) {
+function saveNewTask(personId, krCat, tableId) {
   const cat = (document.getElementById('new-cat-' + tableId)?.value || '').trim();
   const desc = (document.getElementById('new-desc-' + tableId)?.value || '').trim();
   const prio = document.getElementById('new-prio-' + tableId)?.value || null;
@@ -389,7 +433,7 @@ function saveNewTask(personId, tableId) {
   if (!desc) { alert('Ingresa una descripción'); return; }
 
   const id = 't' + Date.now();
-  const newTask = { id, type: 'little', cat: cat || 'General', desc, priority: prio || null, eta: eta || null, status, link: '', updates: [] };
+  const newTask = { id, type: 'little', cat: cat || 'General', desc, priority: prio||null, eta: eta||null, status, link: '', updates: [], kr: krCat||null };
 
   let found = false;
   Object.values(data.areas).forEach(a => {
@@ -397,68 +441,43 @@ function saveNewTask(personId, tableId) {
       if (p.id === personId) { p.tasks.push(newTask); found = true; }
     });
   });
-
-  if (found) {
-    taskStatus[id] = status;
-    taskPriority[id] = prio;
-    taskEta[id] = eta;
-    taskUpdates[id] = [];
-    scheduleSync();
-    renderAll();
-  }
+  if (found) { taskStatus[id]=status; taskPriority[id]=prio; taskEta[id]=eta; taskUpdates[id]=[]; taskKr[id]=krCat||null; scheduleSync(); renderAll(); }
 }
 
-function renderTaskBlock(p) {
-  const allTasks = onlyPrio
-    ? p.tasks.filter(t => taskPriority[t.id] === 'Alta')
-    : p.tasks;
-  const total = p.tasks.filter(t => taskStatus[t.id] !== 'done').length;
-  const tableId = p.id;
-
-  let html = `<div class="person-block">
-    <div class="person-header">
-      <div class="avatar" style="background:${p.bg};color:${p.tc}">${p.initials}</div>
-      <div><div class="person-name">${p.name}</div><div class="task-count">${total} pendiente${total!==1?'s':''}</div></div>
-    </div>`;
-
-  html += `<div class="kr-section">
-    <div class="kr-section-title">${(p.krs && p.krs.length) ? 'Key Results' : 'KR Pendiente'}</div>`;
-  if (p.krs && p.krs.length) {
-    html += `<div class="kr-strip">`;
-    p.krs.forEach(kr => {
-      html += `<div class="kr-pill"><strong>${kr.cat}</strong>&nbsp;${kr.desc}&nbsp;<span style="color:#bbb">${kr.eta}</span></div>`;
-    });
-    html += `</div>`;
-  }
-  html += `</div>`;
-
-  html += `<table class="task-table">
-    <thead><tr>
-      <th style="width:100px">Categoría</th>
-      <th>Descripción</th>
-      <th style="width:80px">Prioridad</th>
-      <th style="width:88px">Estado</th>
-      <th style="width:110px">ETA</th>
-      <th style="width:36px"></th>
-    </tr></thead>
-    <tbody id="tbody-${tableId}">`;
-
-  allTasks.forEach(t => {
-    const hi = taskPriority[t.id] === 'Alta';
-    const updates = taskUpdates[t.id] || [];
-    const uCount = updates.length;
-    html += `<tr class="${hi?'high-prio':''}">
+function renderTaskRow(t, personId, krs) {
+  const hi = taskPriority[t.id] === 'Alta';
+  const updates = taskUpdates[t.id] || [];
+  const uCount = updates.length;
+  const krOptions = krs.map(kr => `<option value="${kr.cat}" ${taskKr[t.id]===kr.cat?'selected':''}>${kr.cat}</option>`).join('');
+  return `
+    <tr class="${hi?'high-prio':''}">
       <td><span class="task-cat">${t.cat}</span></td>
       <td><div class="task-desc">${t.desc}</div>${t.link?`<a class="task-link" href="${t.link}" target="_blank">↗ StarTrek</a>`:''}</td>
       <td>${prioSelect(t.id)}</td>
       <td>${statusSelect(t.id)}</td>
       <td>${etaCell(t.id)}</td>
-      <td><button class="update-toggle" onclick="toggleUpdates('${t.id}',this)">▼${uCount?' '+uCount:''}</button></td>
+      <td>
+        <div class="action-btns">
+          <button class="update-toggle" onclick="toggleUpdates('${t.id}',this)" title="Historial">▼${uCount?' '+uCount:''}</button>
+          ${krs.length>1?`<button class="move-btn" onclick="toggleMovePanel('${t.id}')" title="Mover a otro KR">⇄</button>`:''}
+          <button class="delete-btn" onclick="deleteTask('${personId}','${t.id}')" title="Eliminar">✕</button>
+        </div>
+      </td>
+    </tr>
+    <tr class="move-modal-row" id="move-row-${t.id}">
+      <td colspan="6" style="padding:0">
+        <div class="move-modal-inner">
+          <label>Mover a KR:</label>
+          <select id="move-kr-${t.id}">${krOptions}</select>
+          <button onclick="applyMove('${t.id}','${personId}')">Mover</button>
+          <button class="cancel-btn" onclick="toggleMovePanel('${t.id}')">Cancelar</button>
+        </div>
+      </td>
     </tr>
     <tr class="update-panel-row" id="upanel-row-${t.id}">
       <td colspan="6" style="padding:0;border-bottom:1px solid #f0f0f0;">
-        <div class="update-panel-inner" style="background:#f9f9f7;padding:8px 12px;">
-          ${uCount ? updates.map(u => `<div class="update-entry"><span class="update-date">${u.date}:</span>${u.text}</div>`).join('') : '<div class="update-entry" style="color:#bbb;font-style:italic">Sin actualizaciones aún</div>'}
+        <div class="update-panel-inner">
+          ${uCount ? updates.map(u=>`<div class="update-entry"><span class="update-date">${u.date}:</span>${u.text}</div>`).join('') : '<div class="update-entry" style="color:#bbb;font-style:italic">Sin actualizaciones aún</div>'}
           <div class="update-add">
             <input id="uinput-${t.id}" placeholder="Agregar update..." onkeydown="if(event.key==='Enter')addUpdate('${t.id}')" />
             <button onclick="addUpdate('${t.id}')">+ Agregar</button>
@@ -466,10 +485,72 @@ function renderTaskBlock(p) {
         </div>
       </td>
     </tr>`;
-  });
+}
 
-  html += `</tbody></table>`;
-  html += `<span class="add-row-trigger" onclick="showAddRow('${p.id}','${tableId}')">＋ Agregar tarea</span>`;
+function renderTaskBlock(p) {
+  const krs = p.krs || [];
+  const total = p.tasks.filter(t => taskStatus[t.id] !== 'done').length;
+
+  let allTasks = onlyPrio ? p.tasks.filter(t => taskPriority[t.id]==='Alta') : p.tasks;
+
+  let html = `<div class="person-block">
+    <div class="person-header">
+      <div class="avatar" style="background:${p.bg};color:${p.tc}">${p.initials}</div>
+      <div><div class="person-name">${p.name}</div><div class="task-count">${total} pendiente${total!==1?'s':''}</div></div>
+    </div>`;
+
+  const tableHeader = `<thead><tr>
+    <th style="width:100px">Categoría</th>
+    <th>Descripción</th>
+    <th style="width:80px">Prioridad</th>
+    <th style="width:88px">Estado</th>
+    <th style="width:110px">ETA</th>
+    <th style="width:70px"></th>
+  </tr></thead>`;
+
+  if (!krs.length) {
+    // No KRs: show as "KR Pendiente" section
+    const tableId = p.id + '-nokr';
+    html += `<div class="kr-subsection">
+      <div class="kr-subsection-header"><span class="kr-subsection-title">KR Pendiente</span></div>
+      <table class="task-table">${tableHeader}<tbody id="tbody-${tableId}">`;
+    allTasks.forEach(t => { html += renderTaskRow(t, p.id, krs); });
+    html += `</tbody></table>
+      <span class="add-row-trigger" onclick="showAddRow('${p.id}',null,'${tableId}')">＋ Agregar tarea</span>
+    </div>`;
+  } else {
+    krs.forEach((kr, i) => {
+      const tableId = p.id + '-kr' + i;
+      const krTasks = allTasks.filter(t => taskKr[t.id] === kr.cat);
+      html += `<div class="kr-subsection">
+        <div class="kr-subsection-header">
+          <span class="kr-subsection-title">${kr.cat}</span>
+          <span class="kr-subsection-desc">${kr.desc}</span>
+          <span class="kr-subsection-eta">${kr.eta}</span>
+        </div>
+        <table class="task-table">${tableHeader}<tbody id="tbody-${tableId}">`;
+      if (krTasks.length) {
+        krTasks.forEach(t => { html += renderTaskRow(t, p.id, krs); });
+      } else {
+        html += `<tr><td colspan="6" style="padding:6px 8px;font-size:11px;color:#ccc;font-style:italic">Sin tareas en este KR</td></tr>`;
+      }
+      html += `</tbody></table>
+        <span class="add-row-trigger" onclick="showAddRow('${p.id}','${kr.cat}','${tableId}')">＋ Agregar tarea</span>
+      </div>`;
+    });
+
+    // Tasks not assigned to any KR
+    const unassigned = allTasks.filter(t => !taskKr[t.id] || !krs.find(kr => kr.cat === taskKr[t.id]));
+    if (unassigned.length) {
+      const tableId = p.id + '-unassigned';
+      html += `<div class="kr-subsection">
+        <div class="kr-subsection-header"><span class="kr-subsection-title" style="color:#aaa">Sin KR</span></div>
+        <table class="task-table">${tableHeader}<tbody id="tbody-${tableId}">`;
+      unassigned.forEach(t => { html += renderTaskRow(t, p.id, krs); });
+      html += `</tbody></table></div>`;
+    }
+  }
+
   html += `</div>`;
   return html;
 }
@@ -477,27 +558,19 @@ function renderTaskBlock(p) {
 function renderBoard() {
   if (!data) return;
   const container = document.getElementById('view-board');
-
   let people, kams;
   if (currentArea === 'all') {
     people = []; kams = [];
     Object.values(data.areas).forEach(a => {
-      const fp = currentPerson === 'all' ? (a.people||[]) : (a.people||[]).filter(x => x.id === currentPerson);
-      const fk = currentPerson === 'all' ? (a.kams||[]) : (a.kams||[]).filter(x => x.id === currentPerson);
-      people = people.concat(fp);
-      kams = kams.concat(fk);
+      people = people.concat(currentPerson==='all' ? (a.people||[]) : (a.people||[]).filter(x=>x.id===currentPerson));
+      kams = kams.concat(currentPerson==='all' ? (a.kams||[]) : (a.kams||[]).filter(x=>x.id===currentPerson));
     });
   } else {
-    people = filteredPeople();
-    kams = filteredKams();
+    people = filteredPeople(); kams = filteredKams();
   }
-
   if (!people.length && !kams.length) { container.innerHTML = '<div class="empty">Sin datos para esta área aún</div>'; return; }
   let html = people.map(p => renderTaskBlock(p)).join('');
-  if (kams.length) {
-    html += `<div class="kam-label">KAMs — Partner Ops</div>`;
-    html += kams.map(p => renderTaskBlock(p)).join('');
-  }
+  if (kams.length) { html += `<div class="kam-label">KAMs — Partner Ops</div>`; html += kams.map(p => renderTaskBlock(p)).join(''); }
   container.innerHTML = html;
 }
 
@@ -506,23 +579,20 @@ function renderToday() {
   const container = document.getElementById('view-today');
   const today = new Date().toISOString().split('T')[0];
   const people = [...filteredPeople(), ...filteredKams()];
-  let html = '<div class="today-grid">';
-  let any = false;
-
+  let html = '<div class="today-grid">'; let any = false;
   people.forEach(p => {
     let tasks = p.tasks.filter(t => taskStatus[t.id] !== 'done');
     const due = tasks.filter(t => taskEta[t.id] && !String(taskEta[t.id]).startsWith('Q') && taskEta[t.id] <= today);
     const hi = tasks.filter(t => taskPriority[t.id]==='Alta' && !due.find(d=>d.id===t.id));
     let all = [...due, ...hi];
-    if (onlyPrio) all = all.filter(t => taskPriority[t.id] === 'Alta');
+    if (onlyPrio) all = all.filter(t => taskPriority[t.id]==='Alta');
     if (!all.length) return;
     any = true;
-    html += `<div class="today-card">
-      <div class="today-card-header">
-        <div class="avatar" style="background:${p.bg};color:${p.tc};width:26px;height:26px;font-size:10px">${p.initials}</div>
-        <span style="font-size:12px;font-weight:600;color:#1a1a1a">${p.name}</span>
-        <span style="font-size:10px;color:#aaa;margin-left:auto">${all.length} tarea${all.length!==1?'s':''}</span>
-      </div>`;
+    html += `<div class="today-card"><div class="today-card-header">
+      <div class="avatar" style="background:${p.bg};color:${p.tc};width:26px;height:26px;font-size:10px">${p.initials}</div>
+      <span style="font-size:12px;font-weight:600;color:#1a1a1a">${p.name}</span>
+      <span style="font-size:10px;color:#aaa;margin-left:auto">${all.length} tarea${all.length!==1?'s':''}</span>
+    </div>`;
     all.forEach(t => {
       const checked = taskStatus[t.id]==='done';
       html += `<div class="today-task">
@@ -535,32 +605,25 @@ function renderToday() {
     });
     html += `</div>`;
   });
-
   html += '</div>';
   if (!any) html = '<div class="empty">No hay tareas urgentes para hoy</div>';
   container.innerHTML = html;
 }
 
-function toggleDone(id) {
-  taskStatus[id] = taskStatus[id]==='done' ? 'pending' : 'done';
-  scheduleSync(); renderAll();
-}
+function toggleDone(id) { taskStatus[id] = taskStatus[id]==='done' ? 'pending' : 'done'; scheduleSync(); renderAll(); }
 
 function renderGantt() {
   if (!data) return;
   const container = document.getElementById('view-gantt');
   const people = [...filteredPeople(), ...filteredKams()];
-  const START = new Date('2026-04-01');
-  const END = new Date('2026-06-30');
+  const START = new Date('2026-04-01'), END = new Date('2026-06-30');
   const TOTAL = (END - START) / 86400000;
   const months = ['Abr','May','Jun'];
   const startDates = { t1:'2026-04-10', t2:'2026-04-15', t13:'2026-04-14' };
-
   let rows = ''; let any = false;
-
   people.forEach(p => {
     let tasks = p.tasks.filter(t => taskEta[t.id] && !String(taskEta[t.id]).startsWith('Q'));
-    if (onlyPrio) tasks = tasks.filter(t => taskPriority[t.id] === 'Alta');
+    if (onlyPrio) tasks = tasks.filter(t => taskPriority[t.id]==='Alta');
     if (!tasks.length) return;
     any = true;
     tasks.forEach(t => {
@@ -577,12 +640,8 @@ function renderGantt() {
       </div>`;
     });
   });
-
   if (!any) { container.innerHTML = '<div class="empty">No hay tareas con fecha para mostrar en Gantt</div>'; return; }
-  container.innerHTML = `<div class="gantt-wrap">
-    <div class="gantt-months">${months.map(m=>`<div class="gantt-month">${m}</div>`).join('')}</div>
-    ${rows}
-  </div>`;
+  container.innerHTML = `<div class="gantt-wrap"><div class="gantt-months">${months.map(m=>`<div class="gantt-month">${m}</div>`).join('')}</div>${rows}</div>`;
 }
 
 function renderAll() { renderBoard(); renderToday(); renderGantt(); }
