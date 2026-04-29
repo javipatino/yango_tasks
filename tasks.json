@@ -75,7 +75,12 @@
               "eta": "2026-04-28",
               "status": "pending",
               "link": "",
-              "updates": []
+              "updates": [
+                {
+                  "date": "29.04",
+                  "text": "28.04: Alejo envió los contratos a René"
+                }
+              ]
             },
             {
               "id": "t1777473375705",
