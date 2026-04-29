@@ -1,3 +1,316 @@
 {
-  "last_updated": "2026-04-29"
+  "last_updated": "2026-04-29",
+  "areas": {
+    "ops": {
+      "people": [
+        {
+          "id": "javi",
+          "name": "Javier",
+          "initials": "JP",
+          "bg": "#E6F1FB",
+          "tc": "#0C447C",
+          "krs": [],
+          "tasks": [
+            {
+              "id": "t1",
+              "type": "main",
+              "cat": "CI automation",
+              "desc": "Ajustar agente de CI earnings para tener resumen semanal los lunes de incentivos de la competencia",
+              "priority": "Media",
+              "eta": "2026-05-30",
+              "status": "progress",
+              "link": "",
+              "updates": [],
+              "kr": null
+            },
+            {
+              "id": "t2",
+              "type": "main",
+              "cat": "CI driver",
+              "desc": "Driver earnings CI — weekday vs weekend, peak hours",
+              "priority": "Alta",
+              "eta": "2026-06-15",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": null
+            },
+            {
+              "id": "t3",
+              "type": "little",
+              "cat": "Call taxi",
+              "desc": "Validar si Alejo MS&E puede aumentar TR de start call taxi a 13%",
+              "priority": "Alta",
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": null
+            },
+            {
+              "id": "t4",
+              "type": "little",
+              "cat": "Facturas PRO",
+              "desc": "Revisar proceso facturas Pro Soledad y Redi Soledad",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": null
+            },
+            {
+              "id": "t5",
+              "type": "little",
+              "cat": "CI driver",
+              "desc": "Ajustar CI driver TPH&MPH para que tome todo diario",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "https://startrek.yango.com",
+              "updates": [],
+              "kr": null
+            },
+            {
+              "id": "t6",
+              "type": "little",
+              "cat": "Cashless",
+              "desc": "Pendiente de que Floober se agregue como habilitado para recibir pagos cashless",
+              "priority": "Media",
+              "eta": "2026-04-28",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": null
+            }
+          ]
+        },
+        {
+          "id": "nico",
+          "name": "Nicolás",
+          "initials": "NV",
+          "bg": "#E6F5EF",
+          "tc": "#0A5C36",
+          "krs": [
+            { "cat": "Moto", "desc": "Bogota 70k→100k daily · Cali +200k · Baq +90k weekly", "eta": "Q2" },
+            { "cat": "UFC", "desc": "Bogota 60k→80k · Cali 20k→30k weekly", "eta": "Q2" },
+            { "cat": "TukTuk", "desc": "13k→30k weekly trips", "eta": "Q2" }
+          ],
+          "tasks": [
+            {
+              "id": "t7",
+              "type": "main",
+              "cat": "Bogota south",
+              "desc": "Propuesta geobonos Alejo · Descuentos sur MS&E",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Moto"
+            },
+            {
+              "id": "t8",
+              "type": "main",
+              "cat": "IA project",
+              "desc": "Comportamiento conductores horas pico (API fleetroom)",
+              "priority": null,
+              "eta": null,
+              "status": "progress",
+              "link": "",
+              "updates": [],
+              "kr": "Moto"
+            },
+            {
+              "id": "t9",
+              "type": "little",
+              "cat": "Viaje Soledad",
+              "desc": "Cuadrar ida a Soledad con Sarmiento",
+              "priority": null,
+              "eta": "2026-04-20",
+              "status": "done",
+              "link": "",
+              "updates": [],
+              "kr": "Moto"
+            },
+            {
+              "id": "t10",
+              "type": "little",
+              "cat": "Facturas",
+              "desc": "PRO: factura GR 2k USD — lista para pago",
+              "priority": null,
+              "eta": "2026-04-16",
+              "status": "pending",
+              "link": "https://startrek.yango.com",
+              "updates": [],
+              "kr": "Moto"
+            },
+            {
+              "id": "t11",
+              "type": "little",
+              "cat": "Facturas",
+              "desc": "PRO: factura supply 3k USD marzo — pasar a billing",
+              "priority": null,
+              "eta": "2026-04-16",
+              "status": "pending",
+              "link": "https://startrek.yango.com",
+              "updates": [],
+              "kr": "Moto"
+            },
+            {
+              "id": "t12",
+              "type": "little",
+              "cat": "Facturas",
+              "desc": "REDI: factura adquisición base de datos (marketing)",
+              "priority": "Alta",
+              "eta": "2026-04-20",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Moto"
+            },
+            {
+              "id": "t13",
+              "type": "little",
+              "cat": "Facturas",
+              "desc": "REDI: factura pago incentivos (supply)",
+              "priority": "Alta",
+              "eta": "2026-04-20",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Moto"
+            }
+          ]
+        },
+        {
+          "id": "sarmi",
+          "name": "Sarmiento",
+          "initials": "DS",
+          "bg": "#FDF0E6",
+          "tc": "#7A3B0A",
+          "krs": [],
+          "tasks": []
+        },
+        {
+          "id": "juanjo",
+          "name": "Juanjo",
+          "initials": "JG",
+          "bg": "#F3EBF9",
+          "tc": "#5B2D8E",
+          "krs": [],
+          "tasks": []
+        },
+        {
+          "id": "alejo",
+          "name": "Alejo",
+          "initials": "AV",
+          "bg": "#FEF9E6",
+          "tc": "#7A5C0A",
+          "krs": [],
+          "tasks": []
+        },
+        {
+          "id": "lucho",
+          "name": "Lucho",
+          "initials": "LM",
+          "bg": "#E8F4FB",
+          "tc": "#0A4A6E",
+          "krs": [],
+          "tasks": []
+        }
+      ],
+      "kams": [
+        {
+          "id": "jimmy",
+          "name": "Jimmy",
+          "initials": "JR",
+          "bg": "#F0F0F0",
+          "tc": "#444444",
+          "krs": [],
+          "tasks": []
+        },
+        {
+          "id": "danih",
+          "name": "Dani H",
+          "initials": "DH",
+          "bg": "#F0F0F0",
+          "tc": "#444444",
+          "krs": [],
+          "tasks": []
+        },
+        {
+          "id": "jaco",
+          "name": "Jaco",
+          "initials": "JC",
+          "bg": "#F0F0F0",
+          "tc": "#444444",
+          "krs": [],
+          "tasks": []
+        },
+        {
+          "id": "juli",
+          "name": "Juli",
+          "initials": "JL",
+          "bg": "#F0F0F0",
+          "tc": "#444444",
+          "krs": [],
+          "tasks": []
+        }
+      ]
+    },
+    "mkt": {
+      "people": [
+        {
+          "id": "simon",
+          "name": "Simon",
+          "initials": "SM",
+          "bg": "#FDE8E8",
+          "tc": "#7A0A0A",
+          "krs": [],
+          "tasks": []
+        },
+        {
+          "id": "alberto",
+          "name": "Alberto",
+          "initials": "AL",
+          "bg": "#E8F4FD",
+          "tc": "#0A3D6E",
+          "krs": [],
+          "tasks": []
+        },
+        {
+          "id": "andres",
+          "name": "Andrés",
+          "initials": "AG",
+          "bg": "#EDFDE8",
+          "tc": "#1A5C0A",
+          "krs": [],
+          "tasks": []
+        },
+        {
+          "id": "mateo",
+          "name": "Mateo",
+          "initials": "MR",
+          "bg": "#FDF4E8",
+          "tc": "#6E3A0A",
+          "krs": [],
+          "tasks": []
+        }
+      ],
+      "kams": []
+    },
+    "pr": {
+      "people": [],
+      "kams": []
+    },
+    "gr": {
+      "people": [],
+      "kams": []
+    },
+    "otros": {
+      "people": [],
+      "kams": []
+    }
+  }
 }
