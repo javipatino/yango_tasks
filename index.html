@@ -40,7 +40,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .kr-subsection-eta { font-size: 10px; color: #bbb; }
 .kr-edit-btn { background: none; border: none; color: #ccc; cursor: pointer; font-size: 12px; padding: 1px 4px; border-radius: 3px; }
 .kr-edit-btn:hover { color: #185FA5; background: #e8f0fb; }
-.kr-edit-form { display: none; background: #f5f5f3; border-radius: 6px; padding: 8px 10px; margin-bottom: 6px; gap: 6px; flex-wrap: wrap; align-items: center; }
+.kr-edit-form { display: none; background: #f5f5f3; border-radius: 6px; padding: 8px 10px; margin-bottom: 6px; gap: 6px; flex-wrap: wrap; align-items: center; margin-top: 4px; }
 .kr-edit-form.open { display: flex; }
 .kr-edit-form input { font-size: 11px; border: 1px solid #d8d8d8; border-radius: 4px; padding: 2px 6px; height: 24px; background: #fff; }
 .kr-edit-form input.desc-input { flex: 1; min-width: 160px; }
@@ -568,7 +568,9 @@ function renderTaskRow(t, personId, krs) {
   const hi = taskPriority[t.id] === 'Alta';
   const updates = taskUpdates[t.id] || [];
   const uCount = updates.length;
-  const krOptions = krs.map(kr => `<option value="${kr.cat}" ${taskKr[t.id]===kr.cat?'selected':''}>${kr.cat}</option>`).join('');
+  const krOptions = krs.length
+    ? krs.map(kr => `<option value="${kr.cat}" ${taskKr[t.id]===kr.cat?'selected':''}>${kr.cat}</option>`).join('')
+    : '<option value="" disabled>Sin KRs definidos — agrega un KR primero</option>';
   const krEditOptions = krs.map(kr => `<option value="${kr.cat}" ${taskKr[t.id]===kr.cat?'selected':''}>${kr.cat}</option>`).join('');
   const prioOpts = ['','Alta','Media','Baja'].map(v => `<option value="${v}" ${(taskPriority[t.id]||'')=== v?'selected':''}>${v||'—'}</option>`).join('');
   const statOpts = ['pending','progress','done'].map(v => `<option value="${v}" ${(taskStatus[t.id]||'pending')===v?'selected':''}>${v==='pending'?'Pendiente':v==='progress'?'En curso':'Listo'}</option>`).join('');
@@ -585,7 +587,7 @@ function renderTaskRow(t, personId, krs) {
         <div class="action-btns">
           <button class="act-btn hist" onclick="toggleUpdates('${t.id}',this)" title="Historial">▼${uCount?' '+uCount:''}</button>
           <button class="act-btn edit" onclick="toggleEdit('${t.id}')" title="Editar">✏️</button>
-          ${krs.length>1?`<button class="act-btn move" onclick="toggleMove('${t.id}')" title="Mover KR">⇄</button>`:''}
+          <button class="act-btn move" onclick="toggleMove('${t.id}')" title="Mover KR">⇄</button>
           <button class="act-btn del" onclick="deleteTask('${personId}','${t.id}')" title="Eliminar">✕</button>
         </div>
       </td>
@@ -641,6 +643,18 @@ function renderTaskBlock(p) {
     <th style="width:110px">ETA</th><th style="width:80px"></th>
   </tr></thead>`;
 
+  // Shared + Agregar KR form (one per person, reused by button)
+  const addKrForm = `<div>
+    <button class="kr-edit-btn" onclick="showAddKr('${p.id}')" style="font-size:11px;padding:3px 8px">＋ Agregar KR</button>
+    <div class="kr-edit-form" id="kr-add-${p.id}">
+      <div class="edit-field"><label>Nombre</label><input id="kra-cat-${p.id}" placeholder="Moto" style="min-width:80px" /></div>
+      <div class="edit-field"><label>Descripción</label><input id="kra-desc-${p.id}" class="desc-input" placeholder="70k→100k daily..." /></div>
+      <div class="edit-field"><label>ETA</label><input id="kra-eta-${p.id}" class="eta-input" placeholder="Q2" /></div>
+      <button class="kr-save-btn" onclick="saveAddKr('${p.id}')">✓ Agregar</button>
+      <button class="kr-cancel-btn" onclick="showAddKr('${p.id}')">Cancelar</button>
+    </div>
+  </div>`;
+
   let html = `<div class="person-block">
     <div class="person-header">
       <div class="avatar" style="background:${p.bg};color:${p.tc}">${p.initials}</div>
@@ -648,6 +662,7 @@ function renderTaskBlock(p) {
     </div>`;
 
   if (!krs.length) {
+    // No KRs: single "KR Pendiente" section with + KR button in header
     const tid = p.id + '-nokr';
     html += `<div class="kr-subsection">
       <div class="kr-subsection-header">
@@ -667,6 +682,7 @@ function renderTaskBlock(p) {
       <span class="add-row-trigger" onclick="showAddRow('${p.id}','','${tid}')">＋ Agregar tarea</span>
     </div>`;
   } else {
+    // Has KRs: one subsection per KR
     krs.forEach((kr, i) => {
       const tid = p.id + '-kr' + i;
       const krTasks = allTasks.filter(t => taskKr[t.id] === kr.cat);
@@ -695,27 +711,22 @@ function renderTaskBlock(p) {
       </div>`;
     });
 
-    // + Agregar KR
-    html += `<div style="margin-bottom:4px">
-      <button class="kr-edit-btn" onclick="showAddKr('${p.id}')" style="font-size:11px;padding:3px 8px">&#xFF0B; Agregar KR</button>
-      <div class="kr-edit-form" id="kr-add-${p.id}">
-        <div class="edit-field"><label>Nombre</label><input id="kra-cat-${p.id}" placeholder="Moto" style="min-width:80px" /></div>
-        <div class="edit-field"><label>Descripción</label><input id="kra-desc-${p.id}" class="desc-input" placeholder="70k hacia 100k daily..." /></div>
-        <div class="edit-field"><label>ETA</label><input id="kra-eta-${p.id}" class="eta-input" placeholder="Q2" /></div>
-        <button class="kr-save-btn" onclick="saveAddKr('${p.id}')">Agregar</button>
-        <button class="kr-cancel-btn" onclick="showAddKr('${p.id}')">Cancelar</button>
-      </div>
-    </div>`;
-
+    // "Sin KR" section for unassigned tasks
     const unassigned = allTasks.filter(t => !taskKr[t.id] || !krs.find(kr => kr.cat === taskKr[t.id]));
     if (unassigned.length) {
       const tid = p.id + '-unassigned';
       html += `<div class="kr-subsection">
-        <div class="kr-subsection-header"><span class="kr-subsection-title" style="color:#aaa">Sin KR</span></div>
+        <div class="kr-subsection-header">
+          <span class="kr-subsection-title" style="color:#aaa">Sin KR</span>
+          <span style="margin-left:auto"><button class="kr-edit-btn" onclick="showAddKr('${p.id}')" style="font-size:11px;padding:3px 8px">＋ Agregar KR</button></span>
+        </div>
         <table class="task-table">${tableHeader}<tbody id="tbody-${tid}">`;
       unassigned.forEach(t => { html += renderTaskRow(t, p.id, krs); });
       html += `</tbody></table></div>`;
     }
+
+    // Always show + Agregar KR at the bottom (outside Sin KR)
+    html += addKrForm;
   }
 
   html += `</div>`;
