@@ -410,6 +410,33 @@ function toggleKrEdit(personId, krIdx) {
   form.classList.toggle('open');
 }
 
+function showAddKr(personId) {
+  const form = document.getElementById('kr-add-' + personId);
+  if (!form) return;
+  form.classList.toggle('open');
+}
+
+function saveAddKr(personId) {
+  const cat  = document.getElementById('kra-cat-' + personId)?.value.trim();
+  const desc = document.getElementById('kra-desc-' + personId)?.value.trim();
+  const eta  = document.getElementById('kra-eta-' + personId)?.value.trim();
+  if (!cat) { alert('Ingresa un nombre para el KR'); return; }
+
+  Object.values(data.areas).forEach(area => {
+    [...(area.people||[]), ...(area.kams||[])].forEach(p => {
+      if (p.id === personId) {
+        if (!p.krs) p.krs = [];
+        p.krs.push({ cat, desc: desc||'', eta: eta||'' });
+      }
+    });
+  });
+
+  const form = document.getElementById('kr-add-' + personId);
+  if (form) form.classList.remove('open');
+  scheduleSync();
+  renderAll();
+}
+
 function saveKrEdit(personId, krIdx) {
   const cat  = document.getElementById('kre-cat-' + personId + '-' + krIdx)?.value.trim();
   const desc = document.getElementById('kre-desc-' + personId + '-' + krIdx)?.value.trim();
@@ -623,7 +650,17 @@ function renderTaskBlock(p) {
   if (!krs.length) {
     const tid = p.id + '-nokr';
     html += `<div class="kr-subsection">
-      <div class="kr-subsection-header"><span class="kr-subsection-title">KR Pendiente</span></div>
+      <div class="kr-subsection-header">
+        <span class="kr-subsection-title">KR Pendiente</span>
+        <span style="margin-left:auto"><button class="kr-edit-btn" onclick="showAddKr('${p.id}')" title="Agregar KR">＋ KR</button></span>
+      </div>
+      <div class="kr-edit-form" id="kr-add-${p.id}">
+        <div class="edit-field"><label>Nombre</label><input id="kra-cat-${p.id}" placeholder="Moto" style="min-width:80px" /></div>
+        <div class="edit-field"><label>Descripción</label><input id="kra-desc-${p.id}" class="desc-input" placeholder="70k→100k daily..." /></div>
+        <div class="edit-field"><label>ETA</label><input id="kra-eta-${p.id}" class="eta-input" placeholder="Q2" /></div>
+        <button class="kr-save-btn" onclick="saveAddKr('${p.id}')">✓ Agregar</button>
+        <button class="kr-cancel-btn" onclick="showAddKr('${p.id}')">Cancelar</button>
+      </div>
       <table class="task-table">${tableHeader}<tbody id="tbody-${tid}">`;
     allTasks.forEach(t => { html += renderTaskRow(t, p.id, krs); });
     html += `</tbody></table>
@@ -657,6 +694,18 @@ function renderTaskBlock(p) {
         <span class="add-row-trigger" onclick="showAddRow('${p.id}','${kr.cat}','${tid}')">＋ Agregar tarea</span>
       </div>`;
     });
+
+    // + Agregar KR
+    html += `<div style="margin-bottom:4px">
+      <button class="kr-edit-btn" onclick="showAddKr('${p.id}')" style="font-size:11px;padding:3px 8px">&#xFF0B; Agregar KR</button>
+      <div class="kr-edit-form" id="kr-add-${p.id}">
+        <div class="edit-field"><label>Nombre</label><input id="kra-cat-${p.id}" placeholder="Moto" style="min-width:80px" /></div>
+        <div class="edit-field"><label>Descripción</label><input id="kra-desc-${p.id}" class="desc-input" placeholder="70k hacia 100k daily..." /></div>
+        <div class="edit-field"><label>ETA</label><input id="kra-eta-${p.id}" class="eta-input" placeholder="Q2" /></div>
+        <button class="kr-save-btn" onclick="saveAddKr('${p.id}')">Agregar</button>
+        <button class="kr-cancel-btn" onclick="showAddKr('${p.id}')">Cancelar</button>
+      </div>
+    </div>`;
 
     const unassigned = allTasks.filter(t => !taskKr[t.id] || !krs.find(kr => kr.cat === taskKr[t.id]));
     if (unassigned.length) {
