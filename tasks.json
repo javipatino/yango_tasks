@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-04",
+  "last_updated": "2026-05-05",
   "areas": {
     "ops": {
       "people": [
@@ -11,8 +11,8 @@
           "tc": "#0C447C",
           "krs": [
             {
-              "cat": "Trips",
-              "desc": "25mm",
+              "cat": "APR'RFC",
+              "desc": "25 M trips / $74 M GMV / (18 M) Ebitda",
               "eta": ""
             }
           ],
@@ -27,7 +27,7 @@
               "status": "progress",
               "link": "",
               "updates": [],
-              "kr": null
+              "kr": "APR'RFC"
             },
             {
               "id": "t2",
@@ -39,7 +39,7 @@
               "status": "done",
               "link": "",
               "updates": [],
-              "kr": null
+              "kr": "APR'RFC"
             },
             {
               "id": "t3",
@@ -51,7 +51,7 @@
               "status": "pending",
               "link": "",
               "updates": [],
-              "kr": null
+              "kr": "APR'RFC"
             },
             {
               "id": "t4",
@@ -63,7 +63,7 @@
               "status": "pending",
               "link": "",
               "updates": [],
-              "kr": null
+              "kr": "APR'RFC"
             },
             {
               "id": "t5",
@@ -75,7 +75,7 @@
               "status": "pending",
               "link": "https://st.yandex-team.ru/COMPINTELL-15",
               "updates": [],
-              "kr": null
+              "kr": "APR'RFC"
             },
             {
               "id": "t1745411400",
@@ -92,7 +92,7 @@
                   "text": "Alejo le envió a René los pdf para su firma"
                 }
               ],
-              "kr": null
+              "kr": "APR'RFC"
             },
             {
               "id": "t1777473375705",
@@ -104,7 +104,7 @@
               "status": "pending",
               "link": "",
               "updates": [],
-              "kr": null
+              "kr": "APR'RFC"
             },
             {
               "id": "t1777500113645",
@@ -116,7 +116,7 @@
               "status": "pending",
               "link": "",
               "updates": [],
-              "kr": null
+              "kr": "APR'RFC"
             }
           ]
         },
