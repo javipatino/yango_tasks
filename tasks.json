@@ -100,6 +100,18 @@
               "link": "",
               "updates": [],
               "kr": "APR'RFC"
+            },
+            {
+              "id": "t1778015511713",
+              "type": "little",
+              "cat": "Budget Q3",
+              "desc": "Validar con Alejo el ETR estimado para Q3 y Q4",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "APR'RFC"
             }
           ]
         },
