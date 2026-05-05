@@ -84,7 +84,7 @@
               "type": "main",
               "cat": "IA project",
               "desc": "Comportamiento conductores horas pico (API fleetroom)",
-              "priority": null,
+              "priority": "Baja",
               "eta": null,
               "status": "progress",
               "link": "",
