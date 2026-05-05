@@ -64,6 +64,18 @@
               "link": "",
               "updates": [],
               "kr": "APR'RFC"
+            },
+            {
+              "id": "t1778001613016",
+              "type": "little",
+              "cat": "TukTuk",
+              "desc": "Billing a Pro por 4k",
+              "priority": "Baja",
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "APR'RFC"
             }
           ]
         },
