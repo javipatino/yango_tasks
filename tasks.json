@@ -198,6 +198,18 @@
               "link": "",
               "updates": [],
               "kr": "TukTuk"
+            },
+            {
+              "id": "t1778006983262",
+              "type": "little",
+              "cat": "Concurso Top50",
+              "desc": "Sacar concurso de top 50 con más viajes en mayo gana cambio de aceite",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "TukTuk"
             }
           ]
         },
