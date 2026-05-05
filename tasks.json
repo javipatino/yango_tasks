@@ -124,6 +124,18 @@
               "link": "",
               "updates": [],
               "kr": "APR'RFC"
+            },
+            {
+              "id": "t1778017294592",
+              "type": "little",
+              "cat": "otro",
+              "desc": "*pedir reembolso viaje Cali",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "APR'RFC"
             }
           ]
         },
