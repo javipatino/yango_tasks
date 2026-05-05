@@ -162,6 +162,18 @@
               "link": "",
               "updates": [],
               "kr": "UFC"
+            },
+            {
+              "id": "t1777999300131",
+              "type": "little",
+              "cat": "Comfort disc",
+              "desc": "Probar en el oeste-norte de Cali la misma estrategia que tuvo Bogotá comfort de 30% de descuento, combinado con Geo bono para drivers",
+              "priority": "Baja",
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "UFC"
             }
           ]
         },
