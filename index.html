@@ -517,6 +517,10 @@ function deleteTask(personId, taskId) {
 }
 
 // ── Add task ─────────────────────────────────────────────────
+function showAddRowEl(el) {
+  showAddRow(el.dataset.pid, el.dataset.kr, el.dataset.tid);
+}
+
 function showAddRow(personId, krCat, tableId) {
   const existing = document.getElementById('add-row-' + tableId);
   if (existing) { existing.remove(); return; }
@@ -535,10 +539,14 @@ function showAddRow(personId, krCat, tableId) {
       <option value="pending">Pendiente</option><option value="progress">En curso</option><option value="done">Listo</option>
     </select></td>
     <td><input type="date" class="mini-date" id="ne-${tableId}" style="width:100%" /></td>
-    <td><button class="add-task-btn" onclick="saveNewTask('${personId}','${krCat || ''}','${tableId}')">✓</button></td>
+    <td><button class="add-task-btn" data-pid="${personId}" data-kr="${krCat || ''}" data-tid="${tableId}" onclick="saveNewTaskEl(this)">✓</button></td>
   `;
   tbody.appendChild(tr);
   document.getElementById('nd-' + tableId).focus();
+}
+
+function saveNewTaskEl(btn) {
+  saveNewTask(btn.dataset.pid, btn.dataset.kr, btn.dataset.tid);
 }
 
 function saveNewTask(personId, krCat, tableId) {
@@ -707,7 +715,7 @@ function renderTaskBlock(p) {
         html += `<tr><td colspan="6" style="padding:6px 8px;font-size:11px;color:#ccc;font-style:italic">Sin tareas en este KR</td></tr>`;
       }
       html += `</tbody></table>
-        <span class="add-row-trigger" onclick="showAddRow('${p.id}','${kr.cat}','${tid}')">＋ Agregar tarea</span>
+        <span class="add-row-trigger" data-pid="${p.id}" data-kr="${kr.cat}" data-tid="${tid}" onclick="showAddRowEl(this)">＋ Agregar tarea</span>
       </div>`;
     });
 
