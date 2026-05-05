@@ -40,6 +40,18 @@
               "link": "https://st.yandex-team.ru/COMPINTELL-15",
               "updates": [],
               "kr": "APR'RFC"
+            },
+            {
+              "id": "t1777999340204",
+              "type": "little",
+              "cat": "BipBip",
+              "desc": "Firma de contrato para BPO BipBip Vzla",
+              "priority": "Media",
+              "eta": null,
+              "status": "progress",
+              "link": "",
+              "updates": [],
+              "kr": "APR'RFC"
             }
           ]
         },
