@@ -128,18 +128,6 @@
               "kr": "Moto"
             },
             {
-              "id": "t10",
-              "type": "little",
-              "cat": "Facturas",
-              "desc": "PRO: factura supply 3k USD marzo — pasar a billing",
-              "priority": null,
-              "eta": "2026-04-16",
-              "status": "pending",
-              "link": "https://st.yandex-team.ru/TAXIASSIST-608433",
-              "updates": [],
-              "kr": "TukTuk"
-            },
-            {
               "id": "t11",
               "type": "little",
               "cat": "Facturas",
