@@ -556,18 +556,6 @@
           ],
           "tasks": [
             {
-              "id": "k4",
-              "type": "main",
-              "cat": "Oro-Plata-Bronce",
-              "desc": "Oro-Plata-Bronce 2.0 (con Jaco)",
-              "priority": null,
-              "eta": null,
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "Partner comms"
-            },
-            {
               "id": "k5",
               "type": "main",
               "cat": "Partner comms",
