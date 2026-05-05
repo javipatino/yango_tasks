@@ -554,20 +554,7 @@
               "eta": "Q2"
             }
           ],
-          "tasks": [
-            {
-              "id": "k5",
-              "type": "main",
-              "cat": "Partner comms",
-              "desc": "Partner comms Suro — traerla a Bogotá",
-              "priority": null,
-              "eta": null,
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": null
-            }
-          ]
+          "tasks": []
         },
         {
           "id": "jaco",
