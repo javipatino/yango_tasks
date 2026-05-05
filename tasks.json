@@ -112,6 +112,18 @@
               "link": "",
               "updates": [],
               "kr": "APR'RFC"
+            },
+            {
+              "id": "t1778015563593",
+              "type": "little",
+              "cat": "Cali Q3-Q4",
+              "desc": "Propuesta de re-inversión para Cali en Q3 o Q4",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "APR'RFC"
             }
           ]
         },
