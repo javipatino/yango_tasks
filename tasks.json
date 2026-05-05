@@ -181,7 +181,7 @@
               "cat": "Licenciaton",
               "desc": "Evento con GR para llegar a adquirir los conductores que vayan a obtener su licencia",
               "priority": "Media",
-              "eta": null,
+              "eta": "2026-05-08",
               "status": "pending",
               "link": "",
               "updates": [],
