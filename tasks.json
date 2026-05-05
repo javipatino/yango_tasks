@@ -95,7 +95,7 @@
               "cat": "Call Taxi",
               "desc": "Enviar y monitorear contrato call taxi a Cesar y Stefanía",
               "priority": "Alta",
-              "eta": null,
+              "eta": "2026-05-05",
               "status": "progress",
               "link": "",
               "updates": [],
