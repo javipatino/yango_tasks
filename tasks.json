@@ -116,18 +116,6 @@
               "kr": "Moto"
             },
             {
-              "id": "t8",
-              "type": "main",
-              "cat": "Viaje Soledad",
-              "desc": "Cuadrar ida a Soledad con Sarmiento",
-              "priority": null,
-              "eta": "2026-04-20",
-              "status": "done",
-              "link": "",
-              "updates": [],
-              "kr": "Moto"
-            },
-            {
               "id": "t9",
               "type": "little",
               "cat": "Facturas",
