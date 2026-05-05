@@ -243,7 +243,7 @@
               "id": "t15",
               "type": "little",
               "cat": "Referral",
-              "desc": "Sacar nuevas campañas de Referral",
+              "desc": "Monitoreo nuevas campañas de referral",
               "priority": null,
               "eta": "2026-04-21",
               "status": "pending",
