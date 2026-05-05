@@ -30,18 +30,6 @@
               "kr": "APR'RFC"
             },
             {
-              "id": "t3",
-              "type": "little",
-              "cat": "Call taxi",
-              "desc": "Validar si Alejo MS&E puede aumentar TR de start call taxi a 13%",
-              "priority": "Alta",
-              "eta": null,
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "APR'RFC"
-            },
-            {
               "id": "t4",
               "type": "little",
               "cat": "Facturas PRO",
