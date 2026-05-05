@@ -130,7 +130,7 @@
               "type": "little",
               "cat": "otro",
               "desc": "*pedir reembolso viaje Cali",
-              "priority": null,
+              "priority": "Alta",
               "eta": null,
               "status": "pending",
               "link": "",
