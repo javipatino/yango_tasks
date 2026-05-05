@@ -82,7 +82,7 @@
               "type": "little",
               "cat": "Referral",
               "desc": "Visibilidad a MS&E de referral tracker - dónde tiene la inversión Didi (en moto?)",
-              "priority": null,
+              "priority": "Media",
               "eta": null,
               "status": "pending",
               "link": "",
@@ -219,6 +219,18 @@
               "priority": "Media",
               "eta": "2026-05-06",
               "status": "progress",
+              "link": "",
+              "updates": [],
+              "kr": "TukTuk"
+            },
+            {
+              "id": "t1778011429905",
+              "type": "little",
+              "cat": "Lima",
+              "desc": "Vuelo a Lima con Stephan",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
               "link": "",
               "updates": [],
               "kr": "TukTuk"
