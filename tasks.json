@@ -240,18 +240,6 @@
               "kr": "Driver acq."
             },
             {
-              "id": "t14",
-              "type": "main",
-              "cat": "Own scouts",
-              "desc": "LTV vs DAC — finales de abril",
-              "priority": null,
-              "eta": "2026-04-30",
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "Driver acq."
-            },
-            {
               "id": "t15",
               "type": "little",
               "cat": "Referral",
