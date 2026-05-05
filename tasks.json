@@ -560,7 +560,7 @@
               "type": "little",
               "cat": "WA tool",
               "desc": "Hellotext o Elocuenti - Implementación de partners",
-              "priority": null,
+              "priority": "Alta",
               "eta": null,
               "status": "progress",
               "link": "",
