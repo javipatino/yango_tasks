@@ -94,9 +94,9 @@
               "type": "little",
               "cat": "Call Taxi",
               "desc": "Enviar y monitorear contrato call taxi a Cesar y Stefanía",
-              "priority": null,
+              "priority": "Alta",
               "eta": null,
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": "APR'RFC"
