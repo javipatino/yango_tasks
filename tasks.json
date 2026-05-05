@@ -40,18 +40,6 @@
               "link": "https://st.yandex-team.ru/COMPINTELL-15",
               "updates": [],
               "kr": "APR'RFC"
-            },
-            {
-              "id": "t1777473375705",
-              "type": "little",
-              "cat": "MS&E",
-              "desc": "Análisis de MS&E de impacto cuando hay lluvias",
-              "priority": null,
-              "eta": "2026-04-30",
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "APR'RFC"
             }
           ]
         },
