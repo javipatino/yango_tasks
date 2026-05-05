@@ -554,7 +554,20 @@
               "eta": "Q2"
             }
           ],
-          "tasks": []
+          "tasks": [
+            {
+              "id": "t1778007672656",
+              "type": "little",
+              "cat": "WA tool",
+              "desc": "Hellotext o Elocuenti - Implementación de partners",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Partner comms"
+            }
+          ]
         },
         {
           "id": "jaco",
