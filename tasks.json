@@ -83,7 +83,7 @@
               "id": "t7",
               "type": "main",
               "cat": "IA project",
-              "desc": "Comportamiento conductores horas pico (API fleetroom)",
+              "desc": "Análisis con API de fleetroom sobre el comportamiento de conductores en la semana: part-timers vs full-timers, horas valle vs pico, etc",
               "priority": "Baja",
               "eta": null,
               "status": "pending",
