@@ -304,7 +304,7 @@
               "type": "little",
               "cat": "Referral",
               "desc": "Cuadrar con Mate - campaña online de Referral",
-              "priority": null,
+              "priority": "Alta",
               "eta": null,
               "status": "pending",
               "link": "",
