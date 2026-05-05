@@ -33,7 +33,7 @@
               "id": "t5",
               "type": "little",
               "cat": "CI driver",
-              "desc": "Ajustar CI driver TPH&MPH para que tome todo diario",
+              "desc": "CI driver TPH&MPH para que tome todo diario - proceso con Evgeniy de supply HQ",
               "priority": null,
               "eta": null,
               "status": "pending",
