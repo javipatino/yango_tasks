@@ -150,6 +150,18 @@
               "link": "",
               "updates": [],
               "kr": "TukTuk"
+            },
+            {
+              "id": "t1777999252208",
+              "type": "little",
+              "cat": "Eco Plus Cali",
+              "desc": "Evaluar cambio de nombre de Economy AC a Economy Plus",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "UFC"
             }
           ]
         },
