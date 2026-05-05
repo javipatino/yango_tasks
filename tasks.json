@@ -547,7 +547,13 @@
           "initials": "DH",
           "bg": "#E1F5EE",
           "tc": "#085041",
-          "krs": [],
+          "krs": [
+            {
+              "cat": "Partner comms",
+              "desc": "Automated WA flow, 80% of partners",
+              "eta": ""
+            }
+          ],
           "tasks": [
             {
               "id": "k4",
