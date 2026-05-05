@@ -490,6 +490,18 @@
               "link": "",
               "updates": [],
               "kr": "Economy Cali"
+            },
+            {
+              "id": "t1778009132221",
+              "type": "little",
+              "cat": "GR Oviedo",
+              "desc": "Invitación 250 particulares y 250 motos al evento de GR",
+              "priority": "Media",
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Economy Cali"
             }
           ]
         }
