@@ -58,7 +58,7 @@
               "type": "little",
               "cat": "TukTuk",
               "desc": "Factura de Redi para los cambios de aceite",
-              "priority": null,
+              "priority": "Baja",
               "eta": null,
               "status": "pending",
               "link": "",
