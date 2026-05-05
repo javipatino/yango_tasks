@@ -20,8 +20,8 @@
             {
               "id": "t1",
               "type": "main",
-              "cat": "CI automation",
-              "desc": "Ajustar CI earnings para tener resumen semanal los lunes de incentivos de la competencia",
+              "cat": "Incentives CI",
+              "desc": "Ajustar flujo CI earnings para tener resumen semanal los lunes de incentivos de la competencia, consolidado en un google slides",
               "priority": "Media",
               "eta": "2026-05-27",
               "status": "progress",
