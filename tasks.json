@@ -128,18 +128,6 @@
               "kr": "Moto"
             },
             {
-              "id": "t9",
-              "type": "little",
-              "cat": "Facturas",
-              "desc": "PRO: factura GR 2k USD — lista para pago",
-              "priority": null,
-              "eta": "2026-04-16",
-              "status": "pending",
-              "link": "https://st.yandex-team.ru/TAXIASSIST-598054",
-              "updates": [],
-              "kr": "TukTuk"
-            },
-            {
               "id": "t10",
               "type": "little",
               "cat": "Facturas",
