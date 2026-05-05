@@ -69,18 +69,6 @@
               "link": "",
               "updates": [],
               "kr": "APR'RFC"
-            },
-            {
-              "id": "t1777500113645",
-              "type": "little",
-              "cat": "Indrive MS",
-              "desc": "Agregar data de indrive en el sheets de market share",
-              "priority": null,
-              "eta": null,
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "APR'RFC"
             }
           ]
         },
