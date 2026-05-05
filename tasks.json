@@ -42,23 +42,6 @@
               "kr": "APR'RFC"
             },
             {
-              "id": "t1745411400",
-              "type": "little",
-              "cat": "Cashless",
-              "desc": "Pendiente de que Floober se agregue como habilitado para recibir pagos cashless",
-              "priority": "Media",
-              "eta": "2026-04-28",
-              "status": "pending",
-              "link": "",
-              "updates": [
-                {
-                  "date": "29.04",
-                  "text": "Alejo le envió a René los pdf para su firma"
-                }
-              ],
-              "kr": "APR'RFC"
-            },
-            {
               "id": "t1777473375705",
               "type": "little",
               "cat": "MS&E",
