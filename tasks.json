@@ -34,7 +34,7 @@
               "type": "little",
               "cat": "CI driver",
               "desc": "CI driver TPH&MPH para que tome todo diario - proceso con Evgeniy de supply HQ",
-              "priority": null,
+              "priority": "Baja",
               "eta": null,
               "status": "pending",
               "link": "https://st.yandex-team.ru/COMPINTELL-15",
