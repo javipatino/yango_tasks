@@ -88,6 +88,18 @@
               "link": "",
               "updates": [],
               "kr": "APR'RFC"
+            },
+            {
+              "id": "t1778013378307",
+              "type": "little",
+              "cat": "Call Taxi",
+              "desc": "Enviar y monitorear contrato call taxi a Cesar y Stefanía",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "APR'RFC"
             }
           ]
         },
