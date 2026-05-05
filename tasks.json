@@ -274,6 +274,18 @@
               "link": "",
               "updates": [],
               "kr": "Driver acq."
+            },
+            {
+              "id": "t1778010924565",
+              "type": "little",
+              "cat": "Referral",
+              "desc": "Cuadrar con Mate - campaña online de Referral",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Driver acq."
             }
           ]
         },
