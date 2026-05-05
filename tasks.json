@@ -566,6 +566,18 @@
               "link": "",
               "updates": [],
               "kr": "Partner comms"
+            },
+            {
+              "id": "t1778007755302",
+              "type": "little",
+              "cat": "WA tool Bog",
+              "desc": "Suro implementation of WA tool",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Partner comms"
             }
           ]
         },
