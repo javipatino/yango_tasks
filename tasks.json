@@ -30,18 +30,6 @@
               "kr": "APR'RFC"
             },
             {
-              "id": "t2",
-              "type": "main",
-              "cat": "CI driver",
-              "desc": "Driver earnings CI — weekday vs weekend, peak hours",
-              "priority": "Alta",
-              "eta": "2026-06-15",
-              "status": "done",
-              "link": "",
-              "updates": [],
-              "kr": "APR'RFC"
-            },
-            {
               "id": "t3",
               "type": "little",
               "cat": "Call taxi",
