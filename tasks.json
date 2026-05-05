@@ -186,6 +186,18 @@
               "link": "",
               "updates": [],
               "kr": "TukTuk"
+            },
+            {
+              "id": "t1778006928554",
+              "type": "little",
+              "cat": "Redi-Auteco",
+              "desc": "Feria durante semana de mayo 25",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "TukTuk"
             }
           ]
         },
