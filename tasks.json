@@ -180,7 +180,7 @@
               "type": "little",
               "cat": "Licenciaton",
               "desc": "Evento con GR para llegar a adquirir los conductores que vayan a obtener su licencia",
-              "priority": null,
+              "priority": "Media",
               "eta": null,
               "status": "pending",
               "link": "",
