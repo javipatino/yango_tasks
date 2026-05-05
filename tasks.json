@@ -107,7 +107,7 @@
               "cat": "Budget Q3",
               "desc": "Validar con Alejo el ETR estimado para Q3 y Q4",
               "priority": null,
-              "eta": null,
+              "eta": "2026-05-06",
               "status": "pending",
               "link": "",
               "updates": [],
