@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-05",
+  "last_updated": "2026-05-06",
   "areas": {
     "ops": {
       "people": [
@@ -98,7 +98,12 @@
               "eta": "2026-05-05",
               "status": "progress",
               "link": "",
-              "updates": [],
+              "updates": [
+                {
+                  "date": "06.05",
+                  "text": "Contrato enviado a Cesar - pendiente de respuesta por email"
+                }
+              ],
               "kr": "APR'RFC"
             },
             {
