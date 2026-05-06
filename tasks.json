@@ -134,11 +134,11 @@
               "id": "t1778017294592",
               "type": "little",
               "cat": "otro",
-              "desc": "*pedir reembolso viaje Cali",
+              "desc": "reembolso viaje Cali",
               "priority": "Alta",
               "eta": null,
               "status": "pending",
-              "link": "",
+              "link": "https://st.yandex-team.ru/EXPENSEREPSFLE-13373",
               "updates": [],
               "kr": "APR'RFC"
             }
