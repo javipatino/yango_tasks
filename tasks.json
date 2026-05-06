@@ -141,6 +141,18 @@
               "link": "https://st.yandex-team.ru/EXPENSEREPSFLE-13373",
               "updates": [],
               "kr": "APR'RFC"
+            },
+            {
+              "id": "t1778097961449",
+              "type": "little",
+              "cat": "Call Taxi",
+              "desc": "Factura de TL sobre call taxi, de diciembre 2025 en adelante",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "APR'RFC"
             }
           ]
         },
