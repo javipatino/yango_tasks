@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-06",
+  "last_updated": "2026-05-07",
   "areas": {
     "ops": {
       "people": [
@@ -153,6 +153,18 @@
               "cat": "Call Taxi",
               "desc": "Factura de TL sobre call taxi, de diciembre 2025 en adelante",
               "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Gestión"
+            },
+            {
+              "id": "t1746574800000",
+              "type": "little",
+              "cat": "BipBip",
+              "desc": "Contrato BPO BipBip dejarlo firmado y armar capacitaciones",
+              "priority": "Media",
               "eta": null,
               "status": "pending",
               "link": "",
