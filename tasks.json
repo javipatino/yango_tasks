@@ -340,6 +340,18 @@
               "link": "",
               "updates": [],
               "kr": "TukTuk"
+            },
+            {
+              "id": "t1746668400000",
+              "type": "little",
+              "cat": "TukTuk",
+              "desc": "Factura pro drivers de los stickers - cargar a Alberto",
+              "priority": "Media",
+              "eta": "2026-05-08",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "TukTuk"
             }
           ]
         },
