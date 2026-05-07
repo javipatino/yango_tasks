@@ -196,16 +196,16 @@
               "kr": "APR'RFC"
             },
             {
-              "id": "t1746660000001",
+              "id": "t1778198302253",
               "type": "little",
-              "cat": "MSE Comisión Cali",
-              "desc": "Follow-up Alejandro MSE: solicitar dejar comisión Cali en 0% por 14 días",
-              "priority": "Alta",
+              "cat": "Tasks",
+              "desc": "Agregar a Mark, Camilo, Stephan en task board",
+              "priority": null,
               "eta": null,
               "status": "pending",
               "link": "",
               "updates": [],
-              "kr": "APR'RFC"
+              "kr": "Gestión"
             }
           ]
         },
@@ -348,18 +348,6 @@
               "desc": "Vuelo a Lima con Stephan",
               "priority": "Media",
               "eta": "2026-05-07",
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "TukTuk"
-            },
-            {
-              "id": "t1746668400000",
-              "type": "little",
-              "cat": "TukTuk",
-              "desc": "Factura pro drivers de los stickers - cargar a Alberto",
-              "priority": "Media",
-              "eta": "2026-05-08",
               "status": "pending",
               "link": "",
               "updates": [],
