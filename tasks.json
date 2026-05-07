@@ -170,6 +170,16 @@
               "link": "",
               "updates": [],
               "kr": "Gestión"
+            },
+            {
+              "id": "t1746648000000",
+              "type": "little",
+              "cat": "All Hands LATAM",
+              "desc": "All Hands LATAM el 11 de mayo: proponer a alguien del equipo y un proyecto a presentar",
+              "priority": "Alta",
+              "eta": "2026-05-11",
+              "status": "pending",
+              "link": ""
             }
           ]
         },
