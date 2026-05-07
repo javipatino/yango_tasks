@@ -194,6 +194,18 @@
               "link": "",
               "updates": [],
               "kr": "APR'RFC"
+            },
+            {
+              "id": "t1746660000001",
+              "type": "little",
+              "cat": "MSE Comisión Cali",
+              "desc": "Follow-up Alejandro MSE: solicitar dejar comisión Cali en 0% por 14 días",
+              "priority": "Alta",
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "APR'RFC"
             }
           ]
         },
