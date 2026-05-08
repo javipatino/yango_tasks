@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-07",
+  "last_updated": "2026-05-08",
   "areas": {
     "ops": {
       "people": [
@@ -105,6 +105,10 @@
               "link": "",
               "updates": [
                 {
+                  "date": "08.05",
+                  "text": "Solicité a Stefanía su OK al correo, para que Jimmy pueda subir los taxiassist"
+                },
+                {
                   "date": "06.05",
                   "text": "Contrato enviado a Cesar - pendiente de respuesta por email"
                 }
@@ -201,7 +205,7 @@
               "cat": "Tasks",
               "desc": "Agregar a Mark, Camilo, Stephan en task board",
               "priority": null,
-              "eta": null,
+              "eta": "2026-05-08",
               "status": "pending",
               "link": "",
               "updates": [],
