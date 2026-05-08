@@ -210,6 +210,18 @@
               "link": "",
               "updates": [],
               "kr": "Gestión"
+            },
+            {
+              "id": "t1778251054100",
+              "type": "little",
+              "cat": "Oviedo",
+              "desc": "Convocatoria de Jimmy a conductores para evento en Suro",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "APR'RFC"
             }
           ]
         },
