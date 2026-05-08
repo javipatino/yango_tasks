@@ -520,6 +520,18 @@
               "link": "",
               "updates": [],
               "kr": "Moto Fleet"
+            },
+            {
+              "id": "t1746751200000",
+              "type": "little",
+              "cat": "Moto Fleet",
+              "desc": "Proponer a MS&E beneficios en features que tengan los drivers en moto fleet: ej. más viajes con mis destinos, menos comisión en mi zona, etc.",
+              "priority": "Media",
+              "eta": "2026-05-13",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Moto Fleet"
             }
           ]
         },
