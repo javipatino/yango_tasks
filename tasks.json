@@ -1082,7 +1082,7 @@
               "type": "little",
               "cat": "Referrals",
               "desc": "Actualización valores campaña + \"muchas oportunidades de referir\" en canales",
-              "priority": null,
+              "priority": "Media",
               "eta": null,
               "status": "progress",
               "link": "",
