@@ -662,18 +662,6 @@
               "kr": "Economy"
             },
             {
-              "id": "t24",
-              "type": "little",
-              "cat": "Adq. Suro",
-              "desc": "5 scouts en calle always on — ¿activos?",
-              "priority": null,
-              "eta": null,
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "Economy"
-            },
-            {
               "id": "t1778009132221",
               "type": "little",
               "cat": "GR Oviedo",
