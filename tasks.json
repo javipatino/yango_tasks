@@ -1108,7 +1108,7 @@
               "desc": "Multi-channel campaign deployment",
               "priority": null,
               "eta": null,
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": null
