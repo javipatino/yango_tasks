@@ -641,7 +641,7 @@
               "id": "t22",
               "type": "main",
               "cat": "Pricing CI 2.0",
-              "desc": "DiDi precios con descuento · Añadir puntos metro-area",
+              "desc": "Metabase dash con timeframe",
               "priority": "Alta",
               "eta": null,
               "status": "progress",
