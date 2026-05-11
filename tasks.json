@@ -784,6 +784,18 @@
               "link": "",
               "updates": [],
               "kr": "Partner comms"
+            },
+            {
+              "id": "t1778520880787",
+              "type": "little",
+              "cat": "Partner Pro",
+              "desc": "Apenas se registra un conductor nuevo, que le llegue un WA automático del partner anunciando el 1% por 14 días",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Partner comms"
             }
           ]
         },
