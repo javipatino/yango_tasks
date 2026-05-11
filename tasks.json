@@ -1068,8 +1068,8 @@
             {
               "id": "m13",
               "type": "little",
-              "cat": "Multi-channel",
-              "desc": "1% Off Cal+Baq campaign",
+              "cat": "1% Off Cal+Baq campaign",
+              "desc": "Multi-channel deployment",
               "priority": null,
               "eta": null,
               "status": "progress",
