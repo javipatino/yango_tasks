@@ -1058,7 +1058,7 @@
               "type": "little",
               "cat": "WhatsApp Channel",
               "desc": "Implementado como AON, meta 10k followers",
-              "priority": null,
+              "priority": "Media",
               "eta": null,
               "status": "progress",
               "link": "",
