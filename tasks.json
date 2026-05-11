@@ -1076,6 +1076,18 @@
               "link": "",
               "updates": [],
               "kr": null
+            },
+            {
+              "id": "t1778528820148",
+              "type": "little",
+              "cat": "Referrals",
+              "desc": "Agregar mensaje \"muchas oportunidades de referir\" en canales",
+              "priority": null,
+              "eta": null,
+              "status": "progress",
+              "link": "",
+              "updates": [],
+              "kr": null
             }
           ]
         }
