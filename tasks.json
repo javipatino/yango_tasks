@@ -1118,7 +1118,7 @@
               "type": "little",
               "cat": "TukTuk",
               "desc": "WhatsApp Survey launch y entrega results a Nico",
-              "priority": null,
+              "priority": "Media",
               "eta": null,
               "status": "done",
               "link": "",
