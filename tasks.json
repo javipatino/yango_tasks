@@ -684,18 +684,6 @@
               "link": "https://st.yandex-team.ru/INTLTAXI-1984",
               "updates": [],
               "kr": "Economy"
-            },
-            {
-              "id": "t1746750000001",
-              "type": "little",
-              "cat": "Partners T&C",
-              "desc": "Dejar mensaje en ticket de contrato de mandato de partner a driver, con propuesta de wording de parte del equipo local",
-              "priority": null,
-              "eta": null,
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "Economy"
             }
           ]
         }
