@@ -708,6 +708,18 @@
               "link": "",
               "updates": [],
               "kr": "Economy"
+            },
+            {
+              "id": "t1778525595640",
+              "type": "little",
+              "cat": "Latam all hands",
+              "desc": "Presentar programa partner pro",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Economy"
             }
           ]
         }
