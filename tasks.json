@@ -631,7 +631,7 @@
           "tc": "#633806",
           "krs": [
             {
-              "cat": "Economy Cali",
+              "cat": "Economy",
               "desc": "Bogota 900k weekly · Cali 210k→240k weekly trips",
               "eta": "Q2"
             }
@@ -647,7 +647,7 @@
               "status": "progress",
               "link": "",
               "updates": [],
-              "kr": "Economy Cali"
+              "kr": "Economy"
             },
             {
               "id": "t23",
@@ -659,7 +659,7 @@
               "status": "pending",
               "link": "",
               "updates": [],
-              "kr": "Economy Cali"
+              "kr": "Economy"
             },
             {
               "id": "t24",
@@ -671,7 +671,7 @@
               "status": "pending",
               "link": "",
               "updates": [],
-              "kr": "Economy Cali"
+              "kr": "Economy"
             },
             {
               "id": "t25",
@@ -683,7 +683,7 @@
               "status": "pending",
               "link": "",
               "updates": [],
-              "kr": "Economy Cali"
+              "kr": "Economy"
             },
             {
               "id": "t1778009132221",
@@ -695,7 +695,7 @@
               "status": "pending",
               "link": "",
               "updates": [],
-              "kr": "Economy Cali"
+              "kr": "Economy"
             },
             {
               "id": "t1746664800000",
@@ -707,7 +707,7 @@
               "status": "pending",
               "link": "",
               "updates": [],
-              "kr": "Economy Cali"
+              "kr": "Economy"
             },
             {
               "id": "t1746750000001",
@@ -719,7 +719,7 @@
               "status": "pending",
               "link": "",
               "updates": [],
-              "kr": "Economy Cali"
+              "kr": "Economy"
             }
           ]
         }
