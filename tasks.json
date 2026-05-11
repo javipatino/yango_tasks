@@ -1106,7 +1106,7 @@
               "type": "little",
               "cat": "Nequi",
               "desc": "Bogotá launch descuento & 150k bindings",
-              "priority": null,
+              "priority": "Alta",
               "eta": null,
               "status": "progress",
               "link": "",
