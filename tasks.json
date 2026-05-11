@@ -456,7 +456,7 @@
               "desc": "Seguimiento leads por canal",
               "priority": null,
               "eta": null,
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": "Moto Fleet"
@@ -468,7 +468,7 @@
               "desc": "Lanzar performance moto fleet",
               "priority": null,
               "eta": null,
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": "Moto Fleet"
