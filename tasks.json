@@ -696,6 +696,18 @@
               "link": "",
               "updates": [],
               "kr": "Economy"
+            },
+            {
+              "id": "t1778521091912",
+              "type": "little",
+              "cat": "Partner Pro",
+              "desc": "Entender qué es lo que sacaron de Fleetroom de Gold-Silver-Basic a ver cómo nos impacta nuestro plan de Partner Pro",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Economy"
             }
           ]
         }
