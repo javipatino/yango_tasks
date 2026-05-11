@@ -684,6 +684,18 @@
               "link": "https://st.yandex-team.ru/INTLTAXI-1984",
               "updates": [],
               "kr": "Economy"
+            },
+            {
+              "id": "t1778520708329",
+              "type": "little",
+              "cat": "Partner Pro",
+              "desc": "1. Verificar que todos los partners tengan 1% | 2. Ajuste de weight para Pro (Cali car y moto), y el check de private car para Yego",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Economy"
             }
           ]
         }
