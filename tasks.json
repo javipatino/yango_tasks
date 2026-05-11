@@ -1046,7 +1046,7 @@
               "type": "main",
               "cat": "Moto",
               "desc": "Bogotá campaña multi-canal lanzamiento full",
-              "priority": null,
+              "priority": "Alta",
               "eta": null,
               "status": "done",
               "link": "",
