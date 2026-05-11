@@ -1094,7 +1094,7 @@
               "type": "little",
               "cat": "World Cup",
               "desc": "Desarrollo In-App assets base",
-              "priority": null,
+              "priority": "Alta",
               "eta": null,
               "status": "progress",
               "link": "",
