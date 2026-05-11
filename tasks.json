@@ -1130,7 +1130,7 @@
               "type": "little",
               "cat": "Fleet",
               "desc": "Nuevos creativos UGC para performance",
-              "priority": null,
+              "priority": "Media",
               "eta": null,
               "status": "progress",
               "link": "",
