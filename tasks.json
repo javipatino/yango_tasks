@@ -1070,7 +1070,7 @@
               "type": "little",
               "cat": "1% Off Cal & Baq",
               "desc": "Despliegue Multi-channel (performance, in-app, SMM, WA channel, car billboards)",
-              "priority": null,
+              "priority": "Alta",
               "eta": null,
               "status": "progress",
               "link": "",
