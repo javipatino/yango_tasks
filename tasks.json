@@ -1046,6 +1046,18 @@
               "link": "",
               "updates": [],
               "kr": null
+            },
+            {
+              "id": "t1778614551776",
+              "type": "little",
+              "cat": "Terpel",
+              "desc": "Definida mecanica; por definir beneficio final",
+              "priority": "Media",
+              "eta": null,
+              "status": "progress",
+              "link": "",
+              "updates": [],
+              "kr": null
             }
           ]
         },
