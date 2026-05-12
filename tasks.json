@@ -1004,9 +1004,9 @@
               "type": "little",
               "cat": "Moto Branding",
               "desc": "Confirmación de producción",
-              "priority": null,
+              "priority": "Media",
               "eta": null,
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": null
