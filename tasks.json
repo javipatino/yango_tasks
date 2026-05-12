@@ -1057,7 +1057,9 @@
       "people": []
     },
     "otros": {
-      "people": []
+      "people": [
+        { "id": "mark", "name": "Mark", "initials": "MK", "bg": "#E8EAF6", "tc": "#3949AB", "krs": [], "tasks": [] }
+      ]
     }
   }
 }
