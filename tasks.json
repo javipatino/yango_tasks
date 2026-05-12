@@ -1174,6 +1174,18 @@
               "link": "",
               "updates": [],
               "kr": null
+            },
+            {
+              "id": "t1778613570385",
+              "type": "little",
+              "cat": "World Cup",
+              "desc": "Desarrollo assets base in-app",
+              "priority": null,
+              "eta": null,
+              "status": "progress",
+              "link": "",
+              "updates": [],
+              "kr": null
             }
           ]
         }
