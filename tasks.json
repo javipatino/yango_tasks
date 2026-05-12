@@ -1077,10 +1077,10 @@
               "id": "m7",
               "type": "little",
               "cat": "Moto Branding",
-              "desc": "Confirmación de producción",
-              "priority": null,
+              "desc": "En producción",
+              "priority": "Media",
               "eta": null,
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": null
