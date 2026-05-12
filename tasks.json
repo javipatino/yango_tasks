@@ -733,7 +733,18 @@
           "initials": "JM",
           "bg": "#E6F1FB",
           "tc": "#0C447C",
-          "krs": [],
+          "krs": [
+            {
+              "cat": "Operations",
+              "desc": "",
+              "eta": ""
+            },
+            {
+              "cat": "Taxis Libres",
+              "desc": "",
+              "eta": ""
+            }
+          ],
           "tasks": [
             {
               "id": "k1",
@@ -745,7 +756,7 @@
               "status": "done",
               "link": "",
               "updates": [],
-              "kr": null
+              "kr": "Operations"
             },
             {
               "id": "k2",
@@ -757,7 +768,7 @@
               "status": "progress",
               "link": "https://docs.google.com/presentation/d/1Xu8BYXe8FQxCxzptbpA9lH7UhnBuJ_41rtZTk6ojzVc/edit?slide=id.g3f286570d34_0_124#slide=id.g3f286570d34_0_124, https://docs.google.com/spreadsheets/d/1Q2Qfz4rlrDWGNN2pHJgi1H4wZJ1KZ5WFUu285h6vW-M/edit?gid=130465511#gid=130465511",
               "updates": [],
-              "kr": null
+              "kr": "Operations"
             },
             {
               "id": "k3",
@@ -769,7 +780,7 @@
               "status": "progress",
               "link": "https://st.yandex-team.ru/YLEGAL-5163#69d91e450660f44602d35328",
               "updates": [],
-              "kr": null
+              "kr": "Taxis Libres"
             },
             {
               "id": "t1778611541557",
@@ -1111,18 +1122,6 @@
               "priority": null,
               "eta": null,
               "status": "progress",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
-              "id": "t1778612767023",
-              "type": "little",
-              "cat": "TukTuk",
-              "desc": "Survey por WhatsApp crear y entregar a Nico",
-              "priority": null,
-              "eta": null,
-              "status": "done",
               "link": "",
               "updates": [],
               "kr": null
