@@ -1012,18 +1012,6 @@
               "kr": null
             },
             {
-              "id": "m8",
-              "type": "little",
-              "cat": "Coca Cola",
-              "desc": "Offline promoter con promocode en FEP",
-              "priority": null,
-              "eta": null,
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
               "id": "m9",
               "type": "little",
               "cat": "Puntos Colombia",
