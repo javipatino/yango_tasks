@@ -1080,18 +1080,6 @@
           "krs": [],
           "tasks": [
             {
-              "id": "m11",
-              "type": "main",
-              "cat": "Moto Research",
-              "desc": "Benchmark done, survey WIP",
-              "priority": null,
-              "eta": null,
-              "status": "progress",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
               "id": "m12",
               "type": "little",
               "cat": "WhatsApp Channel",
