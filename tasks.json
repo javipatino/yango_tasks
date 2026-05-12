@@ -1150,6 +1150,18 @@
               "link": "",
               "updates": [],
               "kr": null
+            },
+            {
+              "id": "t1778612938410",
+              "type": "little",
+              "cat": "Referrals",
+              "desc": "Actualización valores campaña y agregar \"aún muchas oportunidades de referir\" mensaje",
+              "priority": null,
+              "eta": null,
+              "status": "progress",
+              "link": "",
+              "updates": [],
+              "kr": null
             }
           ]
         }
