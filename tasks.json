@@ -689,7 +689,9 @@
               "kr": "Economy"
             }
           ]
-        }
+        },
+        { "id": "camilo", "name": "Camilo", "initials": "CA", "bg": "#F3E5F5", "tc": "#7B1FA2", "krs": [], "tasks": [] },
+        { "id": "stephan", "name": "Stephan", "initials": "ST", "bg": "#E0F2F1", "tc": "#00695C", "krs": [], "tasks": [] }
       ],
       "kams": [
         {
