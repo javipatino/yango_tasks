@@ -1088,11 +1088,11 @@
             {
               "id": "m8",
               "type": "little",
-              "cat": "Coca Cola",
-              "desc": "Offline promoter con promocode en FEP",
-              "priority": null,
+              "cat": "Motocarro -user",
+              "desc": "Atividades inician esta semana ( 15 dias)",
+              "priority": "Alta",
               "eta": null,
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": null
