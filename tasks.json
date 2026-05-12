@@ -176,18 +176,6 @@
               "kr": "Gestión"
             },
             {
-              "id": "t1778186258537",
-              "type": "little",
-              "cat": "URG",
-              "desc": "Mandar a Alejo el net earnings per trip Cali - Car, Yango vs Didi, with and without bonuses, and Flex",
-              "priority": "Alta",
-              "eta": null,
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "APR'RFC"
-            },
-            {
               "id": "t1778198302253",
               "type": "little",
               "cat": "Tasks",
