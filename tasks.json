@@ -794,6 +794,18 @@
               "link": "",
               "updates": [],
               "kr": null
+            },
+            {
+              "id": "t1778612467222",
+              "type": "little",
+              "cat": "Marketing",
+              "desc": "Reporte de facturacion por Marketing de TL para el mes de Abril",
+              "priority": "Media",
+              "eta": "2026-05-15",
+              "status": "progress",
+              "link": "",
+              "updates": [],
+              "kr": null
             }
           ]
         },
