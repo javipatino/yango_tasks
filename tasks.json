@@ -492,6 +492,18 @@
               "link": "",
               "updates": [],
               "kr": "Moto Fleet"
+            },
+            {
+              "id": "t1778606946958",
+              "type": "little",
+              "cat": "Motai",
+              "desc": "Test de solo alquiler de motos a precio bajo",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Moto Fleet"
             }
           ]
         },
