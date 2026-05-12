@@ -733,23 +733,7 @@
           "initials": "JM",
           "bg": "#E6F1FB",
           "tc": "#0C447C",
-          "krs": [
-            {
-              "cat": "Operations",
-              "desc": "",
-              "eta": ""
-            },
-            {
-              "cat": "Taxis Libres",
-              "desc": "",
-              "eta": ""
-            },
-            {
-              "cat": "BPO services",
-              "desc": "",
-              "eta": ""
-            }
-          ],
+          "krs": [],
           "tasks": [
             {
               "id": "k1",
@@ -761,7 +745,7 @@
               "status": "done",
               "link": "",
               "updates": [],
-              "kr": "Operations"
+              "kr": null
             },
             {
               "id": "k2",
@@ -773,7 +757,7 @@
               "status": "progress",
               "link": "https://docs.google.com/presentation/d/1Xu8BYXe8FQxCxzptbpA9lH7UhnBuJ_41rtZTk6ojzVc/edit?slide=id.g3f286570d34_0_124#slide=id.g3f286570d34_0_124, https://docs.google.com/spreadsheets/d/1Q2Qfz4rlrDWGNN2pHJgi1H4wZJ1KZ5WFUu285h6vW-M/edit?gid=130465511#gid=130465511",
               "updates": [],
-              "kr": "Operations"
+              "kr": null
             },
             {
               "id": "k3",
@@ -785,7 +769,7 @@
               "status": "progress",
               "link": "https://st.yandex-team.ru/YLEGAL-5163#69d91e450660f44602d35328",
               "updates": [],
-              "kr": "Taxis Libres"
+              "kr": null
             },
             {
               "id": "t1778611541557",
@@ -797,7 +781,7 @@
               "status": "progress",
               "link": "",
               "updates": [],
-              "kr": "BPO services"
+              "kr": null
             },
             {
               "id": "t1778611619213",
@@ -809,7 +793,7 @@
               "status": "progress",
               "link": "",
               "updates": [],
-              "kr": "BPO services"
+              "kr": null
             },
             {
               "id": "t1778612467222",
@@ -821,31 +805,7 @@
               "status": "progress",
               "link": "",
               "updates": [],
-              "kr": "Taxis Libres"
-            },
-            {
-              "id": "t1778613055230",
-              "type": "little",
-              "cat": "Supply",
-              "desc": "Automatizacion reporte de reactivaciones / SURO + BPO",
-              "priority": "Baja",
-              "eta": "2026-06-30",
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "Operations"
-            },
-            {
-              "id": "t1778613122780",
-              "type": "little",
-              "cat": "Supply",
-              "desc": "Unificacion reporte de reactivacion mensual (Churned drivers)",
-              "priority": "Baja",
-              "eta": "2026-05-18",
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "Taxis Libres"
+              "kr": null
             }
           ]
         },
@@ -1120,22 +1080,10 @@
           "krs": [],
           "tasks": [
             {
-              "id": "m11",
-              "type": "main",
-              "cat": "Moto Research",
-              "desc": "Benchmark done, survey WIP",
-              "priority": null,
-              "eta": null,
-              "status": "progress",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
               "id": "m12",
               "type": "little",
               "cat": "WhatsApp Channel",
-              "desc": "Implementado como AO, meta 10k followers EOM",
+              "desc": "Implementado como AO, meta 10k followers",
               "priority": null,
               "eta": null,
               "status": "progress",
@@ -1148,6 +1096,78 @@
               "type": "little",
               "cat": "Performance",
               "desc": "WIP new creatives",
+              "priority": null,
+              "eta": null,
+              "status": "progress",
+              "link": "",
+              "updates": [],
+              "kr": null
+            },
+            {
+              "id": "t1778612767023",
+              "type": "little",
+              "cat": "TukTuk",
+              "desc": "Survey por WhatsApp crear y entregar a Nico",
+              "priority": null,
+              "eta": null,
+              "status": "done",
+              "link": "",
+              "updates": [],
+              "kr": null
+            },
+            {
+              "id": "t1778612824062",
+              "type": "little",
+              "cat": "Moto",
+              "desc": "Campaña despliegue multi-canal",
+              "priority": null,
+              "eta": null,
+              "status": "done",
+              "link": "",
+              "updates": [],
+              "kr": null
+            },
+            {
+              "id": "t1778612879458",
+              "type": "little",
+              "cat": "Performance",
+              "desc": "Nuevos assets Virgin Mobile",
+              "priority": null,
+              "eta": null,
+              "status": "progress",
+              "link": "",
+              "updates": [],
+              "kr": null
+            },
+            {
+              "id": "t1778612938410",
+              "type": "little",
+              "cat": "Referrals",
+              "desc": "Actualización valores campaña y agregar \"aún muchas oportunidades de referir\" mensaje",
+              "priority": null,
+              "eta": null,
+              "status": "progress",
+              "link": "",
+              "updates": [],
+              "kr": null
+            },
+            {
+              "id": "t1778613008138",
+              "type": "little",
+              "cat": "Nequi",
+              "desc": "Despliegue campaña multicanal, 150k bindings",
+              "priority": null,
+              "eta": null,
+              "status": "progress",
+              "link": "",
+              "updates": [],
+              "kr": null
+            },
+            {
+              "id": "t1778613085915",
+              "type": "little",
+              "cat": "1% off Baq + Cal",
+              "desc": "Campaña multi canal desarrollo y salida (Perf, in-app, WA channel, SMM)",
               "priority": null,
               "eta": null,
               "status": "progress",
