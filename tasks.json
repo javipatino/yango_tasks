@@ -198,6 +198,18 @@
               "link": "",
               "updates": [],
               "kr": "Gestión"
+            },
+            {
+              "id": "t1778598003129",
+              "type": "little",
+              "cat": "Redi request",
+              "desc": "Follow-up a request en KAM Colombia, sobre APIs, a George",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Gestión"
             }
           ]
         },
