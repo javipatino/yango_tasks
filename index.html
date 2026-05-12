@@ -214,7 +214,13 @@ function initState() {
 function allPeopleInArea(area) {
   if (area === 'all') {
     let r = [];
-    Object.values(data.areas).forEach(a => r = r.concat(a.people||[], a.kams||[]));
+    // Put 'otros' people first so Mark appears first
+    const areaOrder = ['otros', 'ops', 'mkt', 'pr', 'gr'];
+    const ordered = areaOrder.map(k => data.areas[k]).filter(Boolean);
+    const rest = Object.values(data.areas).filter(a => !areaOrder.includes(
+      Object.keys(data.areas).find(k => data.areas[k] === a)
+    ));
+    [...ordered, ...rest].forEach(a => r = r.concat(a.people||[], a.kams||[]));
     return r;
   }
   const a = data.areas[area];
@@ -500,16 +506,19 @@ function addUpdate(id) {
 }
 
 // ── Delete ───────────────────────────────────────────────────
-function deleteTask(personId, taskId) {
+function deleteTask(personId, taskId, event) {
+  if (event) event.stopPropagation();
   if (!confirm('¿Eliminar esta tarea?')) return;
+  let deleted = false;
   Object.values(data.areas).forEach(a => {
     [...(a.people||[]), ...(a.kams||[])].forEach(p => {
       if (p.id === personId) {
         const idx = p.tasks.findIndex(t => t.id === taskId);
-        if (idx !== -1) p.tasks.splice(idx, 1);
+        if (idx !== -1) { p.tasks.splice(idx, 1); deleted = true; }
       }
     });
   });
+  if (!deleted) return;
   delete taskStatus[taskId]; delete taskPriority[taskId]; delete taskEta[taskId];
   delete taskUpdates[taskId]; delete taskKr[taskId]; delete taskCat[taskId];
   delete taskDesc[taskId]; delete taskLink[taskId];
@@ -596,7 +605,7 @@ function renderTaskRow(t, personId, krs) {
           <button class="act-btn hist" onclick="toggleUpdates('${t.id}',this)" title="Historial">▼${uCount?' '+uCount:''}</button>
           <button class="act-btn edit" onclick="toggleEdit('${t.id}')" title="Editar">✏️</button>
           <button class="act-btn move" onclick="toggleMove('${t.id}')" title="Mover KR">⇄</button>
-          <button class="act-btn del" onclick="deleteTask('${personId}','${t.id}')" title="Eliminar">✕</button>
+          <button class="act-btn del" onclick="deleteTask('${personId}','${t.id}',event)" title="Eliminar">✕</button>
         </div>
       </td>
     </tr>
