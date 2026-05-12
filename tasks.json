@@ -143,18 +143,6 @@
               "kr": "Gestión"
             },
             {
-              "id": "t1778198302253",
-              "type": "little",
-              "cat": "Tasks",
-              "desc": "Agregar a Mark, Camilo, Stephan en task board",
-              "priority": null,
-              "eta": "2026-05-08",
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "Gestión"
-            },
-            {
               "id": "t1778255794795",
               "type": "little",
               "cat": "Global Fleet",
