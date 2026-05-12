@@ -733,7 +733,13 @@
           "initials": "JM",
           "bg": "#E6F1FB",
           "tc": "#0C447C",
-          "krs": [],
+          "krs": [
+            {
+              "cat": "Operations",
+              "desc": "",
+              "eta": ""
+            }
+          ],
           "tasks": [
             {
               "id": "k1",
