@@ -177,6 +177,18 @@
               "link": "",
               "updates": [],
               "kr": "Gestión"
+            },
+            {
+              "id": "t1778598579882",
+              "type": "little",
+              "cat": "Cali USP",
+              "desc": "Performance - incluir value prop de incentivos en campañas de performance en Cali",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "APR'RFC"
             }
           ]
         },
