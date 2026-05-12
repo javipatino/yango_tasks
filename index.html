@@ -21,7 +21,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .area-btn.active-mkt { background: #0F6E56; border-color: #0F6E56; }
 .area-btn.active-pr  { background: #993C1D; border-color: #993C1D; }
 .area-btn.active-gr  { background: #533AB7; border-color: #533AB7; }
-.area-btn.active-otros { background: #5F5E5A; border-color: #5F5E5A; }
+.area-btn.active-gm { background: #5F5E5A; border-color: #5F5E5A; }
 .tabs { display: flex; border-bottom: 1px solid #e0e0e0; margin-bottom: 1.5rem; }
 .tab { font-size: 13px; padding: 7px 16px; color: #888; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all 0.15s; }
 .tab:hover { color: #333; }
@@ -145,7 +145,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <button class="filter-btn area-btn" onclick="filterArea('mkt',this)">Mkt</button>
     <button class="filter-btn area-btn" onclick="filterArea('pr',this)">PR</button>
     <button class="filter-btn area-btn" onclick="filterArea('gr',this)">GR</button>
-    <button class="filter-btn area-btn" onclick="filterArea('otros',this)">Otros</button>
+    <button class="filter-btn area-btn" onclick="filterArea('GM',this)">GM</button>
   </div>
   <div class="person-filters" id="person-filters"></div>
   <div class="tab-filters">
@@ -215,7 +215,7 @@ function allPeopleInArea(area) {
   if (area === 'all') {
     let r = [];
     // Put 'otros' people first so Mark appears first
-    const areaOrder = ['otros', 'ops', 'mkt', 'pr', 'gr'];
+    const areaOrder = ['GM', 'ops', 'mkt', 'pr', 'gr'];
     const ordered = areaOrder.map(k => data.areas[k]).filter(Boolean);
     const rest = Object.values(data.areas).filter(a => !areaOrder.includes(
       Object.keys(data.areas).find(k => data.areas[k] === a)
@@ -236,12 +236,12 @@ function isoToDisplay(iso) {
 
 function filterArea(area, btn) {
   currentArea = area; currentPerson = 'all';
-  document.querySelectorAll('.area-btn').forEach(b => b.classList.remove('active','active-mkt','active-pr','active-gr','active-otros'));
+  document.querySelectorAll('.area-btn').forEach(b => b.classList.remove('active','active-mkt','active-pr','active-gr','active-gm'));
   btn.classList.add('active');
   if (area === 'mkt') btn.classList.add('active-mkt');
   else if (area === 'pr') btn.classList.add('active-pr');
   else if (area === 'gr') btn.classList.add('active-gr');
-  else if (area === 'otros') btn.classList.add('active-otros');
+  else if (area === 'GM') btn.classList.add('active-gm');
   renderPersonFilters(); renderAll();
 }
 
