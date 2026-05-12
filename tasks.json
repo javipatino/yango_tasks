@@ -164,18 +164,6 @@
               "kr": "Gestión"
             },
             {
-              "id": "t1746574800000",
-              "type": "little",
-              "cat": "BipBip",
-              "desc": "Contrato BPO BipBip dejarlo firmado y armar capacitaciones",
-              "priority": "Media",
-              "eta": null,
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "Gestión"
-            },
-            {
               "id": "t1778198302253",
               "type": "little",
               "cat": "Tasks",
