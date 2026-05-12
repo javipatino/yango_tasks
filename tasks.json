@@ -742,7 +742,7 @@
               "desc": "Llamada a conductores en test — precio con bono en order pool",
               "priority": "Baja",
               "eta": null,
-              "status": "pending",
+              "status": "done",
               "link": "",
               "updates": [],
               "kr": null
@@ -768,6 +768,18 @@
               "eta": null,
               "status": "progress",
               "link": "https://st.yandex-team.ru/YLEGAL-5163#69d91e450660f44602d35328",
+              "updates": [],
+              "kr": null
+            },
+            {
+              "id": "t1778611541557",
+              "type": "little",
+              "cat": "BPO",
+              "desc": "COL-VNZA / BPO Project",
+              "priority": "Media",
+              "eta": "2026-06-15",
+              "status": "progress",
+              "link": "",
               "updates": [],
               "kr": null
             }
