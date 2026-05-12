@@ -486,7 +486,7 @@
               "type": "little",
               "cat": "Moto Fleet",
               "desc": "Proponer a MS&E beneficios en features que tengan los drivers en moto fleet: ej. más viajes con mis destinos, menos comisión en mi zona, etc.",
-              "priority": "Media",
+              "priority": "Alta",
               "eta": "2026-05-13",
               "status": "pending",
               "link": "",
