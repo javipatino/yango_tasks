@@ -1053,10 +1053,10 @@
               "id": "m5",
               "type": "main",
               "cat": "WC Fan Zones",
-              "desc": "Costo 300M — detalles por discutir",
-              "priority": null,
+              "desc": "Costo 300M — Alianza BBC; definiendo detalles",
+              "priority": "Alta",
               "eta": null,
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": null
