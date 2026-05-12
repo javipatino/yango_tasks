@@ -189,6 +189,18 @@
               "link": "",
               "updates": [],
               "kr": "APR'RFC"
+            },
+            {
+              "id": "t1778601739115",
+              "type": "little",
+              "cat": "YUNO",
+              "desc": "1. Firmar NDA",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Gestión"
             }
           ]
         },
@@ -690,8 +702,24 @@
             }
           ]
         },
-        { "id": "camilo", "name": "Camilo", "initials": "CA", "bg": "#F3E5F5", "tc": "#7B1FA2", "krs": [], "tasks": [] },
-        { "id": "stephan", "name": "Stephan", "initials": "ST", "bg": "#E0F2F1", "tc": "#00695C", "krs": [], "tasks": [] }
+        {
+          "id": "camilo",
+          "name": "Camilo",
+          "initials": "CA",
+          "bg": "#F3E5F5",
+          "tc": "#7B1FA2",
+          "krs": [],
+          "tasks": []
+        },
+        {
+          "id": "stephan",
+          "name": "Stephan",
+          "initials": "ST",
+          "bg": "#E0F2F1",
+          "tc": "#00695C",
+          "krs": [],
+          "tasks": []
+        }
       ],
       "kams": [
         {
@@ -1058,7 +1086,15 @@
     },
     "GM": {
       "people": [
-        { "id": "mark", "name": "Mark", "initials": "MK", "bg": "#E8EAF6", "tc": "#3949AB", "krs": [], "tasks": [] }
+        {
+          "id": "mark",
+          "name": "Mark",
+          "initials": "MK",
+          "bg": "#E8EAF6",
+          "tc": "#3949AB",
+          "krs": [],
+          "tasks": []
+        }
       ]
     }
   }
