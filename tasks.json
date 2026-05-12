@@ -1101,10 +1101,10 @@
               "id": "m9",
               "type": "little",
               "cat": "Puntos Colombia",
-              "desc": "Legal OK, pending signature para ejecutar",
-              "priority": null,
+              "desc": "Legal OK; en firma por WebDox + adenine",
+              "priority": "Alta",
               "eta": null,
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": null
