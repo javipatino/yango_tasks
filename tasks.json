@@ -733,7 +733,23 @@
           "initials": "JM",
           "bg": "#E6F1FB",
           "tc": "#0C447C",
-          "krs": [],
+          "krs": [
+            {
+              "cat": "Operations",
+              "desc": "",
+              "eta": ""
+            },
+            {
+              "cat": "Taxis Libres",
+              "desc": "",
+              "eta": ""
+            },
+            {
+              "cat": "BPO services",
+              "desc": "",
+              "eta": ""
+            }
+          ],
           "tasks": [
             {
               "id": "k1",
@@ -745,7 +761,7 @@
               "status": "done",
               "link": "",
               "updates": [],
-              "kr": null
+              "kr": "Operations"
             },
             {
               "id": "k2",
@@ -757,7 +773,7 @@
               "status": "progress",
               "link": "https://docs.google.com/presentation/d/1Xu8BYXe8FQxCxzptbpA9lH7UhnBuJ_41rtZTk6ojzVc/edit?slide=id.g3f286570d34_0_124#slide=id.g3f286570d34_0_124, https://docs.google.com/spreadsheets/d/1Q2Qfz4rlrDWGNN2pHJgi1H4wZJ1KZ5WFUu285h6vW-M/edit?gid=130465511#gid=130465511",
               "updates": [],
-              "kr": null
+              "kr": "Operations"
             },
             {
               "id": "k3",
@@ -769,7 +785,7 @@
               "status": "progress",
               "link": "https://st.yandex-team.ru/YLEGAL-5163#69d91e450660f44602d35328",
               "updates": [],
-              "kr": null
+              "kr": "Taxis Libres"
             },
             {
               "id": "t1778611541557",
@@ -781,7 +797,7 @@
               "status": "progress",
               "link": "",
               "updates": [],
-              "kr": null
+              "kr": "BPO services"
             },
             {
               "id": "t1778611619213",
@@ -792,8 +808,61 @@
               "eta": "2026-06-13",
               "status": "progress",
               "link": "",
+              "updates": [
+                {
+                  "date": "12.05",
+                  "text": "Addemdum under sugnature process on ticket https://st.yango-team.com/TAXIASSIST-608420"
+                }
+              ],
+              "kr": "BPO services"
+            },
+            {
+              "id": "t1778612467222",
+              "type": "little",
+              "cat": "Marketing",
+              "desc": "Reporte de facturacion por Marketing de TL para el mes de Abril",
+              "priority": "Media",
+              "eta": "2026-05-15",
+              "status": "progress",
+              "link": "",
               "updates": [],
-              "kr": null
+              "kr": "Taxis Libres"
+            },
+            {
+              "id": "t1778613055230",
+              "type": "little",
+              "cat": "Supply",
+              "desc": "Automatizacion reporte de reactivaciones / SURO + BPO",
+              "priority": "Baja",
+              "eta": "2026-06-30",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Operations"
+            },
+            {
+              "id": "t1778613122780",
+              "type": "little",
+              "cat": "Supply",
+              "desc": "Unificacion reporte de reactivacion mensual (Churned drivers)",
+              "priority": "Baja",
+              "eta": "2026-05-18",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Taxis Libres"
+            },
+            {
+              "id": "t1778614665348",
+              "type": "little",
+              "cat": "Call Taxi",
+              "desc": "Facturacion equipo Call Taxi de Diciembre/25 a Abril/26",
+              "priority": "Media",
+              "eta": "2026-05-29",
+              "status": "progress",
+              "link": "",
+              "updates": [],
+              "kr": "Taxis Libres"
             }
           ]
         },
@@ -967,8 +1036,8 @@
               "id": "m4",
               "type": "main",
               "cat": "Virgin Partnership",
-              "desc": "Lanzados CRM comms (refuerzo); revisando Top up model",
-              "priority": "Alta",
+              "desc": "Primera parte lanzada, pending PR",
+              "priority": null,
               "eta": null,
               "status": "progress",
               "link": "",
@@ -979,9 +1048,9 @@
               "id": "m5",
               "type": "main",
               "cat": "WC Fan Zones",
-              "desc": "Costo 300M — Alianza con BBC: definiendo detalles",
-              "priority": "Alta",
-              "eta": "2026-05-20",
+              "desc": "Costo 300M — detalles por discutir",
+              "priority": null,
+              "eta": null,
               "status": "pending",
               "link": "",
               "updates": [],
@@ -991,10 +1060,10 @@
               "id": "m6",
               "type": "little",
               "cat": "TukTuk Branding",
-              "desc": "Evento Pro esta semana;",
-              "priority": "Media",
+              "desc": "Nuevo evento la próxima semana",
+              "priority": null,
               "eta": null,
-              "status": "progress",
+              "status": "pending",
               "link": "",
               "updates": [],
               "kr": null
@@ -1003,10 +1072,22 @@
               "id": "m7",
               "type": "little",
               "cat": "Moto Branding",
-              "desc": "Ya se inicio producción",
-              "priority": "Media",
-              "eta": "2026-07-31",
-              "status": "progress",
+              "desc": "Confirmación de producción",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": null
+            },
+            {
+              "id": "m8",
+              "type": "little",
+              "cat": "Coca Cola",
+              "desc": "Offline promoter con promocode en FEP",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
               "link": "",
               "updates": [],
               "kr": null
@@ -1015,58 +1096,10 @@
               "id": "m9",
               "type": "little",
               "cat": "Puntos Colombia",
-              "desc": "En firma por WebDox (",
-              "priority": "Alta",
-              "eta": "2026-05-31",
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
-              "id": "t1778614373204",
-              "type": "little",
-              "cat": "Claro Club",
-              "desc": "Revisión legal/ contrato de cooperación",
-              "priority": "Media",
+              "desc": "Legal OK, pending signature para ejecutar",
+              "priority": null,
               "eta": null,
               "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
-              "id": "t1778614422340",
-              "type": "little",
-              "cat": "SmartFit",
-              "desc": "Revisión legal/ contrato de cooperación; Participación sponsor smartfit run",
-              "priority": "Media",
-              "eta": null,
-              "status": "progress",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
-              "id": "t1778614551776",
-              "type": "little",
-              "cat": "Terpel",
-              "desc": "Definida mecanica; por definir beneficio final",
-              "priority": "Media",
-              "eta": null,
-              "status": "progress",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
-              "id": "t1778614614448",
-              "type": "little",
-              "cat": "FlyPass",
-              "desc": "Revision de NDA y acuerdo de cooperación ( de su lado)",
-              "priority": "Media",
-              "eta": null,
-              "status": "progress",
               "link": "",
               "updates": [],
               "kr": null
