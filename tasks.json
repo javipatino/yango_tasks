@@ -432,7 +432,7 @@
               "id": "t18",
               "type": "main",
               "cat": "Performance",
-              "desc": "Lanzar performance moto fleet",
+              "desc": "Monitoreo de campañas de moto fleet en performance",
               "priority": null,
               "eta": null,
               "status": "progress",
