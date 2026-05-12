@@ -182,11 +182,11 @@
               "id": "t1778601739115",
               "type": "little",
               "cat": "YUNO",
-              "desc": "1. Firmar NDA",
+              "desc": "Firmar NDA",
               "priority": null,
               "eta": null,
               "status": "pending",
-              "link": "",
+              "link": "https://st.yandex-team.ru/NDAREGISTER-75060",
               "updates": [],
               "kr": "Gestión"
             }
@@ -320,6 +320,18 @@
               "priority": "Media",
               "eta": "2026-05-06",
               "status": "progress",
+              "link": "",
+              "updates": [],
+              "kr": "TukTuk"
+            },
+            {
+              "id": "t1778617746653",
+              "type": "little",
+              "cat": "Bug brandeo",
+              "desc": "1. Parques marcar manualmente los tuks brandeados | 2. Parques llamar y escribir a esos conductores",
+              "priority": "Alta",
+              "eta": null,
+              "status": "pending",
               "link": "",
               "updates": [],
               "kr": "TukTuk"
@@ -714,7 +726,20 @@
           "bg": "#F3E5F5",
           "tc": "#7B1FA2",
           "krs": [],
-          "tasks": []
+          "tasks": [
+            {
+              "id": "t1778617023154",
+              "type": "little",
+              "cat": "API",
+              "desc": "Automatizar check de new drivers first trip para cruzar con cabinet",
+              "priority": null,
+              "eta": "2026-05-29",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": null
+            }
+          ]
         },
         {
           "id": "stephan",
@@ -733,141 +758,43 @@
           "initials": "JM",
           "bg": "#E6F1FB",
           "tc": "#0C447C",
-          "krs": [
-            {
-              "cat": "Operations",
-              "desc": "",
-              "eta": ""
-            },
-            {
-              "cat": "Taxis Libres",
-              "desc": "",
-              "eta": ""
-            },
-            {
-              "cat": "BPO services",
-              "desc": "",
-              "eta": ""
-            }
-          ],
+          "krs": [],
           "tasks": [
             {
               "id": "k1",
               "type": "main",
               "cat": "Order pool",
               "desc": "Llamada a conductores en test — precio con bono en order pool",
-              "priority": "Baja",
+              "priority": "Alta",
               "eta": null,
-              "status": "done",
+              "status": "pending",
               "link": "",
               "updates": [],
-              "kr": "Operations"
+              "kr": null
             },
             {
               "id": "k2",
               "type": "main",
               "cat": "Metro BOG",
-              "desc": "Nearby zones - Implementation plan (Soacha, Mosquera, Chia, etc)",
-              "priority": "Alta",
-              "eta": "2026-06-01",
-              "status": "progress",
-              "link": "https://docs.google.com/presentation/d/1Xu8BYXe8FQxCxzptbpA9lH7UhnBuJ_41rtZTk6ojzVc/edit?slide=id.g3f286570d34_0_124#slide=id.g3f286570d34_0_124, https://docs.google.com/spreadsheets/d/1Q2Qfz4rlrDWGNN2pHJgi1H4wZJ1KZ5WFUu285h6vW-M/edit?gid=130465511#gid=130465511",
+              "desc": "Plan de acción Soacha, Mosquera, Funza",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
               "updates": [],
-              "kr": "Operations"
+              "kr": null
             },
             {
               "id": "k3",
               "type": "main",
               "cat": "Call taxi",
               "desc": "P&L mensual y nueva cotización contrato Cesar",
-              "priority": "Media",
+              "priority": null,
               "eta": null,
-              "status": "progress",
-              "link": "https://st.yandex-team.ru/YLEGAL-5163#69d91e450660f44602d35328",
-              "updates": [],
-              "kr": "Taxis Libres"
-            },
-            {
-              "id": "t1778611541557",
-              "type": "little",
-              "cat": "BPO",
-              "desc": "Bip Bip - COL-VNZA / BPO Project",
-              "priority": "Media",
-              "eta": "2026-06-15",
-              "status": "progress",
-              "link": "",
-              "updates": [],
-              "kr": "BPO services"
-            },
-            {
-              "id": "t1778611619213",
-              "type": "little",
-              "cat": "BPO",
-              "desc": "Happify - Reactivation plan on churned drivers",
-              "priority": "Media",
-              "eta": "2026-06-13",
-              "status": "progress",
-              "link": "",
-              "updates": [
-                {
-                  "date": "12.05",
-                  "text": "Addemdum under sugnature process on ticket https://st.yango-team.com/TAXIASSIST-608420"
-                }
-              ],
-              "kr": "BPO services"
-            },
-            {
-              "id": "t1778612467222",
-              "type": "little",
-              "cat": "Marketing",
-              "desc": "Reporte de facturacion por Marketing de TL para el mes de Abril",
-              "priority": "Media",
-              "eta": "2026-05-15",
-              "status": "progress",
-              "link": "",
-              "updates": [],
-              "kr": "Taxis Libres"
-            },
-            {
-              "id": "t1778613055230",
-              "type": "little",
-              "cat": "Supply",
-              "desc": "Automatizacion reporte de reactivaciones / SURO + BPO",
-              "priority": "Baja",
-              "eta": "2026-06-30",
               "status": "pending",
               "link": "",
               "updates": [],
-              "kr": "Operations"
-            },
-            {
-              "id": "t1778613122780",
-              "type": "little",
-              "cat": "Supply",
-              "desc": "Unificacion reporte de reactivacion mensual (Churned drivers)",
-              "priority": "Baja",
-              "eta": "2026-05-18",
-              "status": "progress",
-              "link": "",
-              "updates": [],
-              "kr": "Taxis Libres"
-            },
-            {
-              "id": "t1778614665348",
-              "type": "little",
-              "cat": "Call Taxi",
-              "desc": "Facturacion equipo Call Taxi de Diciembre/25 a Abril/26",
-              "priority": "Media",
-              "eta": "2026-05-29",
-              "status": "progress",
-              "link": "",
-              "updates": [
-                {
-                  "date": "12.05",
-                  "text": "Recepcion de factura por $118,995 USD. Pendiente de solicitud de pago por demoras en la firma del contrato."
-                }
-              ],
-              "kr": "Taxis Libres"
+              "kr": null
             }
           ]
         },
@@ -914,7 +841,7 @@
               "type": "little",
               "cat": "Partner Pro",
               "desc": "Apenas se registra un conductor nuevo, que le llegue un WA automático del partner anunciando el 1% por 14 días",
-              "priority": null,
+              "priority": "Alta",
               "eta": null,
               "status": "pending",
               "link": "",
@@ -1041,8 +968,8 @@
               "id": "m4",
               "type": "main",
               "cat": "Virgin Partnership",
-              "desc": "CRM coms v2 lanzados; revisando top up model",
-              "priority": "Media",
+              "desc": "Primera parte lanzada, pending PR",
+              "priority": null,
               "eta": null,
               "status": "progress",
               "link": "",
@@ -1053,10 +980,10 @@
               "id": "m5",
               "type": "main",
               "cat": "WC Fan Zones",
-              "desc": "Costo 300M — Alianza BBC; definiendo detalles",
-              "priority": "Alta",
+              "desc": "Costo 300M — detalles por discutir",
+              "priority": null,
               "eta": null,
-              "status": "progress",
+              "status": "pending",
               "link": "",
               "updates": [],
               "kr": null
@@ -1065,10 +992,10 @@
               "id": "m6",
               "type": "little",
               "cat": "TukTuk Branding",
-              "desc": "Evento ProDrivers esta semana",
-              "priority": "Media",
+              "desc": "Nuevo evento la próxima semana",
+              "priority": null,
               "eta": null,
-              "status": "progress",
+              "status": "pending",
               "link": "",
               "updates": [],
               "kr": null
@@ -1077,10 +1004,10 @@
               "id": "m7",
               "type": "little",
               "cat": "Moto Branding",
-              "desc": "En producción",
-              "priority": "Media",
+              "desc": "Confirmación de producción",
+              "priority": null,
               "eta": null,
-              "status": "progress",
+              "status": "pending",
               "link": "",
               "updates": [],
               "kr": null
@@ -1088,11 +1015,11 @@
             {
               "id": "m8",
               "type": "little",
-              "cat": "Motocarro -user",
-              "desc": "Atividades inician esta semana ( 15 dias)",
-              "priority": "Alta",
+              "cat": "Coca Cola",
+              "desc": "Offline promoter con promocode en FEP",
+              "priority": null,
               "eta": null,
-              "status": "progress",
+              "status": "pending",
               "link": "",
               "updates": [],
               "kr": null
@@ -1101,68 +1028,8 @@
               "id": "m9",
               "type": "little",
               "cat": "Puntos Colombia",
-              "desc": "Legal OK; en firma por WebDox + adenine",
-              "priority": "Alta",
-              "eta": null,
-              "status": "progress",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
-              "id": "t1778615372410",
-              "type": "little",
-              "cat": "Terpel",
-              "desc": "Definida mecanica; por definir beneficio final",
-              "priority": "Media",
-              "eta": null,
-              "status": "progress",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
-              "id": "t1778615465920",
-              "type": "little",
-              "cat": "FlyyPass",
-              "desc": "Revision de NDA ´+  Agreement (por parte de ellos)",
-              "priority": "Media",
-              "eta": null,
-              "status": "progress",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
-              "id": "t1778617029192",
-              "type": "little",
-              "cat": "B. Popular",
-              "desc": "User; Contraction en creación para firma",
-              "priority": "Media",
-              "eta": null,
-              "status": "progress",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
-              "id": "t1778617090836",
-              "type": "little",
-              "cat": "Claro Club",
-              "desc": "ida & vuelta legal",
-              "priority": "Media",
-              "eta": null,
-              "status": "progress",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
-              "id": "t1778617459573",
-              "type": "little",
-              "cat": "SmartFit",
-              "desc": "Revisando partnership con promocodes; Sponsorship de Smartfit Run",
-              "priority": "Media",
+              "desc": "Legal OK, pending signature para ejecutar",
+              "priority": null,
               "eta": null,
               "status": "pending",
               "link": "",
