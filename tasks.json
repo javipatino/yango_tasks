@@ -968,7 +968,7 @@
               "type": "main",
               "cat": "Virgin Partnership",
               "desc": "Lanzados CRM comms (refuerzo); revisando Top up model",
-              "priority": null,
+              "priority": "Alta",
               "eta": null,
               "status": "progress",
               "link": "",
