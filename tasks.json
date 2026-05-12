@@ -794,18 +794,6 @@
               "link": "",
               "updates": [],
               "kr": null
-            },
-            {
-              "id": "t1778612467222",
-              "type": "little",
-              "cat": "Marketing",
-              "desc": "Reporte de facturacion por Marketing de TL para el mes de Abril",
-              "priority": "Media",
-              "eta": "2026-05-15",
-              "status": "progress",
-              "link": "",
-              "updates": [],
-              "kr": null
             }
           ]
         },
@@ -1004,7 +992,7 @@
               "type": "little",
               "cat": "TukTuk Branding",
               "desc": "Nuevo evento la próxima semana",
-              "priority": null,
+              "priority": "Media",
               "eta": null,
               "status": "pending",
               "link": "",
@@ -1080,10 +1068,22 @@
           "krs": [],
           "tasks": [
             {
+              "id": "m11",
+              "type": "main",
+              "cat": "Moto Research",
+              "desc": "Benchmark done, survey WIP",
+              "priority": null,
+              "eta": null,
+              "status": "progress",
+              "link": "",
+              "updates": [],
+              "kr": null
+            },
+            {
               "id": "m12",
               "type": "little",
               "cat": "WhatsApp Channel",
-              "desc": "Implementado como AO, meta 10k followers",
+              "desc": "Implementado como AO, meta 10k followers EOM",
               "priority": null,
               "eta": null,
               "status": "progress",
@@ -1092,82 +1092,10 @@
               "kr": null
             },
             {
-              "id": "t1778612767023",
-              "type": "little",
-              "cat": "TukTuk",
-              "desc": "Survey por WhatsApp crear y entregar a Nico",
-              "priority": null,
-              "eta": null,
-              "status": "done",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
-              "id": "t1778612824062",
-              "type": "little",
-              "cat": "Moto",
-              "desc": "Campaña despliegue multi-canal",
-              "priority": null,
-              "eta": null,
-              "status": "done",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
-              "id": "t1778612879458",
+              "id": "m13",
               "type": "little",
               "cat": "Performance",
-              "desc": "Nuevos assets Virgin Mobile",
-              "priority": null,
-              "eta": null,
-              "status": "progress",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
-              "id": "t1778612938410",
-              "type": "little",
-              "cat": "Referrals",
-              "desc": "Actualización valores campaña y agregar \"aún muchas oportunidades de referir\" mensaje",
-              "priority": null,
-              "eta": null,
-              "status": "progress",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
-              "id": "t1778613008138",
-              "type": "little",
-              "cat": "Nequi",
-              "desc": "Despliegue campaña multicanal, 150k bindings",
-              "priority": null,
-              "eta": null,
-              "status": "progress",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
-              "id": "t1778613085915",
-              "type": "little",
-              "cat": "1% off Baq + Cal",
-              "desc": "Campaña multi canal desarrollo y salida (Perf, in-app, WA channel, SMM) *ver billboard car artes",
-              "priority": null,
-              "eta": null,
-              "status": "progress",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
-              "id": "t1778613570385",
-              "type": "little",
-              "cat": "World Cup",
-              "desc": "Desarrollo assets base in-app",
+              "desc": "WIP new creatives",
               "priority": null,
               "eta": null,
               "status": "progress",
