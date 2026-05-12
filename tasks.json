@@ -95,27 +95,6 @@
               "kr": "APR'RFC"
             },
             {
-              "id": "t1778013378307",
-              "type": "little",
-              "cat": "Call Taxi",
-              "desc": "Enviar y monitorear contrato call taxi a Cesar y Stefanía",
-              "priority": "Alta",
-              "eta": "2026-05-05",
-              "status": "progress",
-              "link": "",
-              "updates": [
-                {
-                  "date": "08.05",
-                  "text": "Solicité a Stefanía su OK al correo, para que Jimmy pueda subir los taxiassist"
-                },
-                {
-                  "date": "06.05",
-                  "text": "Contrato enviado a Cesar - pendiente de respuesta por email"
-                }
-              ],
-              "kr": "Gestión"
-            },
-            {
               "id": "t1778015511713",
               "type": "little",
               "cat": "Budget Q3",
