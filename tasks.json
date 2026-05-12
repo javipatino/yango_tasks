@@ -1022,6 +1022,18 @@
               "link": "",
               "updates": [],
               "kr": null
+            },
+            {
+              "id": "t1778614373204",
+              "type": "little",
+              "cat": "Claro Club",
+              "desc": "Revisión legal/ contrato de cooperación",
+              "priority": "Media",
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": null
             }
           ]
         },
