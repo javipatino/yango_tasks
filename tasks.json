@@ -144,7 +144,7 @@
               "type": "little",
               "cat": "otro",
               "desc": "reembolso viaje Cali",
-              "priority": "Alta",
+              "priority": "Media",
               "eta": null,
               "status": "pending",
               "link": "https://st.yandex-team.ru/EXPENSEREPSFLE-13373",
