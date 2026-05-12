@@ -413,6 +413,11 @@
               "cat": "Moto Fleet",
               "desc": "1.000 bikes, 500 active weekly",
               "eta": "Q2"
+            },
+            {
+              "cat": "Motai",
+              "desc": "Test de solo alquiler",
+              "eta": ""
             }
           ],
           "tasks": [
