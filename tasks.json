@@ -733,23 +733,7 @@
           "initials": "JM",
           "bg": "#E6F1FB",
           "tc": "#0C447C",
-          "krs": [
-            {
-              "cat": "Operations",
-              "desc": "",
-              "eta": ""
-            },
-            {
-              "cat": "Taxis Libres",
-              "desc": "",
-              "eta": ""
-            },
-            {
-              "cat": "BPO services",
-              "desc": "",
-              "eta": ""
-            }
-          ],
+          "krs": [],
           "tasks": [
             {
               "id": "k1",
@@ -761,7 +745,7 @@
               "status": "done",
               "link": "",
               "updates": [],
-              "kr": "Operations"
+              "kr": null
             },
             {
               "id": "k2",
@@ -773,7 +757,7 @@
               "status": "progress",
               "link": "https://docs.google.com/presentation/d/1Xu8BYXe8FQxCxzptbpA9lH7UhnBuJ_41rtZTk6ojzVc/edit?slide=id.g3f286570d34_0_124#slide=id.g3f286570d34_0_124, https://docs.google.com/spreadsheets/d/1Q2Qfz4rlrDWGNN2pHJgi1H4wZJ1KZ5WFUu285h6vW-M/edit?gid=130465511#gid=130465511",
               "updates": [],
-              "kr": "Operations"
+              "kr": null
             },
             {
               "id": "k3",
@@ -785,7 +769,7 @@
               "status": "progress",
               "link": "https://st.yandex-team.ru/YLEGAL-5163#69d91e450660f44602d35328",
               "updates": [],
-              "kr": "Taxis Libres"
+              "kr": null
             },
             {
               "id": "t1778611541557",
@@ -797,7 +781,7 @@
               "status": "progress",
               "link": "",
               "updates": [],
-              "kr": "BPO services"
+              "kr": null
             },
             {
               "id": "t1778611619213",
@@ -808,49 +792,8 @@
               "eta": "2026-06-13",
               "status": "progress",
               "link": "",
-              "updates": [
-                {
-                  "date": "12.05",
-                  "text": "Addemdum under sugnature process on ticket https://st.yango-team.com/TAXIASSIST-608420"
-                }
-              ],
-              "kr": "BPO services"
-            },
-            {
-              "id": "t1778612467222",
-              "type": "little",
-              "cat": "Marketing",
-              "desc": "Reporte de facturacion por Marketing de TL para el mes de Abril",
-              "priority": "Media",
-              "eta": "2026-05-15",
-              "status": "progress",
-              "link": "",
               "updates": [],
-              "kr": "Taxis Libres"
-            },
-            {
-              "id": "t1778613055230",
-              "type": "little",
-              "cat": "Supply",
-              "desc": "Automatizacion reporte de reactivaciones / SURO + BPO",
-              "priority": "Baja",
-              "eta": "2026-06-30",
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "Operations"
-            },
-            {
-              "id": "t1778613122780",
-              "type": "little",
-              "cat": "Supply",
-              "desc": "Unificacion reporte de reactivacion mensual (Churned drivers)",
-              "priority": "Baja",
-              "eta": "2026-05-18",
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "Taxis Libres"
+              "kr": null
             }
           ]
         },
@@ -1049,9 +992,9 @@
               "type": "little",
               "cat": "TukTuk Branding",
               "desc": "Nuevo evento la próxima semana",
-              "priority": null,
+              "priority": "Media",
               "eta": null,
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": null
@@ -1061,18 +1004,6 @@
               "type": "little",
               "cat": "Moto Branding",
               "desc": "Confirmación de producción",
-              "priority": null,
-              "eta": null,
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
-              "id": "m8",
-              "type": "little",
-              "cat": "Coca Cola",
-              "desc": "Offline promoter con promocode en FEP",
               "priority": null,
               "eta": null,
               "status": "pending",
