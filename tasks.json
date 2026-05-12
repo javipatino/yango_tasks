@@ -740,7 +740,7 @@
               "type": "main",
               "cat": "Order pool",
               "desc": "Llamada a conductores en test — precio con bono en order pool",
-              "priority": "Alta",
+              "priority": "Baja",
               "eta": null,
               "status": "pending",
               "link": "",
