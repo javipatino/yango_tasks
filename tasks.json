@@ -764,9 +764,9 @@
               "type": "main",
               "cat": "Call taxi",
               "desc": "P&L mensual y nueva cotización contrato Cesar",
-              "priority": null,
+              "priority": "Media",
               "eta": null,
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": null
