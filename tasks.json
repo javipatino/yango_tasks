@@ -1058,6 +1058,18 @@
               "link": "",
               "updates": [],
               "kr": null
+            },
+            {
+              "id": "t1778614614448",
+              "type": "little",
+              "cat": "FlyPass",
+              "desc": "Revision de NDA y acuerdo de cooperación ( de su lado)",
+              "priority": "Media",
+              "eta": null,
+              "status": "progress",
+              "link": "",
+              "updates": [],
+              "kr": null
             }
           ]
         },
