@@ -861,7 +861,12 @@
               "eta": "2026-05-29",
               "status": "progress",
               "link": "",
-              "updates": [],
+              "updates": [
+                {
+                  "date": "12.05",
+                  "text": "Recepcion de factura por $118,995 USD. Pendiente de solicitud de pago por demoras en la firma del contrato."
+                }
+              ],
               "kr": "Taxis Libres"
             }
           ]
