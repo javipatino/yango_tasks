@@ -847,7 +847,7 @@
               "desc": "Unificacion reporte de reactivacion mensual (Churned drivers)",
               "priority": "Baja",
               "eta": "2026-05-18",
-              "status": "progress",
+              "status": "pending",
               "link": "",
               "updates": [],
               "kr": "Taxis Libres"
@@ -861,12 +861,7 @@
               "eta": "2026-05-29",
               "status": "progress",
               "link": "",
-              "updates": [
-                {
-                  "date": "12.05",
-                  "text": "Recepcion de factura por $118,995 USD. Pendiente de solicitud de pago por demoras en la firma del contrato."
-                }
-              ],
+              "updates": [],
               "kr": "Taxis Libres"
             }
           ]
@@ -1105,6 +1100,18 @@
               "priority": null,
               "eta": null,
               "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": null
+            },
+            {
+              "id": "t1778615189703",
+              "type": "little",
+              "cat": "123",
+              "desc": "prueba",
+              "priority": "Media",
+              "eta": null,
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": null
