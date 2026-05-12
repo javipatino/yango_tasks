@@ -994,7 +994,7 @@
               "desc": "Nuevo evento la próxima semana",
               "priority": "Media",
               "eta": null,
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": null
