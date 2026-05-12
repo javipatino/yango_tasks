@@ -1065,10 +1065,10 @@
               "id": "m6",
               "type": "little",
               "cat": "TukTuk Branding",
-              "desc": "Nuevo evento la próxima semana",
-              "priority": null,
+              "desc": "Evento ProDrivers esta semana",
+              "priority": "Media",
               "eta": null,
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": null
