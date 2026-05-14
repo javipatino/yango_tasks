@@ -814,7 +814,7 @@
               "cat": "General",
               "desc": "Ajustar workterms Suro para evitar que alguno tenga >100k conductores",
               "priority": "Alta",
-              "eta": null,
+              "eta": "2026-05-15",
               "status": "pending",
               "link": "",
               "updates": [],
