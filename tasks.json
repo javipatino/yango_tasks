@@ -746,7 +746,7 @@
               "type": "little",
               "cat": "Suro BOG",
               "desc": "1% comisión BOG primeros 14 días | Yango se bajó a 0% la comisión, vamos a meter 10 scouts nuevos, no hagan más scouts Suro",
-              "priority": null,
+              "priority": "Alta",
               "eta": null,
               "status": "pending",
               "link": "",
