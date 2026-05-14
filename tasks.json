@@ -785,18 +785,6 @@
           "krs": [],
           "tasks": [
             {
-              "id": "k1",
-              "type": "main",
-              "cat": "Order pool",
-              "desc": "Llamada a conductores en test — precio con bono en order pool",
-              "priority": "Alta",
-              "eta": null,
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
               "id": "k2",
               "type": "main",
               "cat": "Metro BOG",
