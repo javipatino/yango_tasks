@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-14",
+  "last_updated": "2026-05-15",
   "areas": {
     "ops": {
       "people": [
@@ -752,6 +752,16 @@
               "link": "",
               "updates": [],
               "kr": "Economy"
+            },
+            {
+              "id": "t1747267200000",
+              "type": "little",
+              "cat": "Cali USP",
+              "desc": "Armar USP en Cali con mensaje: 'Gana semanal hasta $XX' — calculado con 100% de objetivo y 1% de comisión para newbies y reactivados",
+              "priority": "Media",
+              "eta": null,
+              "status": "pending",
+              "link": ""
             }
           ]
         },
