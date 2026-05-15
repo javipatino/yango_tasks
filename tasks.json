@@ -423,6 +423,18 @@
               "link": "",
               "updates": [],
               "kr": "Driver acq."
+            },
+            {
+              "id": "t1747612800",
+              "type": "little",
+              "cat": "Cabinet",
+              "desc": "Implementar cabinet en Soledad",
+              "priority": "Alta",
+              "eta": "2026-05-19",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Driver acq."
             }
           ]
         },
