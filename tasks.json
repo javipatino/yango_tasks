@@ -836,6 +836,18 @@
               "link": "",
               "updates": [],
               "kr": "Economy"
+            },
+            {
+              "id": "t1779222133693",
+              "type": "little",
+              "cat": "Partner pro",
+              "desc": "Cómo premiar a partners que hacen eventos en sus oficinas presenciales",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Economy"
             }
           ]
         },
