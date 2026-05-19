@@ -201,30 +201,6 @@
               "link": "",
               "updates": [],
               "kr": "APR'RFC"
-            },
-            {
-              "id": "t1779202669681",
-              "type": "little",
-              "cat": "IA",
-              "desc": "Leet wiki de IA para Yandex teams",
-              "priority": null,
-              "eta": null,
-              "status": "pending",
-              "link": "https://wiki.yandex-team.ru/stefania/en/",
-              "updates": [],
-              "kr": "Gestión"
-            },
-            {
-              "id": "t1779205390033",
-              "type": "little",
-              "cat": "Hub soledad",
-              "desc": "Algún hub en soledad para hacer revisión de fraude?",
-              "priority": null,
-              "eta": null,
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "Gestión"
             }
           ]
         },
@@ -371,18 +347,6 @@
               "link": "",
               "updates": [],
               "kr": "TukTuk"
-            },
-            {
-              "id": "t1779207239660",
-              "type": "little",
-              "cat": "Chain orders",
-              "desc": "Chain orders screenshots en Didi y Uber, según pidió Evgeny",
-              "priority": null,
-              "eta": "2026-05-19",
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "Moto"
             }
           ]
         },
@@ -808,7 +772,7 @@
               "desc": "Armar USP en Cali con mensaje: 'Gana semanal hasta $XX' — calculado con 100% de objetivo y 1% de comisión para newbies y reactivados",
               "priority": "Alta",
               "eta": null,
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": "Economy"
@@ -887,18 +851,6 @@
               "desc": "Ajustar workterms Suro para evitar que alguno tenga >100k conductores",
               "priority": "Alta",
               "eta": "2026-05-15",
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
-              "id": "t1779206240589",
-              "type": "little",
-              "cat": "Call taxi",
-              "desc": "Firma de contrato y otrosí de call taxi",
-              "priority": null,
-              "eta": null,
               "status": "pending",
               "link": "",
               "updates": [],
