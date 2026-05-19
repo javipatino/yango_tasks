@@ -371,6 +371,18 @@
               "link": "",
               "updates": [],
               "kr": "TukTuk"
+            },
+            {
+              "id": "t1779207239660",
+              "type": "little",
+              "cat": "Chain orders",
+              "desc": "Chain orders screenshots en Didi y Uber, según pidió Evgeny",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Moto"
             }
           ]
         },
