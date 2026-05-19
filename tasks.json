@@ -225,6 +225,18 @@
               "link": "",
               "updates": [],
               "kr": "Gestión"
+            },
+            {
+              "id": "t1779220855957",
+              "type": "little",
+              "cat": "Volto-TL",
+              "desc": "Pago de taxis libres a Volto",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Gestión"
             }
           ]
         },
