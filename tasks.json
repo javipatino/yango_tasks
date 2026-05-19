@@ -371,6 +371,18 @@
               "link": "",
               "updates": [],
               "kr": "Moto"
+            },
+            {
+              "id": "t1779220645412",
+              "type": "little",
+              "cat": "Hubs check",
+              "desc": "Nuevo WoW con hub 2 horas - checks anti fraude",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "TukTuk"
             }
           ]
         },
