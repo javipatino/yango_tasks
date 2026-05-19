@@ -213,6 +213,18 @@
               "link": "https://wiki.yandex-team.ru/stefania/en/",
               "updates": [],
               "kr": "Gestión"
+            },
+            {
+              "id": "t1779205390033",
+              "type": "little",
+              "cat": "Hub soledad",
+              "desc": "Algún hub en soledad para hacer revisión de fraude?",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Gestión"
             }
           ]
         },
