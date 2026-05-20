@@ -407,6 +407,18 @@
               "link": "",
               "updates": [],
               "kr": "Moto"
+            },
+            {
+              "id": "t1779310907194",
+              "type": "little",
+              "cat": "Comms MKT C+ BOG",
+              "desc": "Align comms for comfort plus new bonus scheme in BOG",
+              "priority": "Alta",
+              "eta": "2026-05-19",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "UFC"
             }
           ]
         },
