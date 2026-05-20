@@ -872,6 +872,16 @@
               "link": "",
               "updates": [],
               "kr": "Economy"
+            },
+            {
+              "id": "t1748390400",
+              "type": "little",
+              "cat": "DiDi CI",
+              "desc": "Con los incentivos nuevos para DiDi en Cali, completar el archivo de cómo están los net earnings y sub GMV de DiDi en Cali",
+              "priority": "Alta",
+              "eta": "2026-05-20",
+              "status": "pending",
+              "link": ""
             }
           ]
         },
