@@ -507,6 +507,18 @@
               "link": "",
               "updates": [],
               "kr": "Driver acq."
+            },
+            {
+              "id": "t1779291931169",
+              "type": "little",
+              "cat": "General",
+              "desc": "Construir en IB el modelo actualizado de Driver onboarding, especifico la parte de DOCUMENTS CHECK. Que documentos piden? como se llama cada uno de ellos? que otros procesos como selfie + documento tienen? ASAP",
+              "priority": "Alta",
+              "eta": "2026-05-27",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Driver acq."
             }
           ]
         },
@@ -872,16 +884,6 @@
               "link": "",
               "updates": [],
               "kr": "Economy"
-            },
-            {
-              "id": "t1748390400",
-              "type": "little",
-              "cat": "DiDi CI",
-              "desc": "Con los incentivos nuevos para DiDi en Cali, completar el archivo de cómo están los net earnings y sub GMV de DiDi en Cali",
-              "priority": "Alta",
-              "eta": "2026-05-20",
-              "status": "pending",
-              "link": ""
             }
           ]
         },
