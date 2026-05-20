@@ -201,6 +201,18 @@
               "link": "",
               "updates": [],
               "kr": "Gestión"
+            },
+            {
+              "id": "t1779307037665",
+              "type": "little",
+              "cat": "Derecho petición",
+              "desc": "Derecho de petición | TL enviar pago a usuario y descontar a conductor",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Gestión"
             }
           ]
         },
