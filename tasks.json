@@ -237,18 +237,6 @@
               "link": "",
               "updates": [],
               "kr": "Gestión"
-            },
-            {
-              "id": "t1779289880073",
-              "type": "little",
-              "cat": "General",
-              "desc": "Reordenar con Lucho responsabilidades de HUBS dando foco a: 1. Moto Fleet, 2. Tuk Tuk",
-              "priority": "Alta",
-              "eta": "2026-05-26",
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "APR'RFC"
             }
           ]
         },
