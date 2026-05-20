@@ -233,7 +233,7 @@
               "type": "main",
               "cat": "Bogota south",
               "desc": "Propuesta Alejo en SUR · zona de descuento · zona de geo bono",
-              "priority": "Media",
+              "priority": "Alta",
               "eta": "2026-05-06",
               "status": "progress",
               "link": "",
@@ -383,6 +383,18 @@
               "link": "",
               "updates": [],
               "kr": "Moto"
+            },
+            {
+              "id": "t1779298453147",
+              "type": "little",
+              "cat": "Comms Bonus C+",
+              "desc": "Align with marketing comms of new bonus scheme for comfort plus in BOG",
+              "priority": "Alta",
+              "eta": "2026-05-22",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "UFC"
             }
           ]
         },
