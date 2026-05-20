@@ -371,6 +371,18 @@
               "link": "",
               "updates": [],
               "kr": "TukTuk"
+            },
+            {
+              "id": "t1779298394206",
+              "type": "little",
+              "cat": "Bogotá VIP",
+              "desc": "Market intel complete of Moto VIP Picap and understand if it is worth launching in BOG",
+              "priority": "Alta",
+              "eta": "2026-05-25",
+              "status": "progress",
+              "link": "",
+              "updates": [],
+              "kr": "Moto"
             }
           ]
         },
