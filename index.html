@@ -871,6 +871,34 @@ function applyHash() {
   const hash = window.location.hash.replace('#', '').toLowerCase();
   if (!hash || !data) return;
 
+  // Map hash to area keys
+  const areaMap = { ops:'ops', mkt:'mkt', pr:'pr', gr:'gr', gm:'GM', todos:'all', all:'all' };
+  const areaLabels = { ops:'Ops', mkt:'Mkt', pr:'PR', gr:'GR', GM:'GM', all:'Todos' };
+
+  if (areaMap[hash] !== undefined) {
+    // Hash matches an area
+    const areaKey = areaMap[hash];
+    currentArea = areaKey;
+    currentPerson = 'all';
+
+    document.querySelectorAll('.area-btn').forEach(b => {
+      b.classList.remove('active','active-mkt','active-pr','active-gr','active-gm');
+      const label = b.textContent.trim();
+      if (label === (areaLabels[areaKey] || areaKey)) {
+        b.classList.add('active');
+        if (areaKey === 'mkt') b.classList.add('active-mkt');
+        else if (areaKey === 'pr') b.classList.add('active-pr');
+        else if (areaKey === 'gr') b.classList.add('active-gr');
+        else if (areaKey === 'GM') b.classList.add('active-gm');
+      }
+    });
+
+    renderPersonFilters();
+    renderAll();
+    document.title = (areaLabels[areaKey] || areaKey) + ' — Yango Tasks';
+    return;
+  }
+
   // Try to match to a person id or name
   const allPeople = [];
   Object.values(data.areas).forEach(a => {
@@ -892,12 +920,10 @@ function applyHash() {
       }
     });
 
-    // Set area filter
     currentArea = matchArea;
-    document.querySelectorAll('.area-btn').forEach(b => b.classList.remove('active','active-mkt','active-pr','active-gr','active-gm'));
-    const areaLabels = { ops:'Ops', mkt:'Mkt', pr:'PR', gr:'GR', GM:'GM' };
     document.querySelectorAll('.area-btn').forEach(b => {
-      if (b.textContent === (areaLabels[matchArea] || matchArea)) {
+      b.classList.remove('active','active-mkt','active-pr','active-gr','active-gm');
+      if (b.textContent.trim() === (areaLabels[matchArea] || matchArea)) {
         b.classList.add('active');
         if (matchArea === 'mkt') b.classList.add('active-mkt');
         else if (matchArea === 'pr') b.classList.add('active-pr');
@@ -906,17 +932,13 @@ function applyHash() {
       }
     });
 
-    // Set person filter
     currentPerson = match.id;
     renderPersonFilters();
-    // Activate correct person button
     document.querySelectorAll('.person-filters .filter-btn').forEach(b => {
-      b.classList.toggle('active', b.textContent === match.name);
+      b.classList.toggle('active', b.textContent.trim() === match.name);
     });
 
     renderAll();
-
-    // Update page title
     document.title = match.name + ' — Yango Tasks';
   }
 }
