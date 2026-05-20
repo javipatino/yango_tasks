@@ -191,18 +191,6 @@
               "kr": "Gestión"
             },
             {
-              "id": "t1778678971307",
-              "type": "little",
-              "cat": "MSE",
-              "desc": "1. Bonos por %. agregar mensaje desde la pantalla, y lanzar comms | 2. Preparar comms de reactivados (pendiente el tag)",
-              "priority": null,
-              "eta": null,
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "APR'RFC"
-            },
-            {
               "id": "t1779202669681",
               "type": "little",
               "cat": "IA",
