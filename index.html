@@ -180,18 +180,7 @@ let taskDesc = {};
 let taskLink = {};
 let saveTimer = null;
 
-async function loadData() {
-  try {
-    const r = await fetch(JSON_URL + '?t=' + Date.now());
-    data = await r.json();
-    document.getElementById('last-updated').textContent = 'Actualizado: ' + data.last_updated;
-    initState();
-    renderPersonFilters();
-    renderAll();
-  } catch(e) {
-    document.getElementById('view-board').innerHTML = '<div class="empty">Error cargando datos.</div>';
-  }
-}
+// loadData defined below with hash routing
 
 function initState() {
   Object.values(data.areas).forEach(area => {
@@ -339,26 +328,64 @@ function scheduleSync() {
 }
 
 async function syncToGitHub() {
-  const updated = JSON.parse(JSON.stringify(data));
-  Object.values(updated.areas).forEach(area => {
-    [...(area.people||[]), ...(area.kams||[])].forEach(p => {
-      p.tasks.forEach(t => {
-        t.status = taskStatus[t.id] ?? t.status;
-        t.priority = taskPriority[t.id] ?? t.priority;
-        t.eta = taskEta[t.id] ?? t.eta;
-        t.updates = taskUpdates[t.id] ?? t.updates ?? [];
-        t.kr = taskKr[t.id] ?? t.kr ?? null;
-        t.cat = taskCat[t.id] ?? t.cat;
-        t.desc = taskDesc[t.id] ?? t.desc;
-        t.link = taskLink[t.id] ?? t.link ?? '';
+  try {
+    // Fetch fresh data from server to avoid SHA conflicts
+    const freshRes = await fetch(JSON_URL + '?t=' + Date.now());
+    const freshData = await freshRes.json();
+
+    // Merge local changes on top of fresh server data
+    const updated = JSON.parse(JSON.stringify(freshData));
+    Object.values(updated.areas).forEach(area => {
+      [...(area.people||[]), ...(area.kams||[])].forEach(p => {
+        p.tasks.forEach(t => {
+          if (taskStatus[t.id] !== undefined)   t.status   = taskStatus[t.id];
+          if (taskPriority[t.id] !== undefined)  t.priority = taskPriority[t.id];
+          if (taskEta[t.id] !== undefined)        t.eta      = taskEta[t.id];
+          if (taskUpdates[t.id] !== undefined)    t.updates  = taskUpdates[t.id];
+          if (taskKr[t.id] !== undefined)         t.kr       = taskKr[t.id];
+          if (taskCat[t.id] !== undefined)        t.cat      = taskCat[t.id];
+          if (taskDesc[t.id] !== undefined)       t.desc     = taskDesc[t.id];
+          if (taskLink[t.id] !== undefined)       t.link     = taskLink[t.id];
+        });
+        // Merge KR edits
+        if (p.krs) p.krs = p.krs; // KR edits are saved directly in data object
       });
     });
-  });
-  try {
-    const res = await fetch(WEBHOOK_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(updated) });
-    if (res.ok) { data = updated; document.getElementById('last-updated').textContent = 'Actualizado: ' + new Date().toISOString().split('T')[0]; showSync('saved', '✓ Guardado en GitHub'); }
-    else showSync('error', 'Error al guardar');
-  } catch(e) { showSync('error', 'Error de conexión'); }
+    // Also carry over any newly added tasks not yet on server
+    Object.values(data.areas).forEach((area, aIdx) => {
+      const areaKey = Object.keys(data.areas)[aIdx];
+      const updArea = updated.areas[areaKey];
+      if (!updArea) return;
+      [...(area.people||[]), ...(area.kams||[])].forEach(p => {
+        const col = area.people?.includes(p) ? 'people' : 'kams';
+        const updP = (updArea[col]||[]).find(x => x.id === p.id);
+        if (!updP) return;
+        // Add tasks that exist locally but not on server
+        p.tasks.forEach(t => {
+          if (!updP.tasks.find(st => st.id === t.id)) {
+            updP.tasks.push(t);
+          }
+        });
+        // Sync KR changes
+        updP.krs = p.krs;
+      });
+    });
+
+    const res = await fetch(WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(updated)
+    });
+    if (res.ok) {
+      data = updated;
+      document.getElementById('last-updated').textContent = 'Actualizado: ' + new Date().toISOString().split('T')[0];
+      showSync('saved', '✓ Guardado en GitHub');
+    } else {
+      showSync('error', 'Error al guardar');
+    }
+  } catch(e) {
+    showSync('error', 'Error de conexión');
+  }
 }
 
 function updatePriority(id, val) { taskPriority[id] = val || null; scheduleSync(); renderAll(); }
@@ -838,6 +865,77 @@ function renderGantt() {
 }
 
 function renderAll() { renderBoard(); renderToday(); renderGantt(); }
+
+// ── Hash routing ─────────────────────────────────────────────
+function applyHash() {
+  const hash = window.location.hash.replace('#', '').toLowerCase();
+  if (!hash || !data) return;
+
+  // Try to match to a person id or name
+  const allPeople = [];
+  Object.values(data.areas).forEach(a => {
+    allPeople.push(...(a.people||[]), ...(a.kams||[]));
+  });
+
+  const match = allPeople.find(p =>
+    p.id.toLowerCase() === hash ||
+    p.name.toLowerCase() === hash ||
+    p.name.toLowerCase().replace(/\s+/g, '') === hash
+  );
+
+  if (match) {
+    // Find which area this person is in
+    let matchArea = 'ops';
+    Object.entries(data.areas).forEach(([key, area]) => {
+      if ([...(area.people||[]), ...(area.kams||[])].find(p => p.id === match.id)) {
+        matchArea = key;
+      }
+    });
+
+    // Set area filter
+    currentArea = matchArea;
+    document.querySelectorAll('.area-btn').forEach(b => b.classList.remove('active','active-mkt','active-pr','active-gr','active-gm'));
+    const areaLabels = { ops:'Ops', mkt:'Mkt', pr:'PR', gr:'GR', GM:'GM' };
+    document.querySelectorAll('.area-btn').forEach(b => {
+      if (b.textContent === (areaLabels[matchArea] || matchArea)) {
+        b.classList.add('active');
+        if (matchArea === 'mkt') b.classList.add('active-mkt');
+        else if (matchArea === 'pr') b.classList.add('active-pr');
+        else if (matchArea === 'gr') b.classList.add('active-gr');
+        else if (matchArea === 'GM') b.classList.add('active-gm');
+      }
+    });
+
+    // Set person filter
+    currentPerson = match.id;
+    renderPersonFilters();
+    // Activate correct person button
+    document.querySelectorAll('.person-filters .filter-btn').forEach(b => {
+      b.classList.toggle('active', b.textContent === match.name);
+    });
+
+    renderAll();
+
+    // Update page title
+    document.title = match.name + ' — Yango Tasks';
+  }
+}
+
+async function loadData() {
+  try {
+    const r = await fetch(JSON_URL + '?t=' + Date.now());
+    data = await r.json();
+    document.getElementById('last-updated').textContent = 'Actualizado: ' + data.last_updated;
+    initState();
+    renderPersonFilters();
+    renderAll();
+    applyHash(); // Apply hash routing after data loads
+  } catch(e) {
+    document.getElementById('view-board').innerHTML = '<div class="empty">Error cargando datos.</div>';
+  }
+}
+
+window.addEventListener('hashchange', applyHash);
 loadData();
 </script>
 </body>
