@@ -893,18 +893,6 @@
               "kr": null
             },
             {
-              "id": "t1778768405680",
-              "type": "little",
-              "cat": "General",
-              "desc": "Ajustar workterms Suro para evitar que alguno tenga >100k conductores",
-              "priority": "Alta",
-              "eta": "2026-05-15",
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
               "id": "t1779206240589",
               "type": "little",
               "cat": "Call taxi",
