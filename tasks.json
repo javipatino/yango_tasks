@@ -395,6 +395,18 @@
               "link": "https://st.yandex-team.ru/TAXIASSIST-627544",
               "updates": [],
               "kr": "TukTuk"
+            },
+            {
+              "id": "t1779310749237",
+              "type": "little",
+              "cat": "General",
+              "desc": "Moto VIP: Business case, analysis",
+              "priority": null,
+              "eta": "2026-05-26",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Moto"
             }
           ]
         },
