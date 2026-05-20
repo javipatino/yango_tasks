@@ -353,9 +353,9 @@
               "type": "little",
               "cat": "Chain orders",
               "desc": "Chain orders screenshots en Didi y Uber, según pidió Evgeny",
-              "priority": null,
+              "priority": "Media",
               "eta": "2026-05-20",
-              "status": "pending",
+              "status": "done",
               "link": "",
               "updates": [],
               "kr": "Moto"
