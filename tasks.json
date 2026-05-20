@@ -107,18 +107,6 @@
               "kr": "APR'RFC"
             },
             {
-              "id": "t1778015563593",
-              "type": "little",
-              "cat": "Cali Q3-Q4",
-              "desc": "Propuesta de re-inversión para Cali carro en Q3 o Q4",
-              "priority": null,
-              "eta": "2026-05-06",
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "APR'RFC"
-            },
-            {
               "id": "t1778017294592",
               "type": "little",
               "cat": "otro",
@@ -443,7 +431,7 @@
               "desc": "Monitoreo nuevas campañas de referral",
               "priority": null,
               "eta": "2026-04-21",
-              "status": "progress",
+              "status": "pending",
               "link": "",
               "updates": [],
               "kr": "Driver acq."
@@ -479,7 +467,7 @@
               "desc": "Cuadrar con Mate - campaña online de Referral",
               "priority": "Alta",
               "eta": null,
-              "status": "progress",
+              "status": "pending",
               "link": "",
               "updates": [],
               "kr": "Driver acq."
@@ -491,7 +479,7 @@
               "desc": "Implementar cabinet en Soledad",
               "priority": "Alta",
               "eta": "2026-05-19",
-              "status": "progress",
+              "status": "pending",
               "link": "",
               "updates": [],
               "kr": "Driver acq."
