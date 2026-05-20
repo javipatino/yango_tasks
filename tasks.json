@@ -183,7 +183,7 @@
               "type": "little",
               "cat": "Volto-TL",
               "desc": "Pago de taxis libres a Volto",
-              "priority": null,
+              "priority": "Alta",
               "eta": null,
               "status": "pending",
               "link": "",
@@ -233,7 +233,7 @@
               "type": "main",
               "cat": "Bogota south",
               "desc": "Propuesta Alejo en SUR · zona de descuento · zona de geo bono",
-              "priority": "Alta",
+              "priority": "Media",
               "eta": "2026-05-06",
               "status": "progress",
               "link": "",
@@ -371,30 +371,6 @@
               "link": "",
               "updates": [],
               "kr": "TukTuk"
-            },
-            {
-              "id": "t1779298394206",
-              "type": "little",
-              "cat": "Bogotá VIP",
-              "desc": "Market intel complete of Moto VIP Picap and understand if it is worth launching in BOG",
-              "priority": "Alta",
-              "eta": "2026-05-25",
-              "status": "progress",
-              "link": "",
-              "updates": [],
-              "kr": "Moto"
-            },
-            {
-              "id": "t1779298453147",
-              "type": "little",
-              "cat": "Comms Bonus C+",
-              "desc": "Align with marketing comms of new bonus scheme for comfort plus in BOG",
-              "priority": "Alta",
-              "eta": "2026-05-22",
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "UFC"
             }
           ]
         },
