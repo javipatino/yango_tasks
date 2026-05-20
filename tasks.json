@@ -71,36 +71,12 @@
               "kr": "APR'RFC"
             },
             {
-              "id": "t1778001613016",
-              "type": "little",
-              "cat": "TukTuk",
-              "desc": "Billing a Pro por 4k",
-              "priority": "Baja",
-              "eta": null,
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "APR'RFC"
-            },
-            {
               "id": "t1778011010441",
               "type": "little",
               "cat": "Referral",
               "desc": "Visibilidad a MS&E de referral tracker - dónde tiene la inversión Didi (en moto?)",
               "priority": "Media",
               "eta": null,
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "APR'RFC"
-            },
-            {
-              "id": "t1778015511713",
-              "type": "little",
-              "cat": "Budget Q3",
-              "desc": "Validar con Alejo el ETR estimado para Q3 y Q4",
-              "priority": null,
-              "eta": "2026-05-06",
               "status": "pending",
               "link": "",
               "updates": [],
