@@ -507,18 +507,6 @@
               "link": "",
               "updates": [],
               "kr": "Driver acq."
-            },
-            {
-              "id": "t1779291931169",
-              "type": "little",
-              "cat": "General",
-              "desc": "Construir en IB el modelo actualizado de Driver onboarding, especifico la parte de DOCUMENTS CHECK. Que documentos piden? como se llama cada uno de ellos? que otros procesos como selfie + documento tienen? ASAP",
-              "priority": "Alta",
-              "eta": "2026-05-27",
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "Driver acq."
             }
           ]
         },
@@ -880,6 +868,18 @@
               "desc": "Cómo premiar a partners que hacen eventos en sus oficinas presenciales",
               "priority": null,
               "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Economy"
+            },
+            {
+              "id": "t1748390400",
+              "type": "little",
+              "cat": "DiDi CI",
+              "desc": "Con los incentivos nuevos para DiDi en Cali, completar el archivo de cómo están los net earnings y sub GMV de DiDi en Cali",
+              "priority": "Alta",
+              "eta": "2026-05-20",
               "status": "pending",
               "link": "",
               "updates": [],
@@ -1295,18 +1295,6 @@
               "link": "",
               "updates": [],
               "kr": null
-            },
-            {
-              "id": "t1779291962435",
-              "type": "little",
-              "cat": "General",
-              "desc": "IB User Onboarding. Por favor hacer un proceso 360 comparativo del user onboarding.",
-              "priority": "Alta",
-              "eta": "2026-05-27",
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": null
             }
           ]
         }
@@ -1327,7 +1315,20 @@
           "bg": "#E8EAF6",
           "tc": "#3949AB",
           "krs": [],
-          "tasks": []
+          "tasks": [
+            {
+              "id": "t1779292623802",
+              "type": "little",
+              "cat": "Porrito",
+              "desc": "Sala ventana 2-3pm",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": null
+            }
+          ]
         }
       ]
     }
