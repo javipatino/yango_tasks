@@ -494,18 +494,6 @@
           ],
           "tasks": [
             {
-              "id": "t17",
-              "type": "main",
-              "cat": "Lead Gen",
-              "desc": "Seguimiento leads por canal",
-              "priority": null,
-              "eta": null,
-              "status": "progress",
-              "link": "",
-              "updates": [],
-              "kr": "Moto Fleet"
-            },
-            {
               "id": "t18",
               "type": "main",
               "cat": "Performance",
