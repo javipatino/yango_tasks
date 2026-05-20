@@ -1295,6 +1295,18 @@
               "link": "",
               "updates": [],
               "kr": null
+            },
+            {
+              "id": "t1779291962435",
+              "type": "little",
+              "cat": "General",
+              "desc": "IB User Onboarding. Por favor hacer un proceso 360 comparativo del user onboarding.",
+              "priority": "Alta",
+              "eta": "2026-05-27",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": null
             }
           ]
         }
