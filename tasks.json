@@ -237,6 +237,18 @@
               "link": "",
               "updates": [],
               "kr": "Gestión"
+            },
+            {
+              "id": "t1779289937988",
+              "type": "little",
+              "cat": "General",
+              "desc": "Reordenar con Lucho los Hub Experts, dando prioridad a Tuk Tuk y Moto Fleet proeycto 14k rent daily",
+              "priority": "Alta",
+              "eta": "2026-05-26",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Gestión"
             }
           ]
         },
