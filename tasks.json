@@ -407,6 +407,18 @@
               "link": "",
               "updates": [],
               "kr": "UFC"
+            },
+            {
+              "id": "t1779397983881",
+              "type": "little",
+              "cat": "Supervisor",
+              "desc": "Alinear way of work y supervisor",
+              "priority": "Alta",
+              "eta": "2026-05-25",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "TukTuk"
             }
           ]
         },
