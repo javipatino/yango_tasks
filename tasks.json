@@ -371,6 +371,18 @@
               "link": "",
               "updates": [],
               "kr": "Moto"
+            },
+            {
+              "id": "t1779390409660",
+              "type": "little",
+              "cat": "Moto VIP",
+              "desc": "CI comparing vip versus yango",
+              "priority": "Media",
+              "eta": "2026-05-28",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Moto"
             }
           ]
         },
