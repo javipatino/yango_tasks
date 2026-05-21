@@ -936,6 +936,18 @@
               "link": "",
               "updates": [],
               "kr": "Partner comms"
+            },
+            {
+              "id": "t1779374214406",
+              "type": "little",
+              "cat": "Partner Ops",
+              "desc": "Ticket a soporte Feature contrato de mandato",
+              "priority": "Media",
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Otros"
             }
           ]
         },
