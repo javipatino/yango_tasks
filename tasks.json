@@ -869,6 +869,11 @@
               "cat": "Partner comms",
               "desc": "Automated WA flow, 80% of partners",
               "eta": "Q2"
+            },
+            {
+              "cat": "Otros",
+              "desc": "",
+              "eta": ""
             }
           ],
           "tasks": [
