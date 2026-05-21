@@ -965,6 +965,18 @@
               "link": "",
               "updates": [],
               "kr": null
+            },
+            {
+              "id": "t1779374117977",
+              "type": "little",
+              "cat": "Partners Ops",
+              "desc": "Guia para nuevos partners (Con Dani H)",
+              "priority": "Baja",
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": null
             }
           ]
         },
