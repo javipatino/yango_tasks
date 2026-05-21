@@ -919,6 +919,18 @@
               "link": "",
               "updates": [],
               "kr": "Partner comms"
+            },
+            {
+              "id": "t1779374012434",
+              "type": "little",
+              "cat": "Partner Ops",
+              "desc": "Ticket para bajar balance a -15.000 para nuevos",
+              "priority": "Baja",
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Partner comms"
             }
           ]
         },
