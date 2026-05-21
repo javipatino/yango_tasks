@@ -1018,6 +1018,18 @@
               "link": "",
               "updates": [],
               "kr": null
+            },
+            {
+              "id": "t1779374732814",
+              "type": "little",
+              "cat": "Partner Ops",
+              "desc": "Documento con recopilacion de links contratos de mandato (Con Dani H)",
+              "priority": "Baja",
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": null
             }
           ]
         },
