@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-20",
+  "last_updated": "2026-05-21",
   "areas": {
     "ops": {
       "people": [
@@ -71,12 +71,48 @@
               "kr": "APR'RFC"
             },
             {
+              "id": "t1778001613016",
+              "type": "little",
+              "cat": "TukTuk",
+              "desc": "Billing a Pro por 4k",
+              "priority": "Baja",
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "APR'RFC"
+            },
+            {
               "id": "t1778011010441",
               "type": "little",
               "cat": "Referral",
               "desc": "Visibilidad a MS&E de referral tracker - dónde tiene la inversión Didi (en moto?)",
               "priority": "Media",
               "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "APR'RFC"
+            },
+            {
+              "id": "t1778015511713",
+              "type": "little",
+              "cat": "Budget Q3",
+              "desc": "Validar con Alejo el ETR estimado para Q3 y Q4",
+              "priority": null,
+              "eta": "2026-05-06",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "APR'RFC"
+            },
+            {
+              "id": "t1778015563593",
+              "type": "little",
+              "cat": "Cali Q3-Q4",
+              "desc": "Propuesta de re-inversión para Cali carro en Q3 o Q4",
+              "priority": null,
+              "eta": "2026-05-06",
               "status": "pending",
               "link": "",
               "updates": [],
@@ -155,64 +191,16 @@
               "kr": "Gestión"
             },
             {
-              "id": "t1779202669681",
+              "id": "t1778678971307",
               "type": "little",
-              "cat": "IA",
-              "desc": "Leet wiki de IA para Yandex teams",
-              "priority": null,
-              "eta": null,
-              "status": "pending",
-              "link": "https://wiki.yandex-team.ru/stefania/en/",
-              "updates": [],
-              "kr": "Gestión"
-            },
-            {
-              "id": "t1779205390033",
-              "type": "little",
-              "cat": "Hub soledad",
-              "desc": "Algún hub en soledad para hacer revisión de fraude?",
+              "cat": "MSE",
+              "desc": "1. Bonos por %. agregar mensaje desde la pantalla, y lanzar comms | 2. Preparar comms de reactivados (pendiente el tag)",
               "priority": null,
               "eta": null,
               "status": "pending",
               "link": "",
               "updates": [],
-              "kr": "Gestión"
-            },
-            {
-              "id": "t1779220855957",
-              "type": "little",
-              "cat": "Volto-TL",
-              "desc": "Pago de taxis libres a Volto",
-              "priority": "Alta",
-              "eta": null,
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "Gestión"
-            },
-            {
-              "id": "t1779289937988",
-              "type": "little",
-              "cat": "General",
-              "desc": "Reordenar con Lucho los Hub Experts, dando prioridad a Tuk Tuk y Moto Fleet proeycto 14k rent daily",
-              "priority": "Alta",
-              "eta": "2026-05-26",
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "Gestión"
-            },
-            {
-              "id": "t1779307037665",
-              "type": "little",
-              "cat": "Derecho petición",
-              "desc": "Derecho de petición | TL enviar pago a usuario y descontar a conductor",
-              "priority": null,
-              "eta": null,
-              "status": "pending",
-              "link": "https://st.yandex-team.ru/REQUESTS-420857",
-              "updates": [],
-              "kr": "Gestión"
+              "kr": "APR'RFC"
             }
           ]
         },
@@ -245,7 +233,7 @@
               "type": "main",
               "cat": "Bogota south",
               "desc": "Propuesta Alejo en SUR · zona de descuento · zona de geo bono",
-              "priority": "Alta",
+              "priority": "Media",
               "eta": "2026-05-06",
               "status": "progress",
               "link": "",
@@ -283,7 +271,7 @@
               "desc": "REDI: factura pago incentivos (supply)",
               "priority": "Media",
               "eta": "2026-05-08",
-              "status": "done",
+              "status": "progress",
               "link": "https://st.yandex-team.ru/TAXIASSIST-616382",
               "updates": [],
               "kr": "TukTuk"
@@ -349,76 +337,16 @@
               "kr": "TukTuk"
             },
             {
-              "id": "t1779207239660",
+              "id": "t1778617746653",
               "type": "little",
-              "cat": "Chain orders",
-              "desc": "Chain orders screenshots en Didi y Uber, según pidió Evgeny",
-              "priority": "Media",
-              "eta": "2026-05-20",
-              "status": "done",
-              "link": "",
-              "updates": [],
-              "kr": "Moto"
-            },
-            {
-              "id": "t1779220645412",
-              "type": "little",
-              "cat": "Hubs check",
-              "desc": "Nuevo WoW con hub 2 horas - checks anti fraude",
-              "priority": null,
+              "cat": "Bug brandeo",
+              "desc": "1. Parques marcar manualmente los tuks brandeados | 2. Parques llamar y escribir a esos conductores",
+              "priority": "Alta",
               "eta": null,
               "status": "pending",
               "link": "",
               "updates": [],
               "kr": "TukTuk"
-            },
-            {
-              "id": "t1779289976838",
-              "type": "little",
-              "cat": "General",
-              "desc": "Definir cómo funcionaría el modelo para tener un coordinador",
-              "priority": "Alta",
-              "eta": "2026-05-22",
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "TukTuk"
-            },
-            {
-              "id": "t1779303418988",
-              "type": "little",
-              "cat": "Facturas",
-              "desc": "Pro Drivers, factura de 3k",
-              "priority": null,
-              "eta": null,
-              "status": "progress",
-              "link": "https://st.yandex-team.ru/TAXIASSIST-627544",
-              "updates": [],
-              "kr": "TukTuk"
-            },
-            {
-              "id": "t1779310749237",
-              "type": "little",
-              "cat": "General",
-              "desc": "Moto VIP: Business case, analysis",
-              "priority": "Alta",
-              "eta": "2026-05-26",
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "Moto"
-            },
-            {
-              "id": "t1779310907194",
-              "type": "little",
-              "cat": "Comms MKT C+ BOG",
-              "desc": "Align comms for comfort plus new bonus scheme in BOG",
-              "priority": "Alta",
-              "eta": "2026-05-19",
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "UFC"
             }
           ]
         },
@@ -530,6 +458,18 @@
           ],
           "tasks": [
             {
+              "id": "t17",
+              "type": "main",
+              "cat": "Lead Gen",
+              "desc": "Seguimiento leads por canal",
+              "priority": null,
+              "eta": null,
+              "status": "progress",
+              "link": "",
+              "updates": [],
+              "kr": "Moto Fleet"
+            },
+            {
               "id": "t18",
               "type": "main",
               "cat": "Performance",
@@ -594,18 +534,6 @@
               "type": "little",
               "cat": "Motai",
               "desc": "Test de solo alquiler de motos a precio bajo",
-              "priority": null,
-              "eta": null,
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "Moto Fleet"
-            },
-            {
-              "id": "t1779221056874",
-              "type": "little",
-              "cat": "Motai performance",
-              "desc": "Yulia sacar performance de renta diaria, con logo motai, (partner de yango)",
               "priority": null,
               "eta": null,
               "status": "pending",
@@ -757,7 +685,7 @@
               "id": "t1778009132221",
               "type": "little",
               "cat": "GR Oviedo",
-              "desc": "Invitación 200 conductores al evento de GR, lunes mayo 25 - sede Suro",
+              "desc": "Invitación 250 particulares y 250 motos al evento de GR, martes mayo 19 - sede Suro - María Villate construye el mensaje a comunicar a conductores",
               "priority": "Media",
               "eta": null,
               "status": "pending",
@@ -774,6 +702,18 @@
               "eta": "2026-05-08",
               "status": "pending",
               "link": "https://st.yandex-team.ru/INTLTAXI-1984",
+              "updates": [],
+              "kr": "Economy"
+            },
+            {
+              "id": "t1778520708329",
+              "type": "little",
+              "cat": "Partner Pro",
+              "desc": "1. Verificar que todos los partners tengan 1% | 2. Ajuste de weight para Pro (Cali car y moto), y el check de private car para Yego",
+              "priority": null,
+              "eta": null,
+              "status": "done",
+              "link": "",
               "updates": [],
               "kr": "Economy"
             },
@@ -820,7 +760,7 @@
               "desc": "1% comisión BOG primeros 14 días | Yango se bajó a 0% la comisión, vamos a meter 10 scouts nuevos, no hagan más scouts Suro",
               "priority": "Alta",
               "eta": null,
-              "status": "pending",
+              "status": "done",
               "link": "",
               "updates": [],
               "kr": "Economy"
@@ -832,31 +772,7 @@
               "desc": "Armar USP en Cali con mensaje: 'Gana semanal hasta $XX' — calculado con 100% de objetivo y 1% de comisión para newbies y reactivados",
               "priority": "Alta",
               "eta": null,
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "Economy"
-            },
-            {
-              "id": "t1779222133693",
-              "type": "little",
-              "cat": "Partner pro",
-              "desc": "Cómo premiar a partners que hacen eventos en sus oficinas presenciales",
-              "priority": null,
-              "eta": null,
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": "Economy"
-            },
-            {
-              "id": "t1748390400",
-              "type": "little",
-              "cat": "DiDi CI",
-              "desc": "Con los incentivos nuevos para DiDi en Cali, completar el archivo de cómo están los net earnings y sub GMV de DiDi en Cali",
-              "priority": "Alta",
-              "eta": "2026-05-20",
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": "Economy"
@@ -929,12 +845,12 @@
               "kr": null
             },
             {
-              "id": "t1779206240589",
+              "id": "t1778768405680",
               "type": "little",
-              "cat": "Call taxi",
-              "desc": "Firma de contrato y otrosí de call taxi",
-              "priority": null,
-              "eta": null,
+              "cat": "General",
+              "desc": "Ajustar workterms Suro para evitar que alguno tenga >100k conductores",
+              "priority": "Alta",
+              "eta": "2026-05-15",
               "status": "pending",
               "link": "",
               "updates": [],
@@ -986,6 +902,18 @@
               "cat": "Partner Pro",
               "desc": "Apenas se registra un conductor nuevo, que le llegue un WA automático del partner anunciando el 1% por 14 días",
               "priority": "Alta",
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Partner comms"
+            },
+            {
+              "id": "t1779373836306",
+              "type": "little",
+              "cat": "hdhhdhd",
+              "desc": "jdjdjjdjd",
+              "priority": null,
               "eta": null,
               "status": "pending",
               "link": "",
@@ -1279,32 +1207,7 @@
           "bg": "#E8EAF6",
           "tc": "#3949AB",
           "krs": [],
-          "tasks": [
-            {
-              "id": "t1779292623802",
-              "type": "little",
-              "cat": "Porrito",
-              "desc": "Sala ventana 2-3pm",
-              "priority": null,
-              "eta": null,
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": null
-            },
-            {
-              "id": "t1779292638396",
-              "type": "little",
-              "cat": "Siesta",
-              "desc": "Siesta al porro, sala sofá 3-4pm",
-              "priority": null,
-              "eta": null,
-              "status": "pending",
-              "link": "",
-              "updates": [],
-              "kr": null
-            }
-          ]
+          "tasks": []
         }
       ]
     }
