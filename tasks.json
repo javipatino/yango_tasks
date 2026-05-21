@@ -948,6 +948,18 @@
               "link": "",
               "updates": [],
               "kr": "Otros"
+            },
+            {
+              "id": "t1779374280629",
+              "type": "little",
+              "cat": "Partner Ops",
+              "desc": "Compartir New features de FR con partners (Evidencia en los tickets)",
+              "priority": "Alta",
+              "eta": "2026-05-22",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Otros"
             }
           ]
         },
