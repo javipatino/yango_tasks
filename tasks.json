@@ -347,6 +347,18 @@
               "link": "",
               "updates": [],
               "kr": "TukTuk"
+            },
+            {
+              "id": "t1779390271306",
+              "type": "little",
+              "cat": "Claasifier",
+              "desc": "Revisar y cruzar classifier de uber/didi versus yango comfort",
+              "priority": "Baja",
+              "eta": "2026-05-28",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "UFC"
             }
           ]
         },
