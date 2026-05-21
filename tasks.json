@@ -911,9 +911,9 @@
             {
               "id": "t1779373836306",
               "type": "little",
-              "cat": "hdhhdhd",
-              "desc": "jdjdjjdjd",
-              "priority": null,
+              "cat": "Partner Ops",
+              "desc": "Guia para nuevo partner",
+              "priority": "Baja",
               "eta": null,
               "status": "pending",
               "link": "",
