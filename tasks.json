@@ -359,6 +359,18 @@
               "link": "",
               "updates": [],
               "kr": "UFC"
+            },
+            {
+              "id": "t1779390354678",
+              "type": "little",
+              "cat": "Moto VIP",
+              "desc": "Analysis of Earnings from picap moto vip drivers",
+              "priority": "Baja",
+              "eta": "2026-05-26",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Moto"
             }
           ]
         },
