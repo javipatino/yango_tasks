@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-21",
+  "last_updated": "2026-05-22",
   "areas": {
     "ops": {
       "people": [
@@ -197,6 +197,18 @@
               "desc": "1. Bonos por %. agregar mensaje desde la pantalla, y lanzar comms | 2. Preparar comms de reactivados (pendiente el tag)",
               "priority": null,
               "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "APR'RFC"
+            },
+            {
+              "id": "t1748563200000",
+              "type": "little",
+              "cat": "fact vs plan partner payments",
+              "desc": "Fact vs plan partner payments",
+              "priority": null,
+              "eta": "2026-05-25",
               "status": "pending",
               "link": "",
               "updates": [],
