@@ -771,7 +771,7 @@
               "cat": "Peajes",
               "desc": "Revisar peajes faltantes en Yango Maps · WoW de peajes",
               "priority": "Alta",
-              "eta": null,
+              "eta": "2026-05-25",
               "status": "progress",
               "link": "",
               "updates": [],
