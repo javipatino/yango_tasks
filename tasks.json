@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-22",
+  "last_updated": "2026-05-25",
   "areas": {
     "ops": {
       "people": [
@@ -213,6 +213,18 @@
               "link": "",
               "updates": [],
               "kr": "APR'RFC"
+            },
+            {
+              "id": "t1748563200001",
+              "type": "little",
+              "cat": "Onboarding",
+              "desc": "Onboarding user y driver",
+              "priority": "Alta",
+              "eta": "2026-05-22",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": null
             }
           ]
         },
