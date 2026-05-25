@@ -990,7 +990,7 @@
               "type": "little",
               "cat": "WA tool Bog",
               "desc": "Implementación flujo registro y pre-churn",
-              "priority": null,
+              "priority": "Alta",
               "eta": null,
               "status": "pending",
               "link": "",
