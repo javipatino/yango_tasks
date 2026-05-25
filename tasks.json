@@ -391,7 +391,7 @@
               "desc": "Analysis of Earnings from picap moto vip drivers",
               "priority": "Media",
               "eta": "2026-05-26",
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": "Moto"
@@ -403,7 +403,7 @@
               "desc": "CI comparing vip versus yango",
               "priority": "Media",
               "eta": "2026-05-28",
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": "Moto"
@@ -415,7 +415,7 @@
               "desc": "Survey to Users | Understand willingness to use moto vip",
               "priority": "Media",
               "eta": "2026-06-01",
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": "Moto"
@@ -608,7 +608,7 @@
               "desc": "Pendiente de payretailers para iniciar",
               "priority": null,
               "eta": null,
-              "status": "progress",
+              "status": "pending",
               "link": "",
               "updates": [],
               "kr": "Moto Fleet"
