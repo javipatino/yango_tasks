@@ -807,7 +807,7 @@
               "cat": "Partner Pro",
               "desc": "1. Verificar que todos los partners tengan 1% | 2. Ajuste de weight para Pro (Cali car y moto), y el check de private car para Yego",
               "priority": null,
-              "eta": null,
+              "eta": "2026-05-20",
               "status": "done",
               "link": "",
               "updates": [],
