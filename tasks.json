@@ -608,7 +608,7 @@
               "desc": "Pendiente de payretailers para iniciar",
               "priority": null,
               "eta": null,
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": "Moto Fleet"
