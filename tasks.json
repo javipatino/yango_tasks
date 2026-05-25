@@ -1227,10 +1227,10 @@
               "id": "m3",
               "type": "main",
               "cat": "World Cup",
-              "desc": "Big worry — no green light de HQ aún",
+              "desc": "Entrega de material para TV",
               "priority": "Alta",
-              "eta": null,
-              "status": "pending",
+              "eta": "2026-06-06",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": null
