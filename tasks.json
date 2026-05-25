@@ -1344,7 +1344,7 @@
               "type": "main",
               "cat": "Influencer",
               "desc": "Redefiniendo nueva campaña always on",
-              "priority": null,
+              "priority": "Alta",
               "eta": null,
               "status": "progress",
               "link": "",
