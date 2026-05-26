@@ -451,7 +451,7 @@
               "desc": "Acceptance Rate Analysis - decrease",
               "priority": "Media",
               "eta": "2026-05-28",
-              "status": "pending",
+              "status": "done",
               "link": "",
               "updates": [],
               "kr": "TukTuk"
@@ -461,7 +461,7 @@
               "type": "little",
               "cat": "Reactivation",
               "desc": "Analysis and deepdive on churn drivers with more than 10 trips",
-              "priority": null,
+              "priority": "Media",
               "eta": null,
               "status": "pending",
               "link": "",
