@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-25",
+  "last_updated": "2026-05-26",
   "areas": {
     "ops": {
       "people": [
@@ -708,7 +708,7 @@
               "desc": "Que se vea más claro el descuento en app",
               "priority": null,
               "eta": null,
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": "Nequi"
@@ -732,7 +732,7 @@
               "desc": "API para que conductores recarguen via Cobre",
               "priority": null,
               "eta": null,
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": "Nequi"
