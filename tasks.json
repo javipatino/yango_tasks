@@ -485,7 +485,7 @@
               "type": "little",
               "cat": "Facturas",
               "desc": "Factura Redi aceites 830 usd",
-              "priority": null,
+              "priority": "Baja",
               "eta": null,
               "status": "pending",
               "link": "",
