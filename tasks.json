@@ -1111,7 +1111,7 @@
               "cat": "Partner Ops",
               "desc": "Ticket a soporte Feature contrato de mandato",
               "priority": "Media",
-              "eta": null,
+              "eta": "2026-05-26",
               "status": "pending",
               "link": "",
               "updates": [],
