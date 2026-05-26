@@ -796,6 +796,18 @@
               "link": "",
               "updates": [],
               "kr": "Nequi"
+            },
+            {
+              "id": "t1748390400000",
+              "type": "little",
+              "cat": "Salario",
+              "desc": "Reducir salario a Alejo",
+              "priority": "Alta",
+              "eta": "2026-05-28",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": null
             }
           ]
         },
