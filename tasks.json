@@ -232,7 +232,7 @@
               "cat": "XX",
               "desc": "Apretar alejo",
               "priority": null,
-              "eta": null,
+              "eta": "2026-05-27",
               "status": "pending",
               "link": "",
               "updates": [],
