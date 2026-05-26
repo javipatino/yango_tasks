@@ -225,6 +225,18 @@
               "link": "",
               "updates": [],
               "kr": "APR'RFC"
+            },
+            {
+              "id": "t1779831988992",
+              "type": "little",
+              "cat": "XX",
+              "desc": "Apretar alejo",
+              "priority": null,
+              "eta": null,
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "APR'RFC"
             }
           ]
         },
