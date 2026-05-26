@@ -295,7 +295,7 @@
               "desc": "REDI: factura pago incentivos (supply)",
               "priority": "Media",
               "eta": "2026-05-08",
-              "status": "done",
+              "status": "progress",
               "link": "https://st.yandex-team.ru/TAXIASSIST-616382",
               "updates": [],
               "kr": "TukTuk"
@@ -708,7 +708,7 @@
               "desc": "Que se vea más claro el descuento en app",
               "priority": null,
               "eta": null,
-              "status": "progress",
+              "status": "pending",
               "link": "",
               "updates": [],
               "kr": "Nequi"
@@ -732,7 +732,7 @@
               "desc": "API para que conductores recarguen via Cobre",
               "priority": null,
               "eta": null,
-              "status": "progress",
+              "status": "pending",
               "link": "",
               "updates": [],
               "kr": "Nequi"
@@ -744,7 +744,7 @@
               "desc": "Follow-up a Ivan para top-ups por Cobre",
               "priority": null,
               "eta": null,
-              "status": "progress",
+              "status": "pending",
               "link": "",
               "updates": [],
               "kr": "Nequi"
@@ -1404,7 +1404,7 @@
               "type": "main",
               "cat": "Influencer",
               "desc": "Redefiniendo nueva campaña always on",
-              "priority": null,
+              "priority": "Alta",
               "eta": null,
               "status": "progress",
               "link": "",
@@ -1418,7 +1418,7 @@
               "desc": "Shooting Dayro Moreno",
               "priority": "Alta",
               "eta": "2026-05-27",
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": null
@@ -1430,7 +1430,7 @@
               "desc": "World Cup Content",
               "priority": null,
               "eta": "2026-05-01",
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": null
@@ -1442,7 +1442,7 @@
               "desc": "World Cup Influencers Campaign",
               "priority": null,
               "eta": "2026-05-11",
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": null
