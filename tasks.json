@@ -473,7 +473,7 @@
               "type": "little",
               "cat": "Facturas",
               "desc": "Factura Pro 3k",
-              "priority": null,
+              "priority": "Baja",
               "eta": null,
               "status": "pending",
               "link": "",
