@@ -1099,7 +1099,7 @@
               "cat": "Partner Ops",
               "desc": "Ticket para bajar balance a -10.000 para nuevos",
               "priority": "Baja",
-              "eta": null,
+              "eta": "2026-05-29",
               "status": "pending",
               "link": "",
               "updates": [],
