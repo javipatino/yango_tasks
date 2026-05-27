@@ -754,9 +754,9 @@
               "type": "little",
               "cat": "Cobre",
               "desc": "Follow-up a Ivan para top-ups por Cobre",
-              "priority": null,
+              "priority": "Alta",
               "eta": null,
-              "status": "pending",
+              "status": "done",
               "link": "",
               "updates": [],
               "kr": "Nequi"
