@@ -820,6 +820,18 @@
               "link": "",
               "updates": [],
               "kr": "Nequi"
+            },
+            {
+              "id": "t1779891346926",
+              "type": "little",
+              "cat": "API",
+              "desc": "Fraude motocarro Soledad",
+              "priority": null,
+              "eta": "2026-05-29",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": "Nequi"
             }
           ]
         },
