@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-26",
+  "last_updated": "2026-05-27",
   "areas": {
     "ops": {
       "people": [
@@ -718,9 +718,9 @@
               "type": "main",
               "cat": "Nequi",
               "desc": "Que se vea más claro el descuento en app",
-              "priority": null,
+              "priority": "Media",
               "eta": null,
-              "status": "pending",
+              "status": "done",
               "link": "",
               "updates": [],
               "kr": "Nequi"
@@ -730,7 +730,7 @@
               "type": "main",
               "cat": "Nequi mkt",
               "desc": "Salida de campaña de marketing Nequi",
-              "priority": null,
+              "priority": "Media",
               "eta": null,
               "status": "pending",
               "link": "",
