@@ -742,9 +742,9 @@
               "type": "main",
               "cat": "API Cobre",
               "desc": "API para que conductores recarguen via Cobre",
-              "priority": null,
+              "priority": "Alta",
               "eta": null,
-              "status": "pending",
+              "status": "progress",
               "link": "",
               "updates": [],
               "kr": "Nequi"
