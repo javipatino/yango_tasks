@@ -778,9 +778,9 @@
               "type": "little",
               "cat": "Bind Nequi Bog",
               "desc": "Lanzar descuentos Bogotá para binding de Nequi | Mayo 20 | luego de solucionar bugs | Ekaterina da luz verde para empujar con MS&E",
-              "priority": null,
+              "priority": "Alta",
               "eta": null,
-              "status": "pending",
+              "status": "done",
               "link": "",
               "updates": [],
               "kr": "Nequi"
