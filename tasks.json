@@ -790,9 +790,9 @@
               "type": "little",
               "cat": "Red Building",
               "desc": "Red building de cashless: meta GMV cashless, cuántos trips implican, cuántos users son, cuántos bindings semanales necesitamos para llegar a esa métrica",
-              "priority": null,
+              "priority": "Media",
               "eta": null,
-              "status": "pending",
+              "status": "done",
               "link": "",
               "updates": [],
               "kr": "Nequi"
