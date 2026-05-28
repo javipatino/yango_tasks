@@ -1258,6 +1258,18 @@
               "link": "",
               "updates": [],
               "kr": null
+            },
+            {
+              "id": "t1780000408644",
+              "type": "little",
+              "cat": "Partner Ops",
+              "desc": "Recolectar Contratos de Servicio y Marketing con Partners (con Jaco)",
+              "priority": "Media",
+              "eta": "2026-06-03",
+              "status": "pending",
+              "link": "",
+              "updates": [],
+              "kr": null
             }
           ]
         },
