@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-02",
+  "last_updated": "2026-06-09",
   "areas": {
     "ops": {
       "people": [
@@ -475,7 +475,7 @@
               "desc": "Analysis and deepdive on churn drivers with more than 10 trips",
               "priority": "Media",
               "eta": null,
-              "status": "pending",
+              "status": "done",
               "link": "",
               "updates": [],
               "kr": "TukTuk"
